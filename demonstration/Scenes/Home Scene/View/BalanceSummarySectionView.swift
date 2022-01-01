@@ -61,7 +61,7 @@ final class BalanceSummarySectionView: UIView {
         return label
     }()
    
-    let labelsStackView: UIStackView = {
+    private let labelsStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .fillEqually

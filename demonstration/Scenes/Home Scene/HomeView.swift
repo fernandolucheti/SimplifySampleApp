@@ -9,20 +9,20 @@ import UIKit
 
 final class HomeView: UIView {
     
-    let budgetBar: UIView = {
+    private let budgetBar: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.secondaryColor
         return view
     }()
     
-    let headerStackView: UIStackView = {
+    private let headerStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
         return stackView
     }()
     
-    let contentStackView: UIStackView = {
+    private let contentStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.alignment = .center
@@ -30,7 +30,7 @@ final class HomeView: UIView {
         return stackView
     }()
     
-    let balanceTitleLabel: UILabel = {
+    private let balanceTitleLabel: UILabel = {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 14)
         label.textColor = UIColor.secondaryColor
@@ -38,21 +38,13 @@ final class HomeView: UIView {
         return label
     }()
     
-    let balanceLabel: UILabel = {
+    private let balanceLabel: UILabel = {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 20)
         label.textColor = UIColor.primaryAccent
         label.text = "$ 40,503.76"
         return label
     }()
-    
-    let monthSection = BalanceSummarySectionView(viewModel: BalanceSummarySectionViewModel(type: .month, value: 0.0, first: true))
-    
-    let incomeSection = BalanceSummarySectionView(viewModel: BalanceSummarySectionViewModel(type: .income, value: 30000.00))
-    
-    let expenseSection = BalanceSummarySectionView(viewModel: BalanceSummarySectionViewModel(type: .expense, value: 120000.00))
-    
-    let monthlyBalanceSection = BalanceSummarySectionView(viewModel: BalanceSummarySectionViewModel(type: .monthlyBalance, value: -18000.00, last: true))
     
     init() {
         super.init(frame: .zero)
@@ -67,12 +59,17 @@ final class HomeView: UIView {
 extension HomeView: ViewCode {
     
     func setupHierarchy() {
-//        addSubview(budgetBar)
-        
+
         addSubview(headerStackView)
         headerStackView.addArrangedSubview(balanceTitleLabel)
         headerStackView.addArrangedSubview(balanceLabel)
         addSubview(contentStackView)
+        
+        let monthSection = BalanceSummarySectionView(viewModel: BalanceSummarySectionViewModel(type: .month, value: 0.0, month: "December", first: true))
+        let incomeSection = BalanceSummarySectionView(viewModel: BalanceSummarySectionViewModel(type: .income, value: 30000.00))
+        let expenseSection = BalanceSummarySectionView(viewModel: BalanceSummarySectionViewModel(type: .expense, value: 120000.00))
+        let monthlyBalanceSection = BalanceSummarySectionView(viewModel: BalanceSummarySectionViewModel(type: .monthlyBalance, value: -18000.00, last: true))
+        
         contentStackView.addArrangedSubview(monthSection)
         contentStackView.addArrangedSubview(incomeSection)
         contentStackView.addArrangedSubview(expenseSection)
@@ -100,8 +97,6 @@ extension HomeView: ViewCode {
     }
     
     func configureView() {
-        
         backgroundColor = .primaryColor
-        
     }
 }

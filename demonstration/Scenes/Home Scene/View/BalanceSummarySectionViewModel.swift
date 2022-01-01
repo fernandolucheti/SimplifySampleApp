@@ -18,7 +18,7 @@ struct BalanceSummarySectionViewModel {
     
     let type: SectionType
     let value: Double
-    let month: String? = "December"
+    var month: String? = nil
     var first: Bool = false
     var last: Bool = false
     

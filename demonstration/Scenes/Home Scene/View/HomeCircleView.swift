@@ -33,7 +33,6 @@ final class HomeCircleView: UIView {
         clipsToBounds = true
         layer.borderColor = borderColor.cgColor
         layer.borderWidth = 2.0
-        configureView()
     }
 }
 

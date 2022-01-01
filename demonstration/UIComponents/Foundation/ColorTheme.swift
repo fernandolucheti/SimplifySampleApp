@@ -10,19 +10,19 @@ import UIKit
 extension UIColor {
     
     static var primaryColor: UIColor {
-        UIColor(hex: "#ffffff") ?? UIColor.clear
+        UIColor(hex: "#ffffff")
     }
     
     static var secondaryColor: UIColor {
-        UIColor(hex: "#c1c1c1") ?? UIColor.clear
+        UIColor(hex: "#c1c1c1")
     }
     
     static var primaryAccent: UIColor {
-        UIColor(hex: "#3083fb") ?? UIColor.clear
+        UIColor(hex: "#3083fb")
     }
     
     static var secondaryAccent: UIColor {
-        UIColor(hex: "#f9777e") ?? UIColor.clear
+        UIColor(hex: "#f9777e")
     }
 }
 
