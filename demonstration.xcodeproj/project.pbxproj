@@ -21,8 +21,6 @@
 		EDC8428A2780AA9F00BA291C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842892780AA9F00BA291C /* HomeView.swift */; };
 		EDC8428C2780AAAD00BA291C /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC8428B2780AAAD00BA291C /* HomePresenter.swift */; };
 		EDC8428E2780AB0E00BA291C /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC8428D2780AB0E00BA291C /* NetworkProvider.swift */; };
-		EDC842912780C73200BA291C /* BudgetBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842902780C73200BA291C /* BudgetBar.swift */; };
-		EDC842942780C76200BA291C /* BuggetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842932780C76200BA291C /* BuggetViewModel.swift */; };
 		EDC842972780C7A900BA291C /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842962780C7A900BA291C /* ColorTheme.swift */; };
 		EDC842992780C8C500BA291C /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842982780C8C500BA291C /* UIColor+Hex.swift */; };
 		EDC8429B2780CB4D00BA291C /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC8429A2780CB4D00BA291C /* ViewCode.swift */; };
@@ -71,8 +69,6 @@
 		EDC842892780AA9F00BA291C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EDC8428B2780AAAD00BA291C /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		EDC8428D2780AB0E00BA291C /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
-		EDC842902780C73200BA291C /* BudgetBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetBar.swift; sourceTree = "<group>"; };
-		EDC842932780C76200BA291C /* BuggetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuggetViewModel.swift; sourceTree = "<group>"; };
 		EDC842962780C7A900BA291C /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
 		EDC842982780C8C500BA291C /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		EDC8429A2780CB4D00BA291C /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
@@ -200,18 +196,8 @@
 			isa = PBXGroup;
 			children = (
 				EDC842952780C79800BA291C /* Foundation */,
-				EDC842922780C73900BA291C /* BudgetBar */,
 			);
 			path = UIComponents;
-			sourceTree = "<group>";
-		};
-		EDC842922780C73900BA291C /* BudgetBar */ = {
-			isa = PBXGroup;
-			children = (
-				EDC842902780C73200BA291C /* BudgetBar.swift */,
-				EDC842932780C76200BA291C /* BuggetViewModel.swift */,
-			);
-			path = BudgetBar;
 			sourceTree = "<group>";
 		};
 		EDC842952780C79800BA291C /* Foundation */ = {
@@ -376,7 +362,6 @@
 				EDC842A6278204BB00BA291C /* NetworkErrors.swift in Sources */,
 				EDC8429E2780CE7E00BA291C /* BalanceSummarySectionView.swift in Sources */,
 				EDC842A02780D05900BA291C /* BalanceSummarySectionViewModel.swift in Sources */,
-				EDC842942780C76200BA291C /* BuggetViewModel.swift in Sources */,
 				EDC8428C2780AAAD00BA291C /* HomePresenter.swift in Sources */,
 				EDC842542780A20900BA291C /* HomeViewController.swift in Sources */,
 				EDC842A22780D99B00BA291C /* CircleView.swift in Sources */,
@@ -384,7 +369,6 @@
 				EDC842AC2782142B00BA291C /* UIView+loading.swift in Sources */,
 				EDC842502780A20900BA291C /* AppDelegate.swift in Sources */,
 				EDC8428A2780AA9F00BA291C /* HomeView.swift in Sources */,
-				EDC842912780C73200BA291C /* BudgetBar.swift in Sources */,
 				EDC842A42782019300BA291C /* HomeService.swift in Sources */,
 				EDC8428E2780AB0E00BA291C /* NetworkProvider.swift in Sources */,
 				EDC842812780A46200BA291C /* NetworkRequests.swift in Sources */,

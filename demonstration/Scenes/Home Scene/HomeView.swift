@@ -9,12 +9,6 @@ import UIKit
 
 final class HomeView: UIView {
     
-    private let budgetBar: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor.secondaryColor
-        return view
-    }()
-    
     private let headerStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -81,7 +75,6 @@ extension HomeView: ViewCode {
     
     func setupConstraints() {
         
-        budgetBar.translatesAutoresizingMaskIntoConstraints = false
         headerStackView.translatesAutoresizingMaskIntoConstraints = false
         contentStackView.translatesAutoresizingMaskIntoConstraints = false
         balanceLabel.translatesAutoresizingMaskIntoConstraints = false
