@@ -17,12 +17,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
-//        let viewController = HomeFactory.createViewController()
-        let testViewController = UIViewController()
-        testViewController.view.backgroundColor = .red
         let viewController = HomeTabViewController(
             navigationItens: [NavigationTabItem(icon: .add, viewController: HomeFactory.createViewController()),
-                              NavigationTabItem(icon: .add, viewController: testViewController)])
+                              NavigationTabItem(icon: .add, viewController: TransactionsViewController())])
         window.rootViewController = viewController
         window.backgroundColor = .primaryColor
         self.window = window

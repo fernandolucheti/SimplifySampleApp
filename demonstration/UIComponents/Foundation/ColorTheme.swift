@@ -14,7 +14,7 @@ extension UIColor {
     }
     
     static var secondaryColor: UIColor {
-        UIColor(hex: "#c4c4c4")
+        UIColor(hex: "#b0b0b0")
     }
     
     static var tertiaryColor: UIColor {

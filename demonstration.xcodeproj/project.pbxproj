@@ -36,6 +36,12 @@
 		EDC842B327822A1D00BA291C /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842B227822A1D00BA291C /* HomeTabView.swift */; };
 		EDC842B52782395300BA291C /* TabBarTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842B42782395300BA291C /* TabBarTapGesture.swift */; };
 		EDC842B72782442300BA291C /* NavigationTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842B62782442300BA291C /* NavigationTabItem.swift */; };
+		EDC842BA2782457C00BA291C /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842B92782457C00BA291C /* TransactionsViewController.swift */; };
+		EDC842BD278245C600BA291C /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842BC278245C600BA291C /* TransactionCell.swift */; };
+		EDC842BF2782471D00BA291C /* TransactionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842BE2782471D00BA291C /* TransactionCellViewModel.swift */; };
+		EDC842C1278249D600BA291C /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842C0278249D600BA291C /* TransactionsView.swift */; };
+		EDC842C3278255DE00BA291C /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842C2278255DD00BA291C /* HeaderView.swift */; };
+		EDC842C5278257EB00BA291C /* UIView+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842C4278257EB00BA291C /* UIView+Rotate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +94,12 @@
 		EDC842B227822A1D00BA291C /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
 		EDC842B42782395300BA291C /* TabBarTapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarTapGesture.swift; sourceTree = "<group>"; };
 		EDC842B62782442300BA291C /* NavigationTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTabItem.swift; sourceTree = "<group>"; };
+		EDC842B92782457C00BA291C /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
+		EDC842BC278245C600BA291C /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
+		EDC842BE2782471D00BA291C /* TransactionCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCellViewModel.swift; sourceTree = "<group>"; };
+		EDC842C0278249D600BA291C /* TransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
+		EDC842C2278255DD00BA291C /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		EDC842C4278257EB00BA291C /* UIView+Rotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Rotate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +192,7 @@
 		EDC842852780A67E00BA291C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				EDC842B82782455100BA291C /* Transaction History Scene */,
 				EDC842AF2782282A00BA291C /* TabBar Scene */,
 				EDC842862780A68800BA291C /* Home Scene */,
 			);
@@ -203,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				EDC842952780C79800BA291C /* Foundation */,
+				EDC842C2278255DD00BA291C /* HeaderView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -217,6 +231,7 @@
 				EDC842A927820C9400BA291C /* String+CurrencyFormat.swift */,
 				EDC842AB2782142B00BA291C /* UIView+loading.swift */,
 				EDC842AD2782261D00BA291C /* UIStackView+RemoveSubviews.swift */,
+				EDC842C4278257EB00BA291C /* UIView+Rotate.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -240,6 +255,25 @@
 				EDC842B42782395300BA291C /* TabBarTapGesture.swift */,
 			);
 			path = "TabBar Scene";
+			sourceTree = "<group>";
+		};
+		EDC842B82782455100BA291C /* Transaction History Scene */ = {
+			isa = PBXGroup;
+			children = (
+				EDC842BB278245B700BA291C /* View */,
+				EDC842B92782457C00BA291C /* TransactionsViewController.swift */,
+			);
+			path = "Transaction History Scene";
+			sourceTree = "<group>";
+		};
+		EDC842BB278245B700BA291C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EDC842BC278245C600BA291C /* TransactionCell.swift */,
+				EDC842BE2782471D00BA291C /* TransactionCellViewModel.swift */,
+				EDC842C0278249D600BA291C /* TransactionsView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,18 +423,24 @@
 				EDC842A22780D99B00BA291C /* CircleView.swift in Sources */,
 				EDC842882780A69C00BA291C /* HomeModels.swift in Sources */,
 				EDC842AC2782142B00BA291C /* UIView+loading.swift in Sources */,
+				EDC842C5278257EB00BA291C /* UIView+Rotate.swift in Sources */,
 				EDC842502780A20900BA291C /* AppDelegate.swift in Sources */,
 				EDC842B52782395300BA291C /* TabBarTapGesture.swift in Sources */,
 				EDC8428A2780AA9F00BA291C /* HomeView.swift in Sources */,
+				EDC842BA2782457C00BA291C /* TransactionsViewController.swift in Sources */,
 				EDC842A42782019300BA291C /* HomeService.swift in Sources */,
 				EDC842812780A46200BA291C /* NetworkRequests.swift in Sources */,
 				EDC842B12782284D00BA291C /* HomeTabViewController.swift in Sources */,
+				EDC842BD278245C600BA291C /* TransactionCell.swift in Sources */,
 				EDC842992780C8C500BA291C /* UIColor+Hex.swift in Sources */,
 				EDC842972780C7A900BA291C /* ColorTheme.swift in Sources */,
 				EDC842522780A20900BA291C /* SceneDelegate.swift in Sources */,
 				EDC842B327822A1D00BA291C /* HomeTabView.swift in Sources */,
+				EDC842C1278249D600BA291C /* TransactionsView.swift in Sources */,
+				EDC842BF2782471D00BA291C /* TransactionCellViewModel.swift in Sources */,
 				EDC842A82782078300BA291C /* HomeFactory.swift in Sources */,
 				EDC8429B2780CB4D00BA291C /* ViewCode.swift in Sources */,
+				EDC842C3278255DE00BA291C /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
