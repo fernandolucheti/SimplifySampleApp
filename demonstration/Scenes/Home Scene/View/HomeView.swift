@@ -34,7 +34,7 @@ final class HomeView: UIView {
     
     private let balanceLabel: UILabel = {
         let label = UILabel()
-        label.font = .boldSystemFont(ofSize: 20)
+        label.font = .boldSystemFont(ofSize: 26)
         label.textColor = UIColor.primaryAccent
         return label
     }()
@@ -53,7 +53,7 @@ final class HomeView: UIView {
         balanceLabel.text = viewModel.balance
         contentStackView.removeAllArrangedSubviews()
         
-        let sections = [BalanceSummarySectionViewModel(type: .month, value: "", month: "December", first: true),
+        let sections = [BalanceSummarySectionViewModel(type: .month, value: "", month: viewModel.month, first: true),
                           BalanceSummarySectionViewModel(type: .income, value: viewModel.income),
                           BalanceSummarySectionViewModel(type: .expense, value: viewModel.expenses),
                           BalanceSummarySectionViewModel(type: .monthlyBalance, value: viewModel.monthlyBalance, last: true)]

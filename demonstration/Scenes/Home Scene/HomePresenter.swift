@@ -37,7 +37,8 @@ final class HomePresenter {
     }
     
     private func createViewModel(_ response: HomeModels.Response) -> HomeModels.ViewModel {
-        HomeModels.ViewModel(balance: response.balance.currencyString(),
+        HomeModels.ViewModel(month: response.month,
+                             balance: response.balance.currencyString(),
                              income: response.income.currencyString(),
                              expenses: response.expenses.currencyString(),
                              monthlyBalance: response.monthlyBalance.currencyString())

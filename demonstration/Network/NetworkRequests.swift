@@ -18,7 +18,7 @@ extension NetworkRequests: TargetType {
     }
     
     var path: String {
-        "a07e1013-a796-423d-9be1-919a952840b0"
+        "93fa1636-db03-43e2-8c56-9c0c212285f4"
     }
     
     var method: Moya.Method {

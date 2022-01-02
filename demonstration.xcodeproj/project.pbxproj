@@ -20,7 +20,6 @@
 		EDC842882780A69C00BA291C /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842872780A69C00BA291C /* HomeModels.swift */; };
 		EDC8428A2780AA9F00BA291C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842892780AA9F00BA291C /* HomeView.swift */; };
 		EDC8428C2780AAAD00BA291C /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC8428B2780AAAD00BA291C /* HomePresenter.swift */; };
-		EDC8428E2780AB0E00BA291C /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC8428D2780AB0E00BA291C /* NetworkProvider.swift */; };
 		EDC842972780C7A900BA291C /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842962780C7A900BA291C /* ColorTheme.swift */; };
 		EDC842992780C8C500BA291C /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842982780C8C500BA291C /* UIColor+Hex.swift */; };
 		EDC8429B2780CB4D00BA291C /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC8429A2780CB4D00BA291C /* ViewCode.swift */; };
@@ -69,7 +68,6 @@
 		EDC842872780A69C00BA291C /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
 		EDC842892780AA9F00BA291C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EDC8428B2780AAAD00BA291C /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
-		EDC8428D2780AB0E00BA291C /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		EDC842962780C7A900BA291C /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
 		EDC842982780C8C500BA291C /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		EDC8429A2780CB4D00BA291C /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
@@ -166,7 +164,6 @@
 			isa = PBXGroup;
 			children = (
 				EDC842802780A46200BA291C /* NetworkRequests.swift */,
-				EDC8428D2780AB0E00BA291C /* NetworkProvider.swift */,
 				EDC842A5278204BB00BA291C /* NetworkErrors.swift */,
 			);
 			path = Network;
@@ -186,7 +183,6 @@
 				EDC8429C2780CE6800BA291C /* View */,
 				EDC842872780A69C00BA291C /* HomeModels.swift */,
 				EDC842532780A20900BA291C /* HomeViewController.swift */,
-				EDC842892780AA9F00BA291C /* HomeView.swift */,
 				EDC8428B2780AAAD00BA291C /* HomePresenter.swift */,
 				EDC842A32782019200BA291C /* HomeService.swift */,
 				EDC842A72782078300BA291C /* HomeFactory.swift */,
@@ -219,6 +215,7 @@
 		EDC8429C2780CE6800BA291C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EDC842892780AA9F00BA291C /* HomeView.swift */,
 				EDC8429D2780CE7E00BA291C /* BalanceSummarySectionView.swift */,
 				EDC8429F2780D05900BA291C /* BalanceSummarySectionViewModel.swift */,
 			);
@@ -374,7 +371,6 @@
 				EDC842502780A20900BA291C /* AppDelegate.swift in Sources */,
 				EDC8428A2780AA9F00BA291C /* HomeView.swift in Sources */,
 				EDC842A42782019300BA291C /* HomeService.swift in Sources */,
-				EDC8428E2780AB0E00BA291C /* NetworkProvider.swift in Sources */,
 				EDC842812780A46200BA291C /* NetworkRequests.swift in Sources */,
 				EDC842992780C8C500BA291C /* UIColor+Hex.swift in Sources */,
 				EDC842972780C7A900BA291C /* ColorTheme.swift in Sources */,
