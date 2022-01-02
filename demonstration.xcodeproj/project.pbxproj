@@ -32,6 +32,7 @@
 		EDC842A82782078300BA291C /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842A72782078300BA291C /* HomeFactory.swift */; };
 		EDC842AA27820C9400BA291C /* String+CurrencyFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842A927820C9400BA291C /* String+CurrencyFormat.swift */; };
 		EDC842AC2782142B00BA291C /* UIView+loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842AB2782142B00BA291C /* UIView+loading.swift */; };
+		EDC842AE2782261D00BA291C /* UIStackView+RemoveSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842AD2782261D00BA291C /* UIStackView+RemoveSubviews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		EDC842A72782078300BA291C /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
 		EDC842A927820C9400BA291C /* String+CurrencyFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+CurrencyFormat.swift"; sourceTree = "<group>"; };
 		EDC842AB2782142B00BA291C /* UIView+loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+loading.swift"; sourceTree = "<group>"; };
+		EDC842AD2782261D00BA291C /* UIStackView+RemoveSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+RemoveSubviews.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +211,7 @@
 				EDC8429A2780CB4D00BA291C /* ViewCode.swift */,
 				EDC842A927820C9400BA291C /* String+CurrencyFormat.swift */,
 				EDC842AB2782142B00BA291C /* UIView+loading.swift */,
+				EDC842AD2782261D00BA291C /* UIStackView+RemoveSubviews.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 			files = (
 				EDC842AA27820C9400BA291C /* String+CurrencyFormat.swift in Sources */,
 				EDC842A6278204BB00BA291C /* NetworkErrors.swift in Sources */,
+				EDC842AE2782261D00BA291C /* UIStackView+RemoveSubviews.swift in Sources */,
 				EDC8429E2780CE7E00BA291C /* BalanceSummarySectionView.swift in Sources */,
 				EDC842A02780D05900BA291C /* BalanceSummarySectionViewModel.swift in Sources */,
 				EDC8428C2780AAAD00BA291C /* HomePresenter.swift in Sources */,

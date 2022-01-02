@@ -51,16 +51,17 @@ final class HomeView: UIView {
     func setupView(_ viewModel: HomeModels.ViewModel) {
         
         balanceLabel.text = viewModel.balance
+        contentStackView.removeAllArrangedSubviews()
         
-        let monthSection = BalanceSummarySectionView(viewModel: BalanceSummarySectionViewModel(type: .month, value: "", month: "December", first: true))
-        let incomeSection = BalanceSummarySectionView(viewModel: BalanceSummarySectionViewModel(type: .income, value: viewModel.income))
-        let expenseSection = BalanceSummarySectionView(viewModel: BalanceSummarySectionViewModel(type: .expense, value: viewModel.expenses))
-        let monthlyBalanceSection = BalanceSummarySectionView(viewModel: BalanceSummarySectionViewModel(type: .monthlyBalance, value: viewModel.monthlyBalance, last: true))
+        let sections = [BalanceSummarySectionViewModel(type: .month, value: "", month: "December", first: true),
+                          BalanceSummarySectionViewModel(type: .income, value: viewModel.income),
+                          BalanceSummarySectionViewModel(type: .expense, value: viewModel.expenses),
+                          BalanceSummarySectionViewModel(type: .monthlyBalance, value: viewModel.monthlyBalance, last: true)]
         
-        contentStackView.addArrangedSubview(monthSection)
-        contentStackView.addArrangedSubview(incomeSection)
-        contentStackView.addArrangedSubview(expenseSection)
-        contentStackView.addArrangedSubview(monthlyBalanceSection)
+        for section in sections {
+            let sectionView = BalanceSummarySectionView(viewModel: section)
+            contentStackView.addArrangedSubview(sectionView)
+        }
     }
 }
 
