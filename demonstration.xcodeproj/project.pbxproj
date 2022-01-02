@@ -28,7 +28,7 @@
 		EDC8429B2780CB4D00BA291C /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC8429A2780CB4D00BA291C /* ViewCode.swift */; };
 		EDC8429E2780CE7E00BA291C /* BalanceSummarySectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC8429D2780CE7E00BA291C /* BalanceSummarySectionView.swift */; };
 		EDC842A02780D05900BA291C /* BalanceSummarySectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC8429F2780D05900BA291C /* BalanceSummarySectionViewModel.swift */; };
-		EDC842A22780D99B00BA291C /* HomeCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842A12780D99B00BA291C /* HomeCircleView.swift */; };
+		EDC842A22780D99B00BA291C /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842A12780D99B00BA291C /* CircleView.swift */; };
 		EDC842A42782019300BA291C /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842A32782019200BA291C /* HomeService.swift */; };
 		EDC842A6278204BB00BA291C /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842A5278204BB00BA291C /* NetworkErrors.swift */; };
 		EDC842A82782078300BA291C /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842A72782078300BA291C /* HomeFactory.swift */; };
@@ -78,7 +78,7 @@
 		EDC8429A2780CB4D00BA291C /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 		EDC8429D2780CE7E00BA291C /* BalanceSummarySectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceSummarySectionView.swift; sourceTree = "<group>"; };
 		EDC8429F2780D05900BA291C /* BalanceSummarySectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceSummarySectionViewModel.swift; sourceTree = "<group>"; };
-		EDC842A12780D99B00BA291C /* HomeCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCircleView.swift; sourceTree = "<group>"; };
+		EDC842A12780D99B00BA291C /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		EDC842A32782019200BA291C /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		EDC842A5278204BB00BA291C /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
 		EDC842A72782078300BA291C /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
@@ -217,6 +217,7 @@
 		EDC842952780C79800BA291C /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				EDC842A12780D99B00BA291C /* CircleView.swift */,
 				EDC842962780C7A900BA291C /* ColorTheme.swift */,
 				EDC842982780C8C500BA291C /* UIColor+Hex.swift */,
 				EDC8429A2780CB4D00BA291C /* ViewCode.swift */,
@@ -231,7 +232,6 @@
 			children = (
 				EDC8429D2780CE7E00BA291C /* BalanceSummarySectionView.swift */,
 				EDC8429F2780D05900BA291C /* BalanceSummarySectionViewModel.swift */,
-				EDC842A12780D99B00BA291C /* HomeCircleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -379,7 +379,7 @@
 				EDC842942780C76200BA291C /* BuggetViewModel.swift in Sources */,
 				EDC8428C2780AAAD00BA291C /* HomePresenter.swift in Sources */,
 				EDC842542780A20900BA291C /* HomeViewController.swift in Sources */,
-				EDC842A22780D99B00BA291C /* HomeCircleView.swift in Sources */,
+				EDC842A22780D99B00BA291C /* CircleView.swift in Sources */,
 				EDC842882780A69C00BA291C /* HomeModels.swift in Sources */,
 				EDC842AC2782142B00BA291C /* UIView+loading.swift in Sources */,
 				EDC842502780A20900BA291C /* AppDelegate.swift in Sources */,

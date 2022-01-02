@@ -31,7 +31,7 @@ struct BalanceSummarySectionViewModel {
         case .expense:
             return "expenses"
         case .monthlyBalance:
-            return Int(value) ?? 1 > 0 ? "month savings" : "month defict"
+            return value.contains("-") ? "month defict" : "month savings"
         }
     }
 }

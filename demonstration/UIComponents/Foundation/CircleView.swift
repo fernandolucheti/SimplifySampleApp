@@ -7,19 +7,18 @@
 
 import UIKit
 
-final class HomeCircleView: UIView {
+final class CircleView: UIView {
     
-    var color: UIColor {
-        didSet {
-            backgroundColor = color
-        }
-    }
+    private var color: UIColor
+    private var borderColor: UIColor
+    private var size: CGFloat
+    private var borderWidth: CGFloat
     
-    var borderColor: UIColor
-    
-    init(color: UIColor, borderColor: UIColor = .primaryColor) {
+    init(color: UIColor, borderColor: UIColor, size: CGFloat, borderWidth: CGFloat) {
         self.color = color
         self.borderColor = borderColor
+        self.size = size
+        self.borderWidth = borderWidth
         super.init(frame: .zero)
         setupView()
     }
@@ -29,20 +28,20 @@ final class HomeCircleView: UIView {
     }
     
     override func layoutSubviews() {
-        layer.cornerRadius = 11
+        layer.cornerRadius = size/2
         clipsToBounds = true
         layer.borderColor = borderColor.cgColor
-        layer.borderWidth = 2.0
+        layer.borderWidth = borderWidth
     }
 }
 
-extension HomeCircleView: ViewCode {
+extension CircleView: ViewCode {
     
     func setupHierarchy() { }
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            heightAnchor.constraint(equalToConstant: 22),
+            heightAnchor.constraint(equalToConstant: size),
             widthAnchor.constraint(equalTo: heightAnchor)
         ])
     }

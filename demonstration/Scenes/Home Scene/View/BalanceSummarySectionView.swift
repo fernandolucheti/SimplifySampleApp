@@ -9,13 +9,7 @@ import UIKit
 
 final class BalanceSummarySectionView: UIView {
     
-    var viewModel: BalanceSummarySectionViewModel {
-        didSet {
-            ammountLabel.textColor = sectionColor
-            circleView.color = sectionColor
-            ammountTitleLabel.text = viewModel.title
-        }
-    }
+    var viewModel: BalanceSummarySectionViewModel
     
     private lazy var line: UIView = {
         let view = UIView()
@@ -33,13 +27,16 @@ final class BalanceSummarySectionView: UIView {
         case .expense:
             sectionColor = .secondaryAccent
         case .monthlyBalance:
-            sectionColor = Int(viewModel.value) ?? 1 > 0 ? .primaryAccent : .secondaryAccent
+            sectionColor = viewModel.value.contains("-") ? .secondaryAccent : .primaryAccent
         }
         return sectionColor
     }
     
-    private lazy var circleView: HomeCircleView = {
-        let circle = HomeCircleView(color: sectionColor, borderColor: viewModel.type == .month ? .secondaryColor : .primaryColor)
+    private lazy var circleView: CircleView = {
+        let circle = CircleView(color: sectionColor,
+                                borderColor: viewModel.type == .month ? .secondaryColor : .primaryColor,
+                                size: 22,
+                                borderWidth: 2)
         return circle
     }()
     
