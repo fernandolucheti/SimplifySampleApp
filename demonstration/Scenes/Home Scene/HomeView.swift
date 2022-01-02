@@ -42,7 +42,6 @@ final class HomeView: UIView {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 20)
         label.textColor = UIColor.primaryAccent
-        label.text = "$ 40,503.76"
         return label
     }()
     
@@ -54,26 +53,30 @@ final class HomeView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-}
-
-extension HomeView: ViewCode {
     
-    func setupHierarchy() {
-
-        addSubview(headerStackView)
-        headerStackView.addArrangedSubview(balanceTitleLabel)
-        headerStackView.addArrangedSubview(balanceLabel)
-        addSubview(contentStackView)
+    func setupView(_ viewModel: HomeModels.ViewModel) {
         
-        let monthSection = BalanceSummarySectionView(viewModel: BalanceSummarySectionViewModel(type: .month, value: 0.0, month: "December", first: true))
-        let incomeSection = BalanceSummarySectionView(viewModel: BalanceSummarySectionViewModel(type: .income, value: 30000.00))
-        let expenseSection = BalanceSummarySectionView(viewModel: BalanceSummarySectionViewModel(type: .expense, value: 120000.00))
-        let monthlyBalanceSection = BalanceSummarySectionView(viewModel: BalanceSummarySectionViewModel(type: .monthlyBalance, value: -18000.00, last: true))
+        balanceLabel.text = viewModel.balance
+        
+        let monthSection = BalanceSummarySectionView(viewModel: BalanceSummarySectionViewModel(type: .month, value: "", month: "December", first: true))
+        let incomeSection = BalanceSummarySectionView(viewModel: BalanceSummarySectionViewModel(type: .income, value: viewModel.income))
+        let expenseSection = BalanceSummarySectionView(viewModel: BalanceSummarySectionViewModel(type: .expense, value: viewModel.expenses))
+        let monthlyBalanceSection = BalanceSummarySectionView(viewModel: BalanceSummarySectionViewModel(type: .monthlyBalance, value: viewModel.monthlyBalance, last: true))
         
         contentStackView.addArrangedSubview(monthSection)
         contentStackView.addArrangedSubview(incomeSection)
         contentStackView.addArrangedSubview(expenseSection)
         contentStackView.addArrangedSubview(monthlyBalanceSection)
+    }
+}
+
+extension HomeView: ViewCode {
+    
+    func setupHierarchy() {
+        addSubview(headerStackView)
+        headerStackView.addArrangedSubview(balanceTitleLabel)
+        headerStackView.addArrangedSubview(balanceLabel)
+        addSubview(contentStackView)
     }
     
     func setupConstraints() {

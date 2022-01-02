@@ -17,7 +17,7 @@ struct BalanceSummarySectionViewModel {
     }
     
     let type: SectionType
-    let value: Double
+    let value: String
     var month: String? = nil
     var first: Bool = false
     var last: Bool = false
@@ -31,7 +31,7 @@ struct BalanceSummarySectionViewModel {
         case .expense:
             return "expenses"
         case .monthlyBalance:
-            return value > 0 ? "month savings" : "month defict"
+            return Int(value) ?? 1 > 0 ? "month savings" : "month defict"
         }
     }
 }

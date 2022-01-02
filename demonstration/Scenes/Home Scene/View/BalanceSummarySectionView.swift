@@ -33,7 +33,7 @@ final class BalanceSummarySectionView: UIView {
         case .expense:
             sectionColor = .secondaryAccent
         case .monthlyBalance:
-            sectionColor = viewModel.value > 0 ? .primaryAccent : .secondaryAccent
+            sectionColor = Int(viewModel.value) ?? 1 > 0 ? .primaryAccent : .secondaryAccent
         }
         return sectionColor
     }
@@ -48,7 +48,6 @@ final class BalanceSummarySectionView: UIView {
         label.font = .boldSystemFont(ofSize: 14)
         label.textColor = UIColor.secondaryColor
         label.text = viewModel.title
-        label.numberOfLines = 0
         return label
     }()
     
@@ -56,8 +55,7 @@ final class BalanceSummarySectionView: UIView {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 20)
         label.textColor = sectionColor
-        label.text = "$ \(abs(viewModel.value))"
-        label.numberOfLines = 0
+        label.text = viewModel.value
         return label
     }()
    
@@ -86,7 +84,7 @@ extension BalanceSummarySectionView: ViewCode {
         addSubview(circleView)
         addSubview(labelsStackView)
         labelsStackView.addArrangedSubview(ammountTitleLabel)
-        if viewModel.type != .month {
+        if !viewModel.value.isEmpty {
             labelsStackView.addArrangedSubview(ammountLabel)
         }
     }
@@ -101,7 +99,6 @@ extension BalanceSummarySectionView: ViewCode {
         labelsStackView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            heightAnchor.constraint(equalToConstant: 50),
             widthAnchor.constraint(equalToConstant: 200),
             line.topAnchor.constraint(equalTo: viewModel.first ? circleView.centerYAnchor : topAnchor),
             line.bottomAnchor.constraint(equalTo: viewModel.last ? circleView.centerYAnchor : bottomAnchor),

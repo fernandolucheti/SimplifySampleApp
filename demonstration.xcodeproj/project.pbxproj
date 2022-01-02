@@ -10,7 +10,6 @@
 		EDC842502780A20900BA291C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC8424F2780A20900BA291C /* AppDelegate.swift */; };
 		EDC842522780A20900BA291C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842512780A20900BA291C /* SceneDelegate.swift */; };
 		EDC842542780A20900BA291C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842532780A20900BA291C /* HomeViewController.swift */; };
-		EDC842572780A20900BA291C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDC842552780A20900BA291C /* Main.storyboard */; };
 		EDC842592780A20C00BA291C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDC842582780A20C00BA291C /* Assets.xcassets */; };
 		EDC8425C2780A20C00BA291C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDC8425A2780A20C00BA291C /* LaunchScreen.storyboard */; };
 		EDC842672780A20D00BA291C /* demonstrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842662780A20D00BA291C /* demonstrationTests.swift */; };
@@ -30,6 +29,11 @@
 		EDC8429E2780CE7E00BA291C /* BalanceSummarySectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC8429D2780CE7E00BA291C /* BalanceSummarySectionView.swift */; };
 		EDC842A02780D05900BA291C /* BalanceSummarySectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC8429F2780D05900BA291C /* BalanceSummarySectionViewModel.swift */; };
 		EDC842A22780D99B00BA291C /* HomeCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842A12780D99B00BA291C /* HomeCircleView.swift */; };
+		EDC842A42782019300BA291C /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842A32782019200BA291C /* HomeService.swift */; };
+		EDC842A6278204BB00BA291C /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842A5278204BB00BA291C /* NetworkErrors.swift */; };
+		EDC842A82782078300BA291C /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842A72782078300BA291C /* HomeFactory.swift */; };
+		EDC842AA27820C9400BA291C /* String+CurrencyFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842A927820C9400BA291C /* String+CurrencyFormat.swift */; };
+		EDC842AC2782142B00BA291C /* UIView+loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842AB2782142B00BA291C /* UIView+loading.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +58,6 @@
 		EDC8424F2780A20900BA291C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDC842512780A20900BA291C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EDC842532780A20900BA291C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		EDC842562780A20900BA291C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EDC842582780A20C00BA291C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDC8425B2780A20C00BA291C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDC8425D2780A20C00BA291C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +79,11 @@
 		EDC8429D2780CE7E00BA291C /* BalanceSummarySectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceSummarySectionView.swift; sourceTree = "<group>"; };
 		EDC8429F2780D05900BA291C /* BalanceSummarySectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceSummarySectionViewModel.swift; sourceTree = "<group>"; };
 		EDC842A12780D99B00BA291C /* HomeCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCircleView.swift; sourceTree = "<group>"; };
+		EDC842A32782019200BA291C /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		EDC842A5278204BB00BA291C /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
+		EDC842A72782078300BA291C /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
+		EDC842A927820C9400BA291C /* String+CurrencyFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+CurrencyFormat.swift"; sourceTree = "<group>"; };
+		EDC842AB2782142B00BA291C /* UIView+loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+loading.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +140,6 @@
 				EDC8427F2780A45100BA291C /* Network */,
 				EDC8424F2780A20900BA291C /* AppDelegate.swift */,
 				EDC842512780A20900BA291C /* SceneDelegate.swift */,
-				EDC842552780A20900BA291C /* Main.storyboard */,
 				EDC842582780A20C00BA291C /* Assets.xcassets */,
 				EDC8425A2780A20C00BA291C /* LaunchScreen.storyboard */,
 				EDC8425D2780A20C00BA291C /* Info.plist */,
@@ -162,6 +169,7 @@
 			children = (
 				EDC842802780A46200BA291C /* NetworkRequests.swift */,
 				EDC8428D2780AB0E00BA291C /* NetworkProvider.swift */,
+				EDC842A5278204BB00BA291C /* NetworkErrors.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -182,6 +190,8 @@
 				EDC842532780A20900BA291C /* HomeViewController.swift */,
 				EDC842892780AA9F00BA291C /* HomeView.swift */,
 				EDC8428B2780AAAD00BA291C /* HomePresenter.swift */,
+				EDC842A32782019200BA291C /* HomeService.swift */,
+				EDC842A72782078300BA291C /* HomeFactory.swift */,
 			);
 			path = "Home Scene";
 			sourceTree = "<group>";
@@ -210,6 +220,8 @@
 				EDC842962780C7A900BA291C /* ColorTheme.swift */,
 				EDC842982780C8C500BA291C /* UIColor+Hex.swift */,
 				EDC8429A2780CB4D00BA291C /* ViewCode.swift */,
+				EDC842A927820C9400BA291C /* String+CurrencyFormat.swift */,
+				EDC842AB2782142B00BA291C /* UIView+loading.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -336,7 +348,6 @@
 			files = (
 				EDC8425C2780A20C00BA291C /* LaunchScreen.storyboard in Resources */,
 				EDC842592780A20C00BA291C /* Assets.xcassets in Resources */,
-				EDC842572780A20900BA291C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +372,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDC842AA27820C9400BA291C /* String+CurrencyFormat.swift in Sources */,
+				EDC842A6278204BB00BA291C /* NetworkErrors.swift in Sources */,
 				EDC8429E2780CE7E00BA291C /* BalanceSummarySectionView.swift in Sources */,
 				EDC842A02780D05900BA291C /* BalanceSummarySectionViewModel.swift in Sources */,
 				EDC842942780C76200BA291C /* BuggetViewModel.swift in Sources */,
@@ -368,14 +381,17 @@
 				EDC842542780A20900BA291C /* HomeViewController.swift in Sources */,
 				EDC842A22780D99B00BA291C /* HomeCircleView.swift in Sources */,
 				EDC842882780A69C00BA291C /* HomeModels.swift in Sources */,
+				EDC842AC2782142B00BA291C /* UIView+loading.swift in Sources */,
 				EDC842502780A20900BA291C /* AppDelegate.swift in Sources */,
 				EDC8428A2780AA9F00BA291C /* HomeView.swift in Sources */,
 				EDC842912780C73200BA291C /* BudgetBar.swift in Sources */,
+				EDC842A42782019300BA291C /* HomeService.swift in Sources */,
 				EDC8428E2780AB0E00BA291C /* NetworkProvider.swift in Sources */,
 				EDC842812780A46200BA291C /* NetworkRequests.swift in Sources */,
 				EDC842992780C8C500BA291C /* UIColor+Hex.swift in Sources */,
 				EDC842972780C7A900BA291C /* ColorTheme.swift in Sources */,
 				EDC842522780A20900BA291C /* SceneDelegate.swift in Sources */,
+				EDC842A82782078300BA291C /* HomeFactory.swift in Sources */,
 				EDC8429B2780CB4D00BA291C /* ViewCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,14 +429,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EDC842552780A20900BA291C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EDC842562780A20900BA291C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EDC8425A2780A20C00BA291C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -559,7 +567,6 @@
 				INFOPLIST_FILE = demonstration/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -586,7 +593,6 @@
 				INFOPLIST_FILE = demonstration/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

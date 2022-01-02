@@ -18,4 +18,11 @@ struct HomeModels {
             case balance, income, expenses, monthlyBalance = "monthly_balance"
         }
     }
+    
+    struct ViewModel {
+        let balance: String
+        let income: String
+        let expenses: String
+        let monthlyBalance: String
+    }
 }
