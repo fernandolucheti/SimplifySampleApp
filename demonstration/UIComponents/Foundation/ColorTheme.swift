@@ -10,11 +10,15 @@ import UIKit
 extension UIColor {
     
     static var primaryColor: UIColor {
-        UIColor(hex: "#ffffff")
+        UIColor(hex: "#f7f7f7")
     }
     
     static var secondaryColor: UIColor {
-        UIColor(hex: "#c1c1c1")
+        UIColor(hex: "#c4c4c4")
+    }
+    
+    static var tertiaryColor: UIColor {
+        UIColor(hex: "#ffffff")
     }
     
     static var primaryAccent: UIColor {

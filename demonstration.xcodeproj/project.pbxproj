@@ -32,6 +32,10 @@
 		EDC842AA27820C9400BA291C /* String+CurrencyFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842A927820C9400BA291C /* String+CurrencyFormat.swift */; };
 		EDC842AC2782142B00BA291C /* UIView+loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842AB2782142B00BA291C /* UIView+loading.swift */; };
 		EDC842AE2782261D00BA291C /* UIStackView+RemoveSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842AD2782261D00BA291C /* UIStackView+RemoveSubviews.swift */; };
+		EDC842B12782284D00BA291C /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842B02782284D00BA291C /* HomeTabViewController.swift */; };
+		EDC842B327822A1D00BA291C /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842B227822A1D00BA291C /* HomeTabView.swift */; };
+		EDC842B52782395300BA291C /* TabBarTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842B42782395300BA291C /* TabBarTapGesture.swift */; };
+		EDC842B72782442300BA291C /* NavigationTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842B62782442300BA291C /* NavigationTabItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +84,10 @@
 		EDC842A927820C9400BA291C /* String+CurrencyFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+CurrencyFormat.swift"; sourceTree = "<group>"; };
 		EDC842AB2782142B00BA291C /* UIView+loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+loading.swift"; sourceTree = "<group>"; };
 		EDC842AD2782261D00BA291C /* UIStackView+RemoveSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+RemoveSubviews.swift"; sourceTree = "<group>"; };
+		EDC842B02782284D00BA291C /* HomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
+		EDC842B227822A1D00BA291C /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
+		EDC842B42782395300BA291C /* TabBarTapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarTapGesture.swift; sourceTree = "<group>"; };
+		EDC842B62782442300BA291C /* NavigationTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTabItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +180,7 @@
 		EDC842852780A67E00BA291C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				EDC842AF2782282A00BA291C /* TabBar Scene */,
 				EDC842862780A68800BA291C /* Home Scene */,
 			);
 			path = Scenes;
@@ -220,6 +229,17 @@
 				EDC8429F2780D05900BA291C /* BalanceSummarySectionViewModel.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		EDC842AF2782282A00BA291C /* TabBar Scene */ = {
+			isa = PBXGroup;
+			children = (
+				EDC842B02782284D00BA291C /* HomeTabViewController.swift */,
+				EDC842B227822A1D00BA291C /* HomeTabView.swift */,
+				EDC842B62782442300BA291C /* NavigationTabItem.swift */,
+				EDC842B42782395300BA291C /* TabBarTapGesture.swift */,
+			);
+			path = "TabBar Scene";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDC842AA27820C9400BA291C /* String+CurrencyFormat.swift in Sources */,
+				EDC842B72782442300BA291C /* NavigationTabItem.swift in Sources */,
 				EDC842A6278204BB00BA291C /* NetworkErrors.swift in Sources */,
 				EDC842AE2782261D00BA291C /* UIStackView+RemoveSubviews.swift in Sources */,
 				EDC8429E2780CE7E00BA291C /* BalanceSummarySectionView.swift in Sources */,
@@ -369,12 +390,15 @@
 				EDC842882780A69C00BA291C /* HomeModels.swift in Sources */,
 				EDC842AC2782142B00BA291C /* UIView+loading.swift in Sources */,
 				EDC842502780A20900BA291C /* AppDelegate.swift in Sources */,
+				EDC842B52782395300BA291C /* TabBarTapGesture.swift in Sources */,
 				EDC8428A2780AA9F00BA291C /* HomeView.swift in Sources */,
 				EDC842A42782019300BA291C /* HomeService.swift in Sources */,
 				EDC842812780A46200BA291C /* NetworkRequests.swift in Sources */,
+				EDC842B12782284D00BA291C /* HomeTabViewController.swift in Sources */,
 				EDC842992780C8C500BA291C /* UIColor+Hex.swift in Sources */,
 				EDC842972780C7A900BA291C /* ColorTheme.swift in Sources */,
 				EDC842522780A20900BA291C /* SceneDelegate.swift in Sources */,
+				EDC842B327822A1D00BA291C /* HomeTabView.swift in Sources */,
 				EDC842A82782078300BA291C /* HomeFactory.swift in Sources */,
 				EDC8429B2780CB4D00BA291C /* ViewCode.swift in Sources */,
 			);
