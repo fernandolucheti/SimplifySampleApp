@@ -10,7 +10,6 @@
 		EDC842502780A20900BA291C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC8424F2780A20900BA291C /* AppDelegate.swift */; };
 		EDC842522780A20900BA291C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842512780A20900BA291C /* SceneDelegate.swift */; };
 		EDC842542780A20900BA291C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842532780A20900BA291C /* HomeViewController.swift */; };
-		EDC842592780A20C00BA291C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDC842582780A20C00BA291C /* Assets.xcassets */; };
 		EDC8425C2780A20C00BA291C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDC8425A2780A20C00BA291C /* LaunchScreen.storyboard */; };
 		EDC842672780A20D00BA291C /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842662780A20D00BA291C /* HomePresenterTests.swift */; };
 		EDC842712780A20D00BA291C /* demonstrationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842702780A20D00BA291C /* demonstrationUITests.swift */; };
@@ -49,6 +48,7 @@
 		EDC842CF2782810A00BA291C /* SystemIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842CE2782810A00BA291C /* SystemIcons.swift */; };
 		EDC842D12782820500BA291C /* HomeTabBarFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842D02782820500BA291C /* HomeTabBarFactory.swift */; };
 		EDC842D52782923C00BA291C /* TransactionsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842D42782923C00BA291C /* TransactionsPresenterTests.swift */; };
+		EDC842D72782A74B00BA291C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDC842D62782A74B00BA291C /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +73,6 @@
 		EDC8424F2780A20900BA291C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDC842512780A20900BA291C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EDC842532780A20900BA291C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		EDC842582780A20C00BA291C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDC8425B2780A20C00BA291C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDC8425D2780A20C00BA291C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDC842622780A20D00BA291C /* demonstrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = demonstrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +113,7 @@
 		EDC842CE2782810A00BA291C /* SystemIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemIcons.swift; sourceTree = "<group>"; };
 		EDC842D02782820500BA291C /* HomeTabBarFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarFactory.swift; sourceTree = "<group>"; };
 		EDC842D42782923C00BA291C /* TransactionsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsPresenterTests.swift; sourceTree = "<group>"; };
+		EDC842D62782A74B00BA291C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,12 +165,12 @@
 		EDC8424E2780A20900BA291C /* demonstration */ = {
 			isa = PBXGroup;
 			children = (
+				EDC842D62782A74B00BA291C /* Assets.xcassets */,
 				EDC8428F2780C71800BA291C /* UIComponents */,
 				EDC842852780A67E00BA291C /* Scenes */,
 				EDC8427F2780A45100BA291C /* Network */,
 				EDC8424F2780A20900BA291C /* AppDelegate.swift */,
 				EDC842512780A20900BA291C /* SceneDelegate.swift */,
-				EDC842582780A20C00BA291C /* Assets.xcassets */,
 				EDC8425A2780A20C00BA291C /* LaunchScreen.storyboard */,
 				EDC8425D2780A20C00BA291C /* Info.plist */,
 			);
@@ -407,8 +407,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDC842D72782A74B00BA291C /* Assets.xcassets in Resources */,
 				EDC8425C2780A20C00BA291C /* LaunchScreen.storyboard in Resources */,
-				EDC842592780A20C00BA291C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,6 +641,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = demonstration/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Simplify;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -667,6 +668,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = demonstration/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Simplify;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
