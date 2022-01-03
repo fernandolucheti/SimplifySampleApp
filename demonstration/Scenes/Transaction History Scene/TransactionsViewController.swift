@@ -8,12 +8,26 @@
 import UIKit
 
 final class TransactionsViewController: UIViewController {
-    let transactionsView = TransactionsView()
     
-    init() {
-        super.init(nibName: nil, bundle: nil)
+    let presenter: TransactionsPresenter
+    let transactionsView = TransactionsView()
+    var transactions: [TransactionCellViewModel] = [] {
+        didSet {
+            transactionsView.reloadData()
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         transactionsView.tableViewDataSource = self
         view = transactionsView
+        presenter.fetch()
+        transactionsView.setLoading(true)
+    }
+    
+    init(presenter: TransactionsPresenter) {
+        self.presenter = presenter
+        super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -23,13 +37,26 @@ final class TransactionsViewController: UIViewController {
 
 extension TransactionsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        30
+        transactions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let viewModel = TransactionCellViewModel(value: 10.0, name: "restaurant", date: "01/01/2021", categoryName: "food", categoryColor: .red)
+        let viewModel = transactions[indexPath.row]
         let cell = TransactionCell(style: .default, reuseIdentifier: "transactionCell", viewModel: viewModel)
         cell.viewModel = viewModel
         return cell
     }
+}
+
+extension TransactionsViewController: TransactionsPresenterDelegate {
+    func presentSuccess(viewModel: TransactionModels.ViewModel) {
+        transactions = viewModel.transactions
+        transactionsView.setLoading(false)
+    }
+    
+    func presentError() {
+        transactionsView.setLoading(false)
+    }
+    
+    
 }

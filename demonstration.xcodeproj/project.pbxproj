@@ -42,6 +42,10 @@
 		EDC842C1278249D600BA291C /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842C0278249D600BA291C /* TransactionsView.swift */; };
 		EDC842C3278255DE00BA291C /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842C2278255DD00BA291C /* HeaderView.swift */; };
 		EDC842C5278257EB00BA291C /* UIView+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842C4278257EB00BA291C /* UIView+Rotate.swift */; };
+		EDC842C7278269BA00BA291C /* TransactionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842C6278269BA00BA291C /* TransactionsService.swift */; };
+		EDC842C9278269C400BA291C /* TransactionsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842C8278269C400BA291C /* TransactionsModels.swift */; };
+		EDC842CB27826A5600BA291C /* TransactionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842CA27826A5600BA291C /* TransactionsPresenter.swift */; };
+		EDC842CD27826DF800BA291C /* TransactionsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842CC27826DF800BA291C /* TransactionsFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +104,10 @@
 		EDC842C0278249D600BA291C /* TransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
 		EDC842C2278255DD00BA291C /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		EDC842C4278257EB00BA291C /* UIView+Rotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Rotate.swift"; sourceTree = "<group>"; };
+		EDC842C6278269BA00BA291C /* TransactionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsService.swift; sourceTree = "<group>"; };
+		EDC842C8278269C400BA291C /* TransactionsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsModels.swift; sourceTree = "<group>"; };
+		EDC842CA27826A5600BA291C /* TransactionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsPresenter.swift; sourceTree = "<group>"; };
+		EDC842CC27826DF800BA291C /* TransactionsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +270,10 @@
 			children = (
 				EDC842BB278245B700BA291C /* View */,
 				EDC842B92782457C00BA291C /* TransactionsViewController.swift */,
+				EDC842CA27826A5600BA291C /* TransactionsPresenter.swift */,
+				EDC842C6278269BA00BA291C /* TransactionsService.swift */,
+				EDC842C8278269C400BA291C /* TransactionsModels.swift */,
+				EDC842CC27826DF800BA291C /* TransactionsFactory.swift */,
 			);
 			path = "Transaction History Scene";
 			sourceTree = "<group>";
@@ -415,13 +427,16 @@
 				EDC842AA27820C9400BA291C /* String+CurrencyFormat.swift in Sources */,
 				EDC842B72782442300BA291C /* NavigationTabItem.swift in Sources */,
 				EDC842A6278204BB00BA291C /* NetworkErrors.swift in Sources */,
+				EDC842C9278269C400BA291C /* TransactionsModels.swift in Sources */,
 				EDC842AE2782261D00BA291C /* UIStackView+RemoveSubviews.swift in Sources */,
 				EDC8429E2780CE7E00BA291C /* BalanceSummarySectionView.swift in Sources */,
 				EDC842A02780D05900BA291C /* BalanceSummarySectionViewModel.swift in Sources */,
+				EDC842CB27826A5600BA291C /* TransactionsPresenter.swift in Sources */,
 				EDC8428C2780AAAD00BA291C /* HomePresenter.swift in Sources */,
 				EDC842542780A20900BA291C /* HomeViewController.swift in Sources */,
 				EDC842A22780D99B00BA291C /* CircleView.swift in Sources */,
 				EDC842882780A69C00BA291C /* HomeModels.swift in Sources */,
+				EDC842CD27826DF800BA291C /* TransactionsFactory.swift in Sources */,
 				EDC842AC2782142B00BA291C /* UIView+loading.swift in Sources */,
 				EDC842C5278257EB00BA291C /* UIView+Rotate.swift in Sources */,
 				EDC842502780A20900BA291C /* AppDelegate.swift in Sources */,
@@ -430,6 +445,7 @@
 				EDC842BA2782457C00BA291C /* TransactionsViewController.swift in Sources */,
 				EDC842A42782019300BA291C /* HomeService.swift in Sources */,
 				EDC842812780A46200BA291C /* NetworkRequests.swift in Sources */,
+				EDC842C7278269BA00BA291C /* TransactionsService.swift in Sources */,
 				EDC842B12782284D00BA291C /* HomeTabViewController.swift in Sources */,
 				EDC842BD278245C600BA291C /* TransactionCell.swift in Sources */,
 				EDC842992780C8C500BA291C /* UIColor+Hex.swift in Sources */,

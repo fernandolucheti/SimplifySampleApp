@@ -15,6 +15,7 @@ final class HomeTabViewController: UIViewController {
     let homeTabView: HomeTabView
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         setupView()
     }
     
@@ -24,9 +25,6 @@ final class HomeTabViewController: UIViewController {
         homeTabView = HomeTabView(itens: navigationItens)
         super.init(nibName: nil, bundle: nil)
         homeTabView.setDelegate(self)
-        for item in navigationItens {
-            addChild(item.viewController)
-        }
     }
     
     required init?(coder: NSCoder) {
@@ -34,9 +32,17 @@ final class HomeTabViewController: UIViewController {
     }
     
     private func setupContentView() {
+        
         for view in homeTabView.contentView.subviews {
             view.removeFromSuperview()
         }
+        let shouldAddChildViewController = !children.contains(where: { viewController in
+            viewController == contentViewController
+        })
+        if shouldAddChildViewController {
+            addChild(contentViewController)
+        }
+        contentViewController.willMove(toParent: self)
         homeTabView.contentView.addSubview(contentViewController.view)
         contentViewController.didMove(toParent: self)
     }

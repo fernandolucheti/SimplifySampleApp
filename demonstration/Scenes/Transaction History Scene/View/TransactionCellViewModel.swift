@@ -11,6 +11,5 @@ struct TransactionCellViewModel {
     let value: Double
     let name: String
     let date: String
-    let categoryName: String
     let categoryColor: UIColor
 }

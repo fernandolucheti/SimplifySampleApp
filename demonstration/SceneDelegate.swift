@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         let viewController = HomeTabViewController(
             navigationItens: [NavigationTabItem(icon: .add, viewController: HomeFactory.createViewController()),
-                              NavigationTabItem(icon: .add, viewController: TransactionsViewController())])
+                              NavigationTabItem(icon: .add, viewController: TransactionsFactory.createViewController())])
         window.rootViewController = viewController
         window.backgroundColor = .primaryColor
         self.window = window
