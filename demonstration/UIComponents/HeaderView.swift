@@ -67,7 +67,7 @@ extension HeaderView: ViewCode {
             toggleMonthView.heightAnchor.constraint(equalToConstant: 190),
             titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 20),
             titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10),
-            heightAnchor.constraint(equalToConstant: 130),
+            bottomAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 35),
         ])
         toggleMonthView.rotate(angle: 45)
     }
