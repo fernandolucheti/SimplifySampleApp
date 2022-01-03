@@ -48,6 +48,7 @@
 		EDC842CD27826DF800BA291C /* TransactionsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842CC27826DF800BA291C /* TransactionsFactory.swift */; };
 		EDC842CF2782810A00BA291C /* SystemIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842CE2782810A00BA291C /* SystemIcons.swift */; };
 		EDC842D12782820500BA291C /* HomeTabBarFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842D02782820500BA291C /* HomeTabBarFactory.swift */; };
+		EDC842D52782923C00BA291C /* TransactionsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842D42782923C00BA291C /* TransactionsPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,7 @@
 		EDC842CC27826DF800BA291C /* TransactionsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsFactory.swift; sourceTree = "<group>"; };
 		EDC842CE2782810A00BA291C /* SystemIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemIcons.swift; sourceTree = "<group>"; };
 		EDC842D02782820500BA291C /* HomeTabBarFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarFactory.swift; sourceTree = "<group>"; };
+		EDC842D42782923C00BA291C /* TransactionsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsPresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				EDC842662780A20D00BA291C /* HomePresenterTests.swift */,
+				EDC842D42782923C00BA291C /* TransactionsPresenterTests.swift */,
 			);
 			path = demonstrationTests;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDC842D52782923C00BA291C /* TransactionsPresenterTests.swift in Sources */,
 				EDC842672780A20D00BA291C /* HomePresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,7 +8,7 @@
 import Moya
 
 protocol TransactionsServiceLogic: AnyObject {
-    func fetch(completion: @escaping (Result<TransactionModels.Response, Error>) -> Void)
+    func fetch(completion: @escaping (Result<TransactionModels.Response, NetworkErrors>) -> Void)
 }
 
 final class TransactionsService: TransactionsServiceLogic {
@@ -19,7 +19,7 @@ final class TransactionsService: TransactionsServiceLogic {
         self.provider = provider
     }
     
-    func fetch(completion: @escaping (Result<TransactionModels.Response, Error>) -> Void) {
+    func fetch(completion: @escaping (Result<TransactionModels.Response, NetworkErrors>) -> Void) {
         provider.request(.transactions) { result in
             switch result {
             case.success(let response):

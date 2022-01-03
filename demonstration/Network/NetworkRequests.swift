@@ -38,6 +38,4 @@ extension NetworkRequests: TargetType {
     var headers: [String : String]? {
         ["Content-Type": "application/json"]
     }
-    
-    
 }

@@ -54,7 +54,7 @@ extension TransactionsViewController: TransactionsPresenterDelegate {
         transactionsView.setLoading(false)
     }
     
-    func presentError() {
+    func presentError(_ error: NetworkErrors) {
         transactionsView.setLoading(false)
     }
     
