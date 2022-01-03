@@ -1,5 +1,5 @@
 //
-//  HomeTabFactory.swift
+//  HomeTabBarFactory.swift
 //  demonstration
 //
 //  Created by Fernando on 02/01/22.
@@ -7,13 +7,14 @@
 
 import UIKit
 
-final class HomeTabFactory {
+final class HomeTabBarFactory {
     static func createViewController() -> UIViewController {
         
         func systemImage(_ name: String, filled: Bool = false) -> UIImage {
             let name = filled ? "\(name).fill" : name
-            return UIImage(systemName: name,
-                    withConfiguration: UIImage.SymbolConfiguration(pointSize: 28)) ?? UIImage()
+            let image = UIImage(systemName: name,
+                               withConfiguration: UIImage.SymbolConfiguration(pointSize: 28)) ?? UIImage()
+            return image.withTintColor(.primaryAccent)
         }
         
         let tabItens = [
@@ -25,6 +26,6 @@ final class HomeTabFactory {
                               iconFilled: systemImage(SystemIcons.list.rawValue, filled: true),
                               viewController: TransactionsFactory.createViewController())]
         
-        return HomeTabViewController(navigationItens: tabItens)
+        return VerticalTabBarController(navigationItens: tabItens)
     }
 }

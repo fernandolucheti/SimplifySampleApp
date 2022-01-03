@@ -11,7 +11,13 @@ protocol TabViewDelegate: AnyObject {
     func didSelectTabAtIndex(_ index: Int)
 }
 
-final class HomeTabView: UIView {
+final class VerticalTabBarView: UIView {
+    
+    override var backgroundColor: UIColor? {
+        didSet {
+            tabBarView.backgroundColor = backgroundColor
+        }
+    }
     
     var contentView: UIView = {
         let view = UIView()
@@ -21,7 +27,6 @@ final class HomeTabView: UIView {
     
     private let tabBarView: UIStackView = {
         let stackView = UIStackView()
-        stackView.backgroundColor = .tertiaryColor
         stackView.alignment = .fill
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
@@ -35,7 +40,6 @@ final class HomeTabView: UIView {
         self.navigationItens = itens
         super.init(frame: .zero)
         setupView()
-        backgroundColor = .tertiaryColor
     }
     
     func setDelegate(_ delegate: TabViewDelegate) {
@@ -58,8 +62,8 @@ final class HomeTabView: UIView {
         
         for (index, item) in navigationItens.enumerated() {
             let button = UIButton()
-            button.setImage(item.icon.withTintColor(.secondaryColor), for: .normal)
-            button.setImage(item.iconFilled.withTintColor(.primaryAccent), for: .selected)
+            button.setImage(item.icon, for: .normal)
+            button.setImage(item.iconFilled, for: .selected)
             if index == 0 {
                 button.isSelected = true
             }
@@ -74,7 +78,7 @@ final class HomeTabView: UIView {
     }
 }
 
-extension HomeTabView: ViewCode {
+extension VerticalTabBarView: ViewCode {
     
     func setupHierarchy() {
         addSubview(contentView)

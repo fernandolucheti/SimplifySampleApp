@@ -1,18 +1,17 @@
 //
-//  HomeTabController.swift
+//  VerticalTabBarController.swift
 //  demonstration
 //
 //  Created by Fernando on 02/01/22.
 //
 
-import Foundation
 import UIKit
 
-final class HomeTabViewController: UIViewController {
+final class VerticalTabBarController: UIViewController {
     
     var contentViewController: UIViewController
     let navigationItens: [NavigationTabItem]
-    let homeTabView: HomeTabView
+    let verticalTabBarView: VerticalTabBarView
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +21,9 @@ final class HomeTabViewController: UIViewController {
     init(navigationItens: [NavigationTabItem]) {
         self.contentViewController = navigationItens.first?.viewController ?? UIViewController()
         self.navigationItens = navigationItens
-        homeTabView = HomeTabView(itens: navigationItens)
+        verticalTabBarView = VerticalTabBarView(itens: navigationItens)
         super.init(nibName: nil, bundle: nil)
-        homeTabView.setDelegate(self)
+        verticalTabBarView.setDelegate(self)
     }
     
     required init?(coder: NSCoder) {
@@ -33,7 +32,7 @@ final class HomeTabViewController: UIViewController {
     
     private func setupContentView() {
         
-        for view in homeTabView.contentView.subviews {
+        for view in verticalTabBarView.contentView.subviews {
             view.removeFromSuperview()
         }
         let shouldAddChildViewController = !children.contains(where: { viewController in
@@ -43,12 +42,12 @@ final class HomeTabViewController: UIViewController {
             addChild(contentViewController)
         }
         contentViewController.willMove(toParent: self)
-        homeTabView.contentView.addSubview(contentViewController.view)
+        verticalTabBarView.contentView.addSubview(contentViewController.view)
         contentViewController.didMove(toParent: self)
     }
 }
 
-extension HomeTabViewController: TabViewDelegate {
+extension VerticalTabBarController: TabViewDelegate {
     
     func didSelectTabAtIndex(_ index: Int) {
         contentViewController = navigationItens[index].viewController
@@ -56,9 +55,9 @@ extension HomeTabViewController: TabViewDelegate {
     }
 }
 
-extension HomeTabViewController: ViewCode {
+extension VerticalTabBarController: ViewCode {
     func setupHierarchy() {
-        view = homeTabView
+        view = verticalTabBarView
         setupContentView()
     }
     
@@ -67,10 +66,14 @@ extension HomeTabViewController: ViewCode {
         contentViewController.view.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            contentViewController.view.leadingAnchor.constraint(equalTo: homeTabView.contentView.leadingAnchor),
-            contentViewController.view.trailingAnchor.constraint(equalTo: homeTabView.contentView.trailingAnchor),
-            contentViewController.view.topAnchor.constraint(equalTo: homeTabView.contentView.topAnchor),
-            contentViewController.view.bottomAnchor.constraint(equalTo: homeTabView.contentView.bottomAnchor)
+            contentViewController.view.leadingAnchor.constraint(equalTo: verticalTabBarView.contentView.leadingAnchor),
+            contentViewController.view.trailingAnchor.constraint(equalTo: verticalTabBarView.contentView.trailingAnchor),
+            contentViewController.view.topAnchor.constraint(equalTo: verticalTabBarView.contentView.topAnchor),
+            contentViewController.view.bottomAnchor.constraint(equalTo: verticalTabBarView.contentView.bottomAnchor)
         ])
+    }
+    
+    func configureView() {
+        verticalTabBarView.backgroundColor = .white
     }
 }
