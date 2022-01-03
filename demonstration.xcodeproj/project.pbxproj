@@ -12,7 +12,7 @@
 		EDC842542780A20900BA291C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842532780A20900BA291C /* HomeViewController.swift */; };
 		EDC842592780A20C00BA291C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDC842582780A20C00BA291C /* Assets.xcassets */; };
 		EDC8425C2780A20C00BA291C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDC8425A2780A20C00BA291C /* LaunchScreen.storyboard */; };
-		EDC842672780A20D00BA291C /* demonstrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842662780A20D00BA291C /* demonstrationTests.swift */; };
+		EDC842672780A20D00BA291C /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842662780A20D00BA291C /* HomePresenterTests.swift */; };
 		EDC842712780A20D00BA291C /* demonstrationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842702780A20D00BA291C /* demonstrationUITests.swift */; };
 		EDC842732780A20D00BA291C /* demonstrationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842722780A20D00BA291C /* demonstrationUITestsLaunchTests.swift */; };
 		EDC842812780A46200BA291C /* NetworkRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842802780A46200BA291C /* NetworkRequests.swift */; };
@@ -76,7 +76,7 @@
 		EDC8425B2780A20C00BA291C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDC8425D2780A20C00BA291C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDC842622780A20D00BA291C /* demonstrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = demonstrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDC842662780A20D00BA291C /* demonstrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demonstrationTests.swift; sourceTree = "<group>"; };
+		EDC842662780A20D00BA291C /* HomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
 		EDC8426C2780A20D00BA291C /* demonstrationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = demonstrationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDC842702780A20D00BA291C /* demonstrationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demonstrationUITests.swift; sourceTree = "<group>"; };
 		EDC842722780A20D00BA291C /* demonstrationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demonstrationUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -178,7 +178,7 @@
 		EDC842652780A20D00BA291C /* demonstrationTests */ = {
 			isa = PBXGroup;
 			children = (
-				EDC842662780A20D00BA291C /* demonstrationTests.swift */,
+				EDC842662780A20D00BA291C /* HomePresenterTests.swift */,
 			);
 			path = demonstrationTests;
 			sourceTree = "<group>";
@@ -228,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				EDC842952780C79800BA291C /* Foundation */,
+				EDC842A12780D99B00BA291C /* CircleView.swift */,
 				EDC842C2278255DD00BA291C /* HeaderView.swift */,
 				EDC842AF2782282A00BA291C /* VerticalTabBar */,
 			);
@@ -237,7 +238,6 @@
 		EDC842952780C79800BA291C /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				EDC842A12780D99B00BA291C /* CircleView.swift */,
 				EDC842962780C7A900BA291C /* ColorTheme.swift */,
 				EDC842982780C8C500BA291C /* UIColor+Hex.swift */,
 				EDC8429A2780CB4D00BA291C /* ViewCode.swift */,
@@ -472,7 +472,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDC842672780A20D00BA291C /* demonstrationTests.swift in Sources */,
+				EDC842672780A20D00BA291C /* HomePresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -38,7 +38,7 @@ extension HomeViewController: HomePresenterDelegate {
         view.setLoading(false)
     }
     
-    func presentError() {
+    func presentError(_ error: NetworkErrors) {
         homeView.setLoading(false)
     }
 }

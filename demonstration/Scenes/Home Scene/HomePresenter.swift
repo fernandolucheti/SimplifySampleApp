@@ -9,7 +9,7 @@ import Foundation
 
 protocol HomePresenterDelegate: AnyObject {
     func presentSuccess(viewModel: HomeModels.ViewModel)
-    func presentError()
+    func presentError(_ error: NetworkErrors)
 }
 
 final class HomePresenter {
@@ -30,8 +30,8 @@ final class HomePresenter {
             switch result {
             case .success(let response):
                 self.delegate?.presentSuccess(viewModel: self.createViewModel(response))
-            case .failure:
-                self.delegate?.presentError()
+            case .failure(let error):
+                self.delegate?.presentError(error)
             }
         }
     }

@@ -8,7 +8,7 @@
 import Moya
 
 protocol HomeServiceLogic: AnyObject {
-    func fetch(completion: @escaping (Result<HomeModels.Response, Error>) -> Void)
+    func fetch(completion: @escaping (Result<HomeModels.Response, NetworkErrors>) -> Void)
 }
 
 final class HomeService: HomeServiceLogic {
@@ -19,7 +19,7 @@ final class HomeService: HomeServiceLogic {
         self.provider = provider
     }
     
-    func fetch(completion: @escaping (Result<HomeModels.Response, Error>) -> Void) {
+    func fetch(completion: @escaping (Result<HomeModels.Response, NetworkErrors>) -> Void) {
         provider.request(.home) { result in
             switch result {
             case.success(let response):

@@ -96,8 +96,8 @@ extension VerticalTabBarView: ViewCode {
             contentView.bottomAnchor.constraint(equalTo: bottomAnchor),
             tabBarView.leadingAnchor.constraint(equalTo: contentView.trailingAnchor),
             tabBarView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            tabBarView.topAnchor.constraint(equalTo: topAnchor, constant: 80),
-            tabBarView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -80),
+            tabBarView.topAnchor.constraint(equalTo: topAnchor),
+            tabBarView.bottomAnchor.constraint(equalTo: bottomAnchor),
             tabBarView.widthAnchor.constraint(equalToConstant: 50)
         ])
     }
