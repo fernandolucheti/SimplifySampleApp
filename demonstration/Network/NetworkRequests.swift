@@ -38,4 +38,13 @@ extension NetworkRequests: TargetType {
     var headers: [String : String]? {
         ["Content-Type": "application/json"]
     }
+    
+    var sampleData: Data {
+        switch self {
+        case .home:
+            return "Home".json ?? Data()
+        case .transactions:
+            return "Transactions".json ?? Data()
+        }
+    }
 }

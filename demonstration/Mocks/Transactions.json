@@ -1,0 +1,34 @@
+{
+  "transactions": [
+   {
+        "value": 13.23,
+        "name": "Restaurant",
+        "date": "01/01/2021",
+        "category_color": "#F96766"
+   },
+   {
+        "value": 134.73,
+        "name": "Restaurant",
+        "date": "01/01/2021",
+        "category_color": "#F96766"
+   },
+   {
+        "value": 540.0,
+        "name": "Gas",
+        "date": "03/01/2021",
+        "category_color": "#A125C5"
+   },
+   {
+        "value": 23000.0,
+        "name": "Income",
+        "date": "04/01/2021",
+        "category_color": "#5698F8"
+   },
+   {
+        "value": 43.5,
+        "name": "Movie",
+        "date": "07/01/2021",
+        "category_color": "#DD0061"
+   }
+]
+}
