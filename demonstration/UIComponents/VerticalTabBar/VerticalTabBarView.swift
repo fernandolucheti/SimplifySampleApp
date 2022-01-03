@@ -60,6 +60,7 @@ final class VerticalTabBarView: UIView {
     
     private func setupNavigationItens() {
         
+        tabBarView.addArrangedSubview(UIView.spacer)
         for (index, item) in navigationItens.enumerated() {
             let button = UIButton()
             button.setImage(item.icon, for: .normal)
@@ -75,6 +76,7 @@ final class VerticalTabBarView: UIView {
             navigationItens[index].button = button
             tabBarView.addArrangedSubview(button)
         }
+        tabBarView.addArrangedSubview(UIView.spacer)
     }
 }
 

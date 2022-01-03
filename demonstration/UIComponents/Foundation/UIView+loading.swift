@@ -47,4 +47,8 @@ extension UIView {
             subview.removeFromSuperview()
         }
     }
+    
+    static var spacer: UIView {
+        UIView(frame: .zero)
+    }
 }
