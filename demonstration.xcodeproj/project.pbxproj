@@ -46,6 +46,8 @@
 		EDC842C9278269C400BA291C /* TransactionsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842C8278269C400BA291C /* TransactionsModels.swift */; };
 		EDC842CB27826A5600BA291C /* TransactionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842CA27826A5600BA291C /* TransactionsPresenter.swift */; };
 		EDC842CD27826DF800BA291C /* TransactionsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842CC27826DF800BA291C /* TransactionsFactory.swift */; };
+		EDC842CF2782810A00BA291C /* SystemIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842CE2782810A00BA291C /* SystemIcons.swift */; };
+		EDC842D12782820500BA291C /* HomeTabFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842D02782820500BA291C /* HomeTabFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +110,8 @@
 		EDC842C8278269C400BA291C /* TransactionsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsModels.swift; sourceTree = "<group>"; };
 		EDC842CA27826A5600BA291C /* TransactionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsPresenter.swift; sourceTree = "<group>"; };
 		EDC842CC27826DF800BA291C /* TransactionsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsFactory.swift; sourceTree = "<group>"; };
+		EDC842CE2782810A00BA291C /* SystemIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemIcons.swift; sourceTree = "<group>"; };
+		EDC842D02782820500BA291C /* HomeTabFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +244,7 @@
 				EDC842AB2782142B00BA291C /* UIView+loading.swift */,
 				EDC842AD2782261D00BA291C /* UIStackView+RemoveSubviews.swift */,
 				EDC842C4278257EB00BA291C /* UIView+Rotate.swift */,
+				EDC842CE2782810A00BA291C /* SystemIcons.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -261,6 +266,7 @@
 				EDC842B227822A1D00BA291C /* HomeTabView.swift */,
 				EDC842B62782442300BA291C /* NavigationTabItem.swift */,
 				EDC842B42782395300BA291C /* TabBarTapGesture.swift */,
+				EDC842D02782820500BA291C /* HomeTabFactory.swift */,
 			);
 			path = "TabBar Scene";
 			sourceTree = "<group>";
@@ -429,6 +435,7 @@
 				EDC842A6278204BB00BA291C /* NetworkErrors.swift in Sources */,
 				EDC842C9278269C400BA291C /* TransactionsModels.swift in Sources */,
 				EDC842AE2782261D00BA291C /* UIStackView+RemoveSubviews.swift in Sources */,
+				EDC842D12782820500BA291C /* HomeTabFactory.swift in Sources */,
 				EDC8429E2780CE7E00BA291C /* BalanceSummarySectionView.swift in Sources */,
 				EDC842A02780D05900BA291C /* BalanceSummarySectionViewModel.swift in Sources */,
 				EDC842CB27826A5600BA291C /* TransactionsPresenter.swift in Sources */,
@@ -447,6 +454,7 @@
 				EDC842812780A46200BA291C /* NetworkRequests.swift in Sources */,
 				EDC842C7278269BA00BA291C /* TransactionsService.swift in Sources */,
 				EDC842B12782284D00BA291C /* HomeTabViewController.swift in Sources */,
+				EDC842CF2782810A00BA291C /* SystemIcons.swift in Sources */,
 				EDC842BD278245C600BA291C /* TransactionCell.swift in Sources */,
 				EDC842992780C8C500BA291C /* UIColor+Hex.swift in Sources */,
 				EDC842972780C7A900BA291C /* ColorTheme.swift in Sources */,

@@ -22,7 +22,7 @@ final class HomeTabView: UIView {
     private let tabBarView: UIStackView = {
         let stackView = UIStackView()
         stackView.backgroundColor = .tertiaryColor
-        stackView.alignment = .center
+        stackView.alignment = .fill
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
         return stackView
@@ -59,7 +59,7 @@ final class HomeTabView: UIView {
         for (index, item) in navigationItens.enumerated() {
             let button = UIButton()
             button.setImage(item.icon.withTintColor(.secondaryColor), for: .normal)
-            button.setImage(item.icon.withTintColor(.primaryAccent), for: .selected)
+            button.setImage(item.iconFilled.withTintColor(.primaryAccent), for: .selected)
             if index == 0 {
                 button.isSelected = true
             }
@@ -97,6 +97,4 @@ extension HomeTabView: ViewCode {
             tabBarView.widthAnchor.constraint(equalToConstant: 50)
         ])
     }
-    
-    
 }

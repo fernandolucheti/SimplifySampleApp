@@ -9,7 +9,7 @@ import UIKit
 
 final class HeaderView: UIView {
     
-    let gradientLayer = CAGradientLayer()
+    private let gradientLayer = CAGradientLayer()
     
     var title: String? {
         didSet {
