@@ -10,6 +10,7 @@ import Moya
 
 enum NetworkRequests {
     case home
+    case transactions
 }
 
 extension NetworkRequests: TargetType {
@@ -18,7 +19,12 @@ extension NetworkRequests: TargetType {
     }
     
     var path: String {
-        "93fa1636-db03-43e2-8c56-9c0c212285f4"
+        switch self {
+        case .home:
+            return "93fa1636-db03-43e2-8c56-9c0c212285f4"
+        case .transactions:
+            return "f162c8e2-4a72-44d0-897a-b4990bf7dd28"
+        }
     }
     
     var method: Moya.Method {

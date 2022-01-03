@@ -32,6 +32,22 @@
 		EDC842AA27820C9400BA291C /* String+CurrencyFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842A927820C9400BA291C /* String+CurrencyFormat.swift */; };
 		EDC842AC2782142B00BA291C /* UIView+loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842AB2782142B00BA291C /* UIView+loading.swift */; };
 		EDC842AE2782261D00BA291C /* UIStackView+RemoveSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842AD2782261D00BA291C /* UIStackView+RemoveSubviews.swift */; };
+		EDC842B12782284D00BA291C /* VerticalTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842B02782284D00BA291C /* VerticalTabBarController.swift */; };
+		EDC842B327822A1D00BA291C /* VerticalTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842B227822A1D00BA291C /* VerticalTabBarView.swift */; };
+		EDC842B52782395300BA291C /* TabBarTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842B42782395300BA291C /* TabBarTapGesture.swift */; };
+		EDC842B72782442300BA291C /* NavigationTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842B62782442300BA291C /* NavigationTabItem.swift */; };
+		EDC842BA2782457C00BA291C /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842B92782457C00BA291C /* TransactionsViewController.swift */; };
+		EDC842BD278245C600BA291C /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842BC278245C600BA291C /* TransactionCell.swift */; };
+		EDC842BF2782471D00BA291C /* TransactionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842BE2782471D00BA291C /* TransactionCellViewModel.swift */; };
+		EDC842C1278249D600BA291C /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842C0278249D600BA291C /* TransactionsView.swift */; };
+		EDC842C3278255DE00BA291C /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842C2278255DD00BA291C /* HeaderView.swift */; };
+		EDC842C5278257EB00BA291C /* UIView+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842C4278257EB00BA291C /* UIView+Rotate.swift */; };
+		EDC842C7278269BA00BA291C /* TransactionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842C6278269BA00BA291C /* TransactionsService.swift */; };
+		EDC842C9278269C400BA291C /* TransactionsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842C8278269C400BA291C /* TransactionsModels.swift */; };
+		EDC842CB27826A5600BA291C /* TransactionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842CA27826A5600BA291C /* TransactionsPresenter.swift */; };
+		EDC842CD27826DF800BA291C /* TransactionsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842CC27826DF800BA291C /* TransactionsFactory.swift */; };
+		EDC842CF2782810A00BA291C /* SystemIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842CE2782810A00BA291C /* SystemIcons.swift */; };
+		EDC842D12782820500BA291C /* HomeTabBarFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842D02782820500BA291C /* HomeTabBarFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +96,22 @@
 		EDC842A927820C9400BA291C /* String+CurrencyFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+CurrencyFormat.swift"; sourceTree = "<group>"; };
 		EDC842AB2782142B00BA291C /* UIView+loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+loading.swift"; sourceTree = "<group>"; };
 		EDC842AD2782261D00BA291C /* UIStackView+RemoveSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+RemoveSubviews.swift"; sourceTree = "<group>"; };
+		EDC842B02782284D00BA291C /* VerticalTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalTabBarController.swift; sourceTree = "<group>"; };
+		EDC842B227822A1D00BA291C /* VerticalTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalTabBarView.swift; sourceTree = "<group>"; };
+		EDC842B42782395300BA291C /* TabBarTapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarTapGesture.swift; sourceTree = "<group>"; };
+		EDC842B62782442300BA291C /* NavigationTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTabItem.swift; sourceTree = "<group>"; };
+		EDC842B92782457C00BA291C /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
+		EDC842BC278245C600BA291C /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
+		EDC842BE2782471D00BA291C /* TransactionCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCellViewModel.swift; sourceTree = "<group>"; };
+		EDC842C0278249D600BA291C /* TransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
+		EDC842C2278255DD00BA291C /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		EDC842C4278257EB00BA291C /* UIView+Rotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Rotate.swift"; sourceTree = "<group>"; };
+		EDC842C6278269BA00BA291C /* TransactionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsService.swift; sourceTree = "<group>"; };
+		EDC842C8278269C400BA291C /* TransactionsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsModels.swift; sourceTree = "<group>"; };
+		EDC842CA27826A5600BA291C /* TransactionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsPresenter.swift; sourceTree = "<group>"; };
+		EDC842CC27826DF800BA291C /* TransactionsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsFactory.swift; sourceTree = "<group>"; };
+		EDC842CE2782810A00BA291C /* SystemIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemIcons.swift; sourceTree = "<group>"; };
+		EDC842D02782820500BA291C /* HomeTabBarFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +204,7 @@
 		EDC842852780A67E00BA291C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				EDC842B82782455100BA291C /* Transactions Scene */,
 				EDC842862780A68800BA291C /* Home Scene */,
 			);
 			path = Scenes;
@@ -186,6 +219,7 @@
 				EDC8428B2780AAAD00BA291C /* HomePresenter.swift */,
 				EDC842A32782019200BA291C /* HomeService.swift */,
 				EDC842A72782078300BA291C /* HomeFactory.swift */,
+				EDC842D02782820500BA291C /* HomeTabBarFactory.swift */,
 			);
 			path = "Home Scene";
 			sourceTree = "<group>";
@@ -194,6 +228,8 @@
 			isa = PBXGroup;
 			children = (
 				EDC842952780C79800BA291C /* Foundation */,
+				EDC842C2278255DD00BA291C /* HeaderView.swift */,
+				EDC842AF2782282A00BA291C /* VerticalTabBar */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -208,6 +244,8 @@
 				EDC842A927820C9400BA291C /* String+CurrencyFormat.swift */,
 				EDC842AB2782142B00BA291C /* UIView+loading.swift */,
 				EDC842AD2782261D00BA291C /* UIStackView+RemoveSubviews.swift */,
+				EDC842C4278257EB00BA291C /* UIView+Rotate.swift */,
+				EDC842CE2782810A00BA291C /* SystemIcons.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -218,6 +256,40 @@
 				EDC842892780AA9F00BA291C /* HomeView.swift */,
 				EDC8429D2780CE7E00BA291C /* BalanceSummarySectionView.swift */,
 				EDC8429F2780D05900BA291C /* BalanceSummarySectionViewModel.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EDC842AF2782282A00BA291C /* VerticalTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				EDC842B02782284D00BA291C /* VerticalTabBarController.swift */,
+				EDC842B227822A1D00BA291C /* VerticalTabBarView.swift */,
+				EDC842B62782442300BA291C /* NavigationTabItem.swift */,
+				EDC842B42782395300BA291C /* TabBarTapGesture.swift */,
+			);
+			path = VerticalTabBar;
+			sourceTree = "<group>";
+		};
+		EDC842B82782455100BA291C /* Transactions Scene */ = {
+			isa = PBXGroup;
+			children = (
+				EDC842BB278245B700BA291C /* View */,
+				EDC842B92782457C00BA291C /* TransactionsViewController.swift */,
+				EDC842CA27826A5600BA291C /* TransactionsPresenter.swift */,
+				EDC842C6278269BA00BA291C /* TransactionsService.swift */,
+				EDC842C8278269C400BA291C /* TransactionsModels.swift */,
+				EDC842CC27826DF800BA291C /* TransactionsFactory.swift */,
+			);
+			path = "Transactions Scene";
+			sourceTree = "<group>";
+		};
+		EDC842BB278245B700BA291C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EDC842BC278245C600BA291C /* TransactionCell.swift */,
+				EDC842BE2782471D00BA291C /* TransactionCellViewModel.swift */,
+				EDC842C0278249D600BA291C /* TransactionsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -359,24 +431,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDC842AA27820C9400BA291C /* String+CurrencyFormat.swift in Sources */,
+				EDC842B72782442300BA291C /* NavigationTabItem.swift in Sources */,
 				EDC842A6278204BB00BA291C /* NetworkErrors.swift in Sources */,
+				EDC842C9278269C400BA291C /* TransactionsModels.swift in Sources */,
 				EDC842AE2782261D00BA291C /* UIStackView+RemoveSubviews.swift in Sources */,
+				EDC842D12782820500BA291C /* HomeTabBarFactory.swift in Sources */,
 				EDC8429E2780CE7E00BA291C /* BalanceSummarySectionView.swift in Sources */,
 				EDC842A02780D05900BA291C /* BalanceSummarySectionViewModel.swift in Sources */,
+				EDC842CB27826A5600BA291C /* TransactionsPresenter.swift in Sources */,
 				EDC8428C2780AAAD00BA291C /* HomePresenter.swift in Sources */,
 				EDC842542780A20900BA291C /* HomeViewController.swift in Sources */,
 				EDC842A22780D99B00BA291C /* CircleView.swift in Sources */,
 				EDC842882780A69C00BA291C /* HomeModels.swift in Sources */,
+				EDC842CD27826DF800BA291C /* TransactionsFactory.swift in Sources */,
 				EDC842AC2782142B00BA291C /* UIView+loading.swift in Sources */,
+				EDC842C5278257EB00BA291C /* UIView+Rotate.swift in Sources */,
 				EDC842502780A20900BA291C /* AppDelegate.swift in Sources */,
+				EDC842B52782395300BA291C /* TabBarTapGesture.swift in Sources */,
 				EDC8428A2780AA9F00BA291C /* HomeView.swift in Sources */,
+				EDC842BA2782457C00BA291C /* TransactionsViewController.swift in Sources */,
 				EDC842A42782019300BA291C /* HomeService.swift in Sources */,
 				EDC842812780A46200BA291C /* NetworkRequests.swift in Sources */,
+				EDC842C7278269BA00BA291C /* TransactionsService.swift in Sources */,
+				EDC842B12782284D00BA291C /* VerticalTabBarController.swift in Sources */,
+				EDC842CF2782810A00BA291C /* SystemIcons.swift in Sources */,
+				EDC842BD278245C600BA291C /* TransactionCell.swift in Sources */,
 				EDC842992780C8C500BA291C /* UIColor+Hex.swift in Sources */,
 				EDC842972780C7A900BA291C /* ColorTheme.swift in Sources */,
 				EDC842522780A20900BA291C /* SceneDelegate.swift in Sources */,
+				EDC842B327822A1D00BA291C /* VerticalTabBarView.swift in Sources */,
+				EDC842C1278249D600BA291C /* TransactionsView.swift in Sources */,
+				EDC842BF2782471D00BA291C /* TransactionCellViewModel.swift in Sources */,
 				EDC842A82782078300BA291C /* HomeFactory.swift in Sources */,
 				EDC8429B2780CB4D00BA291C /* ViewCode.swift in Sources */,
+				EDC842C3278255DE00BA291C /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
