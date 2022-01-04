@@ -17,11 +17,29 @@ class HomePresenterTests: XCTestCase {
     func testFetch() throws {
         sut.setDelegate(homePresenterSpy)
         sut.fetch()
-        XCTAssertTrue(homePresenterSpy.viewModel?.month == "November")
+        
         XCTAssertTrue(homePresenterSpy.viewModel?.balance.currencyString() == "$100.00")
-        XCTAssertTrue(homePresenterSpy.viewModel?.income.currencyString() == "$200.00")
-        XCTAssertTrue(homePresenterSpy.viewModel?.expenses.currencyString() == "$100.00")
-        XCTAssertTrue(homePresenterSpy.viewModel?.monthlyBalance.currencyString() == "$100.00")
+        
+        let sections = homePresenterSpy.viewModel?.sections
+        let monthSection = sections?.filter({ section in
+            (section as? MonthSummarySectionViewModel) != nil
+        }).first as! MonthSummarySectionViewModel
+        XCTAssertTrue(monthSection.month == "November")
+        
+        let incomeSection = sections?.filter({ section in
+            (section as? BalanceSummarySectionViewModel)?.type == .income
+        }).first as! BalanceSummarySectionViewModel
+        XCTAssertTrue(incomeSection.value == 200.0)
+        
+        let expensesSection = sections?.filter({ section in
+            (section as? BalanceSummarySectionViewModel)?.type == .expense
+        }).first as! BalanceSummarySectionViewModel
+        XCTAssertTrue(expensesSection.value == 100.0)
+        
+        let monthlyBalanceSection = sections?.filter({ section in
+            (section as? BalanceSummarySectionViewModel)?.type == .monthlyBalance
+        }).first as! BalanceSummarySectionViewModel
+        XCTAssertTrue(monthlyBalanceSection.value == 100.0)
     }
     
     func testError() {

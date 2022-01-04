@@ -37,10 +37,12 @@ final class HomePresenter {
     }
     
     private func createViewModel(_ response: HomeModels.Response) -> HomeModels.ViewModel {
-        HomeModels.ViewModel(month: response.month,
-                             balance: response.balance,
-                             income: response.income,
-                             expenses: response.expenses,
-                             monthlyBalance: response.monthlyBalance)
+        
+        let sections: [SummarySectionViewModel] = [MonthSummarySectionViewModel(month: response.month, first: true),
+                                                   BalanceSummarySectionViewModel(type: .income, value: response.income),
+                                                   BalanceSummarySectionViewModel(type: .expense, value: response.expenses),
+                                                   BalanceSummarySectionViewModel(type: .monthlyBalance, value: response.monthlyBalance, last: true)]
+                                                
+        return HomeModels.ViewModel(balance: response.balance, sections: sections)
     }
 }

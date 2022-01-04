@@ -21,10 +21,7 @@ struct HomeModels {
     }
     
     struct ViewModel {
-        let month: String
         let balance: Double
-        let income: Double
-        let expenses: Double
-        let monthlyBalance: Double
+        let sections: [SummarySectionViewModel]
     }
 }
