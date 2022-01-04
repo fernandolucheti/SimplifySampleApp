@@ -1,5 +1,5 @@
 //
-//  BalanceSummaryView.swift
+//  SummarySectionView.swift
 //  demonstration
 //
 //  Created by Fernando on 01/01/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class BalanceSummarySectionView: UIView {
+final class SummarySectionView: UIView {
     
     var viewModel: SummarySectionViewModel
     
@@ -59,7 +59,7 @@ final class BalanceSummarySectionView: UIView {
     }
 }
 
-extension BalanceSummarySectionView: ViewCode {
+extension SummarySectionView: ViewCode {
     
     func setupHierarchy() {
         addSubview(line)

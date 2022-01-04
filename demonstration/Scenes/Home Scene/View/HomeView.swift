@@ -59,7 +59,7 @@ final class HomeView: UIView {
                           BalanceSummarySectionViewModel(type: .monthlyBalance, value: viewModel.monthlyBalance, last: true)]
         
         for section in sections {
-            let sectionView = BalanceSummarySectionView(viewModel: section)
+            let sectionView = SummarySectionView(viewModel: section)
             contentStackView.addArrangedSubview(sectionView)
         }
     }

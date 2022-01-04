@@ -1,5 +1,5 @@
 //
-//  BalanceSummarySectionViewModel.swift
+//  SummarySectionViewModel.swift
 //  demonstration
 //
 //  Created by Fernando on 01/01/22.

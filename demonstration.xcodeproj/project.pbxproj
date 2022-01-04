@@ -28,8 +28,8 @@
 		EDC842972780C7A900BA291C /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842962780C7A900BA291C /* ColorTheme.swift */; };
 		EDC842992780C8C500BA291C /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842982780C8C500BA291C /* UIColor+Hex.swift */; };
 		EDC8429B2780CB4D00BA291C /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC8429A2780CB4D00BA291C /* ViewCode.swift */; };
-		EDC8429E2780CE7E00BA291C /* BalanceSummarySectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC8429D2780CE7E00BA291C /* BalanceSummarySectionView.swift */; };
-		EDC842A02780D05900BA291C /* BalanceSummarySectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC8429F2780D05900BA291C /* BalanceSummarySectionViewModel.swift */; };
+		EDC8429E2780CE7E00BA291C /* SummarySectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC8429D2780CE7E00BA291C /* SummarySectionView.swift */; };
+		EDC842A02780D05900BA291C /* SummarySectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC8429F2780D05900BA291C /* SummarySectionViewModel.swift */; };
 		EDC842A22780D99B00BA291C /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842A12780D99B00BA291C /* CircleView.swift */; };
 		EDC842A42782019300BA291C /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842A32782019200BA291C /* HomeService.swift */; };
 		EDC842A6278204BB00BA291C /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842A5278204BB00BA291C /* NetworkErrors.swift */; };
@@ -99,8 +99,8 @@
 		EDC842962780C7A900BA291C /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
 		EDC842982780C8C500BA291C /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		EDC8429A2780CB4D00BA291C /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
-		EDC8429D2780CE7E00BA291C /* BalanceSummarySectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceSummarySectionView.swift; sourceTree = "<group>"; };
-		EDC8429F2780D05900BA291C /* BalanceSummarySectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceSummarySectionViewModel.swift; sourceTree = "<group>"; };
+		EDC8429D2780CE7E00BA291C /* SummarySectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummarySectionView.swift; sourceTree = "<group>"; };
+		EDC8429F2780D05900BA291C /* SummarySectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummarySectionViewModel.swift; sourceTree = "<group>"; };
 		EDC842A12780D99B00BA291C /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		EDC842A32782019200BA291C /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		EDC842A5278204BB00BA291C /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
@@ -291,8 +291,8 @@
 			isa = PBXGroup;
 			children = (
 				EDC842892780AA9F00BA291C /* HomeView.swift */,
-				EDC8429D2780CE7E00BA291C /* BalanceSummarySectionView.swift */,
-				EDC8429F2780D05900BA291C /* BalanceSummarySectionViewModel.swift */,
+				EDC8429D2780CE7E00BA291C /* SummarySectionView.swift */,
+				EDC8429F2780D05900BA291C /* SummarySectionViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -476,8 +476,8 @@
 				ED8986DC2782E7BE00CC21BF /* String+json.swift in Sources */,
 				EDC842AE2782261D00BA291C /* UIStackView+RemoveSubviews.swift in Sources */,
 				EDC842D12782820500BA291C /* HomeTabBarFactory.swift in Sources */,
-				EDC8429E2780CE7E00BA291C /* BalanceSummarySectionView.swift in Sources */,
-				EDC842A02780D05900BA291C /* BalanceSummarySectionViewModel.swift in Sources */,
+				EDC8429E2780CE7E00BA291C /* SummarySectionView.swift in Sources */,
+				EDC842A02780D05900BA291C /* SummarySectionViewModel.swift in Sources */,
 				EDC842CB27826A5600BA291C /* TransactionsPresenter.swift in Sources */,
 				EDC8428C2780AAAD00BA291C /* HomePresenter.swift in Sources */,
 				EDC842542780A20900BA291C /* HomeViewController.swift in Sources */,
