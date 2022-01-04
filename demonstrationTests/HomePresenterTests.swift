@@ -18,10 +18,10 @@ class HomePresenterTests: XCTestCase {
         sut.setDelegate(homePresenterSpy)
         sut.fetch()
         XCTAssertTrue(homePresenterSpy.viewModel?.month == "November")
-        XCTAssertTrue(homePresenterSpy.viewModel?.balance == "$100.00")
-        XCTAssertTrue(homePresenterSpy.viewModel?.income == "$200.00")
-        XCTAssertTrue(homePresenterSpy.viewModel?.expenses == "$100.00")
-        XCTAssertTrue(homePresenterSpy.viewModel?.monthlyBalance == "$100.00")
+        XCTAssertTrue(homePresenterSpy.viewModel?.balance.currencyString() == "$100.00")
+        XCTAssertTrue(homePresenterSpy.viewModel?.income.currencyString() == "$200.00")
+        XCTAssertTrue(homePresenterSpy.viewModel?.expenses.currencyString() == "$100.00")
+        XCTAssertTrue(homePresenterSpy.viewModel?.monthlyBalance.currencyString() == "$100.00")
     }
     
     func testError() {
