@@ -9,7 +9,7 @@ import UIKit
 
 final class BalanceSummarySectionView: UIView {
     
-    var viewModel: BalanceSummarySectionViewModel
+    var viewModel: SummarySectionViewModel
     
     private lazy var line: UIView = {
         let view = UIView()
@@ -17,24 +17,9 @@ final class BalanceSummarySectionView: UIView {
         return view
     }()
     
-    private var sectionColor: UIColor {
-        let sectionColor: UIColor
-        switch viewModel.type {
-        case .month:
-            sectionColor = .primaryColor
-        case .income:
-            sectionColor = .primaryAccent
-        case .expense:
-            sectionColor = .secondaryAccent
-        case .monthlyBalance:
-            sectionColor = viewModel.value.contains("-") ? .secondaryAccent : .primaryAccent
-        }
-        return sectionColor
-    }
-    
     private lazy var circleView: CircleView = {
-        let circle = CircleView(color: sectionColor,
-                                borderColor: viewModel.type == .month ? .secondaryColor : .primaryColor,
+        let circle = CircleView(color: viewModel.sectionColor,
+                                borderColor: viewModel.borderColor,
                                 size: 22,
                                 borderWidth: 2)
         return circle
@@ -51,8 +36,8 @@ final class BalanceSummarySectionView: UIView {
     private lazy var ammountLabel: UILabel = {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 20)
-        label.textColor = sectionColor
-        label.text = viewModel.value
+        label.textColor = viewModel.sectionColor
+        label.text = (viewModel as? BalanceSummarySectionViewModel)?.value.currencyString()
         return label
     }()
    
@@ -63,7 +48,7 @@ final class BalanceSummarySectionView: UIView {
         return stackView
     }()
     
-    init(viewModel: BalanceSummarySectionViewModel) {
+    init(viewModel: SummarySectionViewModel) {
         self.viewModel = viewModel
         super.init(frame: .zero)
         setupView()
@@ -81,7 +66,7 @@ extension BalanceSummarySectionView: ViewCode {
         addSubview(circleView)
         addSubview(labelsStackView)
         labelsStackView.addArrangedSubview(ammountTitleLabel)
-        if !viewModel.value.isEmpty {
+        if (viewModel as? BalanceSummarySectionViewModel) != nil {
             labelsStackView.addArrangedSubview(ammountLabel)
         }
     }

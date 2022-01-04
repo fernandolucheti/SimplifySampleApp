@@ -22,9 +22,9 @@ struct HomeModels {
     
     struct ViewModel {
         let month: String
-        let balance: String
-        let income: String
-        let expenses: String
-        let monthlyBalance: String
+        let balance: Double
+        let income: Double
+        let expenses: Double
+        let monthlyBalance: Double
     }
 }

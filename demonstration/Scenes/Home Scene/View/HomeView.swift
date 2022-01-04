@@ -50,10 +50,10 @@ final class HomeView: UIView {
     
     func setupView(_ viewModel: HomeModels.ViewModel) {
         
-        balanceLabel.text = viewModel.balance
+        balanceLabel.text = viewModel.balance.currencyString()
         contentStackView.removeAllArrangedSubviews()
         
-        let sections = [BalanceSummarySectionViewModel(type: .month, value: "", month: viewModel.month, first: true),
+        let sections: [SummarySectionViewModel] = [MonthSummarySectionViewModel(month: viewModel.month, first: true),
                           BalanceSummarySectionViewModel(type: .income, value: viewModel.income),
                           BalanceSummarySectionViewModel(type: .expense, value: viewModel.expenses),
                           BalanceSummarySectionViewModel(type: .monthlyBalance, value: viewModel.monthlyBalance, last: true)]
