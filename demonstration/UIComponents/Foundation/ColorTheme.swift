@@ -10,15 +10,18 @@ import UIKit
 extension UIColor {
     
     static var primaryColor: UIColor {
-        UIColor(hex: "#f7f7f7")
+        return UIColor { (traits) -> UIColor in
+            return traits.userInterfaceStyle == .dark ?
+            UIColor(hex: "#121212") : UIColor(hex: "#f7f7f7")
+        }
     }
     
     static var secondaryColor: UIColor {
-        UIColor(hex: "#b0b0b0")
+        UIColor.systemGray2
     }
     
     static var tertiaryColor: UIColor {
-        UIColor(hex: "#ffffff")
+        UIColor.systemBackground
     }
     
     static var primaryAccent: UIColor {
@@ -29,4 +32,5 @@ extension UIColor {
         UIColor(hex: "#f9777e")
     }
 }
+
 
