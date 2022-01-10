@@ -37,7 +37,7 @@ final class SummarySectionView: UIView {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 20)
         label.textColor = viewModel.sectionColor.color
-        label.text = (viewModel as? BalanceSummarySectionViewModel)?.value.currencyString()
+        label.text = viewModel.subTitle
         return label
     }()
    
@@ -66,7 +66,7 @@ extension SummarySectionView: ViewCode {
         addSubview(circleView)
         addSubview(labelsStackView)
         labelsStackView.addArrangedSubview(ammountTitleLabel)
-        if (viewModel as? BalanceSummarySectionViewModel) != nil {
+        if viewModel.subTitle != nil {
             labelsStackView.addArrangedSubview(ammountLabel)
         }
     }

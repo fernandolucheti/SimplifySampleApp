@@ -11,6 +11,7 @@ protocol SummarySectionViewModel {
     var first: Bool { get }
     var last: Bool { get }
     var title: String { get }
+    var subTitle: String? { get }
     var sectionColor: ColorTheme { get }
     var borderColor: ColorTheme { get }
 }
@@ -19,6 +20,7 @@ struct MonthSummarySectionViewModel: SummarySectionViewModel {
     var month: String
     var first: Bool = false
     var last: Bool = false
+    var subTitle: String? = nil
     var title: String {
         month
     }
@@ -49,6 +51,10 @@ struct BalanceSummarySectionViewModel: SummarySectionViewModel {
         case .monthlyBalance:
             return value < 0 ? "Month defict" : "Month savings"
         }
+    }
+    
+    var subTitle: String? {
+        value.currencyString()
     }
     
     var sectionColor: ColorTheme {
