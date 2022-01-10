@@ -13,9 +13,7 @@ final class VerticalTabBarButtonsFactory {
             let button = UIButton()
             button.setImage(item.icon, for: .normal)
             button.setImage(item.iconFilled, for: .selected)
-            if index == 0 {
-                button.isSelected = true
-            }
+            button.isSelected = index == 0
             return button
         }
     }

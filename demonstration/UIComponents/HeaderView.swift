@@ -84,8 +84,4 @@ extension HeaderView: ViewCode {
         toggleMonthView.rotate(angle: 45)
     }
     
-    func configureView() {
-       
-    }
-    
 }
