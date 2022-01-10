@@ -27,7 +27,7 @@ final class HomeView: UIView {
     private let balanceTitleLabel: UILabel = {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 14)
-        label.textColor = UIColor.secondaryColor
+        label.textColor = ColorTheme.secondaryColor.color
         label.text = "Sum balance in accounts"
         return label
     }()
@@ -35,7 +35,7 @@ final class HomeView: UIView {
     private let balanceLabel: UILabel = {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 26)
-        label.textColor = UIColor.primaryAccent
+        label.textColor = ColorTheme.primaryAccent.color
         return label
     }()
     
@@ -89,6 +89,6 @@ extension HomeView: ViewCode {
     }
     
     func configureView() {
-        backgroundColor = .primaryColor
+        backgroundColor = ColorTheme.primaryColor.color
     }
 }

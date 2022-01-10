@@ -74,6 +74,6 @@ extension VerticalTabBarController: ViewCode {
     }
     
     func configureView() {
-        verticalTabBarView.backgroundColor = .tertiaryColor
+        verticalTabBarView.backgroundColor = ColorTheme.tertiaryColor.color
     }
 }

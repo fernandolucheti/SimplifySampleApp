@@ -19,11 +19,7 @@ final class VerticalTabBarView: UIView {
         }
     }
     
-    var contentView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .primaryColor
-        return view
-    }()
+    var contentView = UIView()
     
     private let tabBarView: UIStackView = {
         let stackView = UIStackView()

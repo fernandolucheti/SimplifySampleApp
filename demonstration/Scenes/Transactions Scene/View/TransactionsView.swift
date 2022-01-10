@@ -18,7 +18,7 @@ final class TransactionsView: UIView {
     
     private let lineView: UIView = {
         let view = UIView()
-        view.backgroundColor = .secondaryColor
+        view.backgroundColor = ColorTheme.secondaryColor.color
         return view
     }()
     
@@ -79,7 +79,7 @@ extension TransactionsView: ViewCode {
     }
     
     func configureView() {
-        backgroundColor = .primaryColor
+        backgroundColor = ColorTheme.primaryColor.color
         headerView.title = "Transactions"
     }
 }

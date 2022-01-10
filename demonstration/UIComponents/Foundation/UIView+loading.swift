@@ -20,9 +20,9 @@ extension UIView {
         
         let background = UIView()
         background.tag = ViewTags.loading.rawValue
-        background.backgroundColor = UIColor.primaryColor
+        background.backgroundColor = ColorTheme.primaryColor.color
         let loading = UIActivityIndicatorView(style: .large)
-        loading.color = .secondaryColor
+        loading.color = ColorTheme.secondaryColor.color
         loading.tag = ViewTags.loading.rawValue
         background.addSubview(loading)
         addSubview(background)
