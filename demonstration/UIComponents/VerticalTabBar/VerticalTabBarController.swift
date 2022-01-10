@@ -21,7 +21,8 @@ final class VerticalTabBarController: UIViewController {
     init(navigationItens: [NavigationTabItem]) {
         self.contentViewController = navigationItens.first?.viewController ?? UIViewController()
         self.navigationItens = navigationItens
-        verticalTabBarView = VerticalTabBarView(itens: navigationItens)
+        let viewItens = VerticalTabBarButtonsFactory.createButtonsFor(navigationItens)
+        verticalTabBarView = VerticalTabBarView(buttons: viewItens)
         super.init(nibName: nil, bundle: nil)
         verticalTabBarView.setDelegate(self)
     }
