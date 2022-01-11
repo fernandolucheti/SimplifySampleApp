@@ -13,13 +13,13 @@ final class SummarySectionView: UIView {
     
     private lazy var line: UIView = {
         let view = UIView()
-        view.backgroundColor = .secondaryColor
+        view.backgroundColor = ColorTheme.secondaryColor.color
         return view
     }()
     
     private lazy var circleView: CircleView = {
-        let circle = CircleView(color: viewModel.sectionColor,
-                                borderColor: viewModel.borderColor,
+        let circle = CircleView(color: viewModel.sectionColor.color,
+                                borderColor: viewModel.borderColor.color,
                                 size: 22,
                                 borderWidth: 2)
         return circle
@@ -28,7 +28,7 @@ final class SummarySectionView: UIView {
     private lazy var ammountTitleLabel: UILabel = {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 14)
-        label.textColor = UIColor.secondaryColor
+        label.textColor = ColorTheme.secondaryColor.color
         label.text = viewModel.title
         return label
     }()
@@ -36,8 +36,8 @@ final class SummarySectionView: UIView {
     private lazy var ammountLabel: UILabel = {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 20)
-        label.textColor = viewModel.sectionColor
-        label.text = (viewModel as? BalanceSummarySectionViewModel)?.value.currencyString()
+        label.textColor = viewModel.sectionColor.color
+        label.text = viewModel.subTitle
         return label
     }()
    
@@ -66,7 +66,7 @@ extension SummarySectionView: ViewCode {
         addSubview(circleView)
         addSubview(labelsStackView)
         labelsStackView.addArrangedSubview(ammountTitleLabel)
-        if (viewModel as? BalanceSummarySectionViewModel) != nil {
+        if viewModel.subTitle != nil {
             labelsStackView.addArrangedSubview(ammountLabel)
         }
     }

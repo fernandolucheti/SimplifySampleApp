@@ -55,6 +55,7 @@
 		EDC842D12782820500BA291C /* HomeTabBarFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842D02782820500BA291C /* HomeTabBarFactory.swift */; };
 		EDC842D52782923C00BA291C /* TransactionsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC842D42782923C00BA291C /* TransactionsPresenterTests.swift */; };
 		EDC842D72782A74B00BA291C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDC842D62782A74B00BA291C /* Assets.xcassets */; };
+		EDE60800278CACC8005A997D /* VerticalTabBarButtonsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE607FF278CACC8005A997D /* VerticalTabBarButtonsFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,7 @@
 		EDC842D02782820500BA291C /* HomeTabBarFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarFactory.swift; sourceTree = "<group>"; };
 		EDC842D42782923C00BA291C /* TransactionsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsPresenterTests.swift; sourceTree = "<group>"; };
 		EDC842D62782A74B00BA291C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EDE607FF278CACC8005A997D /* VerticalTabBarButtonsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalTabBarButtonsFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,6 +306,7 @@
 				EDC842B227822A1D00BA291C /* VerticalTabBarView.swift */,
 				EDC842B62782442300BA291C /* NavigationTabItem.swift */,
 				EDC842B42782395300BA291C /* TabBarTapGesture.swift */,
+				EDE607FF278CACC8005A997D /* VerticalTabBarButtonsFactory.swift */,
 			);
 			path = VerticalTabBar;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 				EDC842B327822A1D00BA291C /* VerticalTabBarView.swift in Sources */,
 				EDC842C1278249D600BA291C /* TransactionsView.swift in Sources */,
 				EDC842BF2782471D00BA291C /* TransactionCellViewModel.swift in Sources */,
+				EDE60800278CACC8005A997D /* VerticalTabBarButtonsFactory.swift in Sources */,
 				EDC842A82782078300BA291C /* HomeFactory.swift in Sources */,
 				EDC8429B2780CB4D00BA291C /* ViewCode.swift in Sources */,
 				EDC842C3278255DE00BA291C /* HeaderView.swift in Sources */,

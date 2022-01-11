@@ -14,7 +14,7 @@ final class HomeTabBarFactory {
             let name = filled ? "\(name).fill" : name
             let image = UIImage(systemName: name,
                                withConfiguration: UIImage.SymbolConfiguration(pointSize: 28)) ?? UIImage()
-            return image.withTintColor(.primaryAccent)
+            return image.withTintColor(ColorTheme.primaryAccent.color)
         }
         
         let tabItens = [

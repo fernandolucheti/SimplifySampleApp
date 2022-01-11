@@ -12,22 +12,22 @@ class TransactionsPresenterTests: XCTestCase {
     
     lazy var service = TransactionsServiceMock()
     lazy var sut = TransactionsPresenter(service: service)
-    lazy var homePresenterSpy = TransactionsPresenterSpy()
+    lazy var transactionsPresenterSpy = TransactionsPresenterSpy()
     
     func testFetch() throws {
-        sut.setDelegate(homePresenterSpy)
+        sut.setDelegate(transactionsPresenterSpy)
         sut.fetch()
-        XCTAssertTrue(homePresenterSpy.viewModel?.transactions.first?.value == 50.0)
-        XCTAssertTrue(homePresenterSpy.viewModel?.transactions.first?.name == "Restaurant")
-        XCTAssertTrue(homePresenterSpy.viewModel?.transactions.first?.date == "01/01/2022")
-        XCTAssertTrue(UIColor(hex: "#ffffff").isEqual(homePresenterSpy.viewModel?.transactions.first?.categoryColor))
+        XCTAssertTrue(transactionsPresenterSpy.viewModel?.transactions.first?.value == 50.0)
+        XCTAssertTrue(transactionsPresenterSpy.viewModel?.transactions.first?.name == "Restaurant")
+        XCTAssertTrue(transactionsPresenterSpy.viewModel?.transactions.first?.date == "01/01/2022")
+        XCTAssertTrue(transactionsPresenterSpy.viewModel?.transactions.first?.categoryColor == "#ffffff")
     }
     
     func testError() {
         sut = TransactionsPresenter(service: TransactionsServiceErrorMock())
-        sut.setDelegate(homePresenterSpy)
+        sut.setDelegate(transactionsPresenterSpy)
         sut.fetch()
-        XCTAssertTrue(homePresenterSpy.error == NetworkErrors.generic)
+        XCTAssertTrue(transactionsPresenterSpy.error == NetworkErrors.generic)
     }
 }
 

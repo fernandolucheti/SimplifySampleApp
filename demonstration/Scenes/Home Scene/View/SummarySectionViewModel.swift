@@ -5,25 +5,27 @@
 //  Created by Fernando on 01/01/22.
 //
 
-import UIKit
+import Foundation
 
 protocol SummarySectionViewModel {
     var first: Bool { get }
     var last: Bool { get }
     var title: String { get }
-    var sectionColor: UIColor { get }
-    var borderColor: UIColor { get }
+    var subTitle: String? { get }
+    var sectionColor: ColorTheme { get }
+    var borderColor: ColorTheme { get }
 }
 
 struct MonthSummarySectionViewModel: SummarySectionViewModel {
     var month: String
     var first: Bool = false
     var last: Bool = false
+    var subTitle: String? = nil
     var title: String {
         month
     }
-    var sectionColor: UIColor = .primaryColor
-    var borderColor: UIColor = .secondaryColor
+    var sectionColor: ColorTheme = ColorTheme.primaryColor
+    var borderColor: ColorTheme = ColorTheme.secondaryColor
 }
 
 struct BalanceSummarySectionViewModel: SummarySectionViewModel {
@@ -38,7 +40,7 @@ struct BalanceSummarySectionViewModel: SummarySectionViewModel {
     var value: Double
     var first: Bool = false
     var last: Bool = false
-    var borderColor: UIColor = .primaryColor
+    var borderColor: ColorTheme = ColorTheme.primaryColor
     
     var title: String {
         switch type {
@@ -51,14 +53,18 @@ struct BalanceSummarySectionViewModel: SummarySectionViewModel {
         }
     }
     
-    var sectionColor: UIColor {
+    var subTitle: String? {
+        value.currencyString()
+    }
+    
+    var sectionColor: ColorTheme {
         switch type {
         case .income:
-            return .primaryAccent
+            return ColorTheme.primaryAccent
         case .expense:
-            return .secondaryAccent
+            return ColorTheme.secondaryAccent
         case .monthlyBalance:
-            return value < 0 ? .secondaryAccent : .primaryAccent
+            return value < 0 ? ColorTheme.secondaryAccent : ColorTheme.primaryAccent
         }
     }
 }

@@ -18,27 +18,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         window.rootViewController = HomeTabBarFactory.createViewController()
-        window.backgroundColor = .primaryColor
+        window.backgroundColor = ColorTheme.primaryColor.color
         self.window = window
         window.makeKeyAndVisible()
         
     }
-
-    func sceneDidDisconnect(_ scene: UIScene) {
-    }
-
-    func sceneDidBecomeActive(_ scene: UIScene) {
-    }
-
-    func sceneWillResignActive(_ scene: UIScene) {
-    }
-
-    func sceneWillEnterForeground(_ scene: UIScene) {
-    }
-
-    func sceneDidEnterBackground(_ scene: UIScene) {
-    }
-
-
 }
 

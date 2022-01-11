@@ -20,7 +20,7 @@ final class TransactionCell: UITableViewCell {
     
     private lazy var categoryView: UIView = {
         let view = UIView()
-        view.backgroundColor = viewModel.categoryColor
+        view.backgroundColor = UIColor(hex: viewModel.categoryColor)
         return view
     }()
     
@@ -34,7 +34,7 @@ final class TransactionCell: UITableViewCell {
     private lazy var transactionNameLabel: UILabel = {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 14)
-        label.textColor = UIColor.secondaryColor
+        label.textColor = ColorTheme.secondaryColor.color
         label.text = viewModel.name
         return label
     }()
@@ -42,7 +42,7 @@ final class TransactionCell: UITableViewCell {
     private lazy var transactionDateLabel: UILabel = {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 14)
-        label.textColor = UIColor.secondaryColor
+        label.textColor = ColorTheme.secondaryColor.color
         label.text = viewModel.date
         return label
     }()
@@ -50,7 +50,7 @@ final class TransactionCell: UITableViewCell {
     private lazy var transactionValueLabel: UILabel = {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 14)
-        label.textColor = viewModel.value > 0 ? .primaryAccent : .secondaryAccent
+        label.textColor = viewModel.value > 0 ? ColorTheme.primaryAccent.color : ColorTheme.secondaryAccent.color
         label.text = viewModel.value.currencyString()
         return label
     }()

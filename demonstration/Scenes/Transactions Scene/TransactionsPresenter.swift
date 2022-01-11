@@ -5,7 +5,7 @@
 //  Created by Fernando on 02/01/22.
 //
 
-import UIKit
+import Foundation
 
 protocol TransactionsPresenterDelegate: AnyObject {
     func presentSuccess(viewModel: TransactionModels.ViewModel)
@@ -42,7 +42,7 @@ final class TransactionsPresenter {
             let viewModelTransaction = TransactionCellViewModel(value: transaction.value,
                                                                 name: transaction.name,
                                                                 date: transaction.date,
-                                                                categoryColor: UIColor(hex: transaction.categoryColor))
+                                                                categoryColor: transaction.categoryColor)
             viewModelTransactions.append(viewModelTransaction)
         }
         return TransactionModels.ViewModel(transactions: viewModelTransactions)

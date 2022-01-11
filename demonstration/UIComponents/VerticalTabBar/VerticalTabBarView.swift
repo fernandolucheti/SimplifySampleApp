@@ -19,11 +19,7 @@ final class VerticalTabBarView: UIView {
         }
     }
     
-    var contentView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .primaryColor
-        return view
-    }()
+    var contentView = UIView()
     
     private let tabBarView: UIStackView = {
         let stackView = UIStackView()
@@ -33,13 +29,14 @@ final class VerticalTabBarView: UIView {
         return stackView
     }()
     
-    var navigationItens: [NavigationTabItem]
+    var buttons: [UIButton]
     private weak var delegate: TabViewDelegate?
     
-    init(itens: [NavigationTabItem]) {
-        self.navigationItens = itens
+    init(buttons: [UIButton]) {
+        self.buttons = buttons
         super.init(frame: .zero)
         setupView()
+        setupNavigationItens(buttons)
     }
     
     func setDelegate(_ delegate: TabViewDelegate) {
@@ -52,28 +49,21 @@ final class VerticalTabBarView: UIView {
     
     @objc func didTapButtonAt(sender: TabBarTapGesture) {
         delegate?.didSelectTabAtIndex(sender.index)
-        for iten in navigationItens {
-            iten.button?.isSelected = false
+        for item in buttons {
+            item.isSelected = false
         }
         sender.button.isSelected = true
     }
     
-    private func setupNavigationItens() {
-        
+    private func setupNavigationItens(_ itens: [UIButton]) {
         tabBarView.addArrangedSubview(UIView.spacer)
-        for (index, item) in navigationItens.enumerated() {
-            let button = UIButton()
-            button.setImage(item.icon, for: .normal)
-            button.setImage(item.iconFilled, for: .selected)
-            if index == 0 {
-                button.isSelected = true
-            }
+        
+        for (index, button) in itens.enumerated() {
             let tapGesture = TabBarTapGesture(button: button,
                                               index: index,
                                               target: self,
                                               action: #selector(didTapButtonAt(sender:)))
             button.addGestureRecognizer(tapGesture)
-            navigationItens[index].button = button
             tabBarView.addArrangedSubview(button)
         }
         tabBarView.addArrangedSubview(UIView.spacer)
@@ -85,7 +75,6 @@ extension VerticalTabBarView: ViewCode {
     func setupHierarchy() {
         addSubview(contentView)
         addSubview(tabBarView)
-        setupNavigationItens()
     }
     
     func setupConstraints() {

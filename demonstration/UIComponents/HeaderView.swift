@@ -24,14 +24,14 @@ final class HeaderView: UIView {
     
     private let toggleMonthView: UIView = {
         let view = UIView()
-        view.backgroundColor = .tertiaryColor
+        view.backgroundColor = ColorTheme.tertiaryColor.color
         return view
     }()
     
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 20)
-        label.textColor = .secondaryColor
+        label.textColor = ColorTheme.secondaryColor.color
         return label
     }()
 
@@ -40,7 +40,7 @@ final class HeaderView: UIView {
         setupGradient()
         toggleMonthView.layer.cornerRadius = 20
         toggleMonthView.clipsToBounds = true
-        toggleMonthView.layer.borderColor = UIColor.secondaryColor.cgColor
+        toggleMonthView.layer.borderColor = ColorTheme.secondaryColor.color.cgColor
         toggleMonthView.layer.borderWidth = 2
     }
     
@@ -54,7 +54,7 @@ final class HeaderView: UIView {
     }
     
     private func setupGradient() {
-        let initialColor = UIColor.primaryColor
+        let initialColor = ColorTheme.primaryColor.color
         let finalColor = initialColor.withAlphaComponent(0.0)
         gradientLayer.colors = [initialColor.cgColor, finalColor.cgColor]
         gradientLayer.frame = bounds
@@ -82,10 +82,6 @@ extension HeaderView: ViewCode {
             bottomAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 35),
         ])
         toggleMonthView.rotate(angle: 45)
-    }
-    
-    func configureView() {
-       
     }
     
 }

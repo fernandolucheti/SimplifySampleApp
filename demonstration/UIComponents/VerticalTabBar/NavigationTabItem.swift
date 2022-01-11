@@ -10,6 +10,5 @@ import UIKit
 struct NavigationTabItem {
     let icon: UIImage
     let iconFilled: UIImage
-    var button: UIButton? = nil
     let viewController: UIViewController
 }
