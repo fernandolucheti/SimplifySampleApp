@@ -18,7 +18,7 @@ class HomePresenterTests: XCTestCase {
         sut.setDelegate(homePresenterSpy)
         sut.fetch()
         
-        XCTAssertTrue(homePresenterSpy.viewModel?.balance.currencyString() == "$100.00")
+        XCTAssertTrue(homePresenterSpy.viewModel?.balance == 100.00)
         
         let sections = homePresenterSpy.viewModel?.sections
         let monthSection = sections?.filter({ section in
