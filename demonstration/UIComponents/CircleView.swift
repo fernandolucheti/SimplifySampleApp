@@ -14,6 +14,10 @@ final class CircleView: UIView {
     private var size: CGFloat
     private var borderWidth: CGFloat
     
+    convenience init(color: UIColor, size: CGFloat) {
+        self.init(color: color, borderColor: color, size: size, borderWidth: 0)
+    }
+    
     init(color: UIColor, borderColor: UIColor, size: CGFloat, borderWidth: CGFloat) {
         self.color = color
         self.borderColor = borderColor
@@ -21,6 +25,11 @@ final class CircleView: UIView {
         self.borderWidth = borderWidth
         super.init(frame: .zero)
         setupView()
+    }
+    
+    func set(color: UIColor) {
+        self.color = color
+        backgroundColor = color
     }
     
     required init?(coder: NSCoder) {

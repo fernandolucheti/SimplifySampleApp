@@ -24,7 +24,12 @@ final class HomeTabBarFactory {
                         
             NavigationTabItem(icon: systemImage(SystemIcons.list.rawValue),
                               iconFilled: systemImage(SystemIcons.list.rawValue, filled: true),
-                              viewController: TransactionsFactory.createViewController())]
+                              viewController: TransactionsFactory.createViewController()),
+            
+            NavigationTabItem(icon: systemImage(SystemIcons.tag.rawValue),
+                              iconFilled: systemImage(SystemIcons.tag.rawValue, filled: true),
+                              viewController: BudgetFactory.createViewController())
+        ]
         
         return VerticalTabBarController(navigationItens: tabItens)
     }

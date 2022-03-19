@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B11AD1827E4D32D00BE3A12 /* BudgetFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B11AD1227E4D32D00BE3A12 /* BudgetFactory.swift */; };
+		8B11AD1927E4D32D00BE3A12 /* BudgetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B11AD1327E4D32D00BE3A12 /* BudgetPresenter.swift */; };
+		8B11AD1A27E4D32D00BE3A12 /* BudgetModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B11AD1427E4D32D00BE3A12 /* BudgetModels.swift */; };
+		8B11AD1B27E4D32D00BE3A12 /* BudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B11AD1527E4D32D00BE3A12 /* BudgetViewController.swift */; };
+		8B11AD1C27E4D32D00BE3A12 /* BudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B11AD1627E4D32D00BE3A12 /* BudgetView.swift */; };
+		8B11AD1D27E4D32D00BE3A12 /* BudgetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B11AD1727E4D32D00BE3A12 /* BudgetService.swift */; };
+		8B11AD4627E4E63700BE3A12 /* BudgetWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B11AD4427E4E63700BE3A12 /* BudgetWorkerTests.swift */; };
+		8B11AD4727E4E63700BE3A12 /* BudgetPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B11AD4527E4E63700BE3A12 /* BudgetPresenterTests.swift */; };
+		8B11AD4A27E4E6E800BE3A12 /* Budget.json in Resources */ = {isa = PBXBuildFile; fileRef = 8B11AD4927E4E6E800BE3A12 /* Budget.json */; };
+		8B11AD6527E63AA700BE3A12 /* BudgetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B11AD6427E63AA700BE3A12 /* BudgetCell.swift */; };
+		8B11AD6727E63B3600BE3A12 /* ThermometerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B11AD6627E63B3600BE3A12 /* ThermometerView.swift */; };
 		ED8986D52782E48F00CC21BF /* HomeServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8986D42782E48F00CC21BF /* HomeServiceTest.swift */; };
 		ED8986D82782E52B00CC21BF /* Home.json in Resources */ = {isa = PBXBuildFile; fileRef = ED8986D72782E52B00CC21BF /* Home.json */; };
 		ED8986DC2782E7BE00CC21BF /* String+json.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8986DB2782E7BE00CC21BF /* String+json.swift */; };
@@ -76,6 +87,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B11AD1227E4D32D00BE3A12 /* BudgetFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetFactory.swift; sourceTree = "<group>"; };
+		8B11AD1327E4D32D00BE3A12 /* BudgetPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetPresenter.swift; sourceTree = "<group>"; };
+		8B11AD1427E4D32D00BE3A12 /* BudgetModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetModels.swift; sourceTree = "<group>"; };
+		8B11AD1527E4D32D00BE3A12 /* BudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewController.swift; sourceTree = "<group>"; };
+		8B11AD1627E4D32D00BE3A12 /* BudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetView.swift; sourceTree = "<group>"; };
+		8B11AD1727E4D32D00BE3A12 /* BudgetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetService.swift; sourceTree = "<group>"; };
+		8B11AD4427E4E63700BE3A12 /* BudgetWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetWorkerTests.swift; sourceTree = "<group>"; };
+		8B11AD4527E4E63700BE3A12 /* BudgetPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetPresenterTests.swift; sourceTree = "<group>"; };
+		8B11AD4927E4E6E800BE3A12 /* Budget.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Budget.json; sourceTree = "<group>"; };
+		8B11AD6427E63AA700BE3A12 /* BudgetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetCell.swift; sourceTree = "<group>"; };
+		8B11AD6627E63B3600BE3A12 /* ThermometerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThermometerView.swift; sourceTree = "<group>"; };
 		ED8986D42782E48F00CC21BF /* HomeServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceTest.swift; sourceTree = "<group>"; };
 		ED8986D72782E52B00CC21BF /* Home.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Home.json; sourceTree = "<group>"; };
 		ED8986DB2782E7BE00CC21BF /* String+json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+json.swift"; sourceTree = "<group>"; };
@@ -156,11 +178,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B11AD1127E4BB9500BE3A12 /* Budget */ = {
+			isa = PBXGroup;
+			children = (
+				8B11AD6327E63A9000BE3A12 /* View */,
+				8B11AD1227E4D32D00BE3A12 /* BudgetFactory.swift */,
+				8B11AD1327E4D32D00BE3A12 /* BudgetPresenter.swift */,
+				8B11AD1427E4D32D00BE3A12 /* BudgetModels.swift */,
+				8B11AD1527E4D32D00BE3A12 /* BudgetViewController.swift */,
+				8B11AD1727E4D32D00BE3A12 /* BudgetService.swift */,
+			);
+			path = Budget;
+			sourceTree = "<group>";
+		};
+		8B11AD4227E4E5F800BE3A12 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EDC842662780A20D00BA291C /* HomePresenterTests.swift */,
+				ED8986D42782E48F00CC21BF /* HomeServiceTest.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8B11AD4327E4E60800BE3A12 /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				EDC842D42782923C00BA291C /* TransactionsPresenterTests.swift */,
+				ED8986E22782EC8B00CC21BF /* TransactionServiceTests.swift */,
+			);
+			path = Transactions;
+			sourceTree = "<group>";
+		};
+		8B11AD4827E4E64F00BE3A12 /* Budget */ = {
+			isa = PBXGroup;
+			children = (
+				8B11AD4427E4E63700BE3A12 /* BudgetWorkerTests.swift */,
+				8B11AD4527E4E63700BE3A12 /* BudgetPresenterTests.swift */,
+			);
+			path = Budget;
+			sourceTree = "<group>";
+		};
+		8B11AD6327E63A9000BE3A12 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8B11AD1627E4D32D00BE3A12 /* BudgetView.swift */,
+				8B11AD6427E63AA700BE3A12 /* BudgetCell.swift */,
+				8B11AD6627E63B3600BE3A12 /* ThermometerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		ED8986D62782E4A900CC21BF /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
 				ED8986D72782E52B00CC21BF /* Home.json */,
 				ED8986E02782E96900CC21BF /* Transactions.json */,
+				8B11AD4927E4E6E800BE3A12 /* Budget.json */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -215,10 +288,9 @@
 		EDC842652780A20D00BA291C /* demonstrationTests */ = {
 			isa = PBXGroup;
 			children = (
-				EDC842662780A20D00BA291C /* HomePresenterTests.swift */,
-				ED8986D42782E48F00CC21BF /* HomeServiceTest.swift */,
-				EDC842D42782923C00BA291C /* TransactionsPresenterTests.swift */,
-				ED8986E22782EC8B00CC21BF /* TransactionServiceTests.swift */,
+				8B11AD4827E4E64F00BE3A12 /* Budget */,
+				8B11AD4227E4E5F800BE3A12 /* Home */,
+				8B11AD4327E4E60800BE3A12 /* Transactions */,
 			);
 			path = demonstrationTests;
 			sourceTree = "<group>";
@@ -244,13 +316,14 @@
 		EDC842852780A67E00BA291C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				EDC842B82782455100BA291C /* Transactions Scene */,
-				EDC842862780A68800BA291C /* Home Scene */,
+				8B11AD1127E4BB9500BE3A12 /* Budget */,
+				EDC842B82782455100BA291C /* Transactions */,
+				EDC842862780A68800BA291C /* Home */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		EDC842862780A68800BA291C /* Home Scene */ = {
+		EDC842862780A68800BA291C /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				EDC8429C2780CE6800BA291C /* View */,
@@ -261,7 +334,7 @@
 				EDC842A72782078300BA291C /* HomeFactory.swift */,
 				EDC842D02782820500BA291C /* HomeTabBarFactory.swift */,
 			);
-			path = "Home Scene";
+			path = Home;
 			sourceTree = "<group>";
 		};
 		EDC8428F2780C71800BA291C /* UIComponents */ = {
@@ -311,7 +384,7 @@
 			path = VerticalTabBar;
 			sourceTree = "<group>";
 		};
-		EDC842B82782455100BA291C /* Transactions Scene */ = {
+		EDC842B82782455100BA291C /* Transactions */ = {
 			isa = PBXGroup;
 			children = (
 				EDC842BB278245B700BA291C /* View */,
@@ -321,7 +394,7 @@
 				EDC842C8278269C400BA291C /* TransactionsModels.swift */,
 				EDC842CC27826DF800BA291C /* TransactionsFactory.swift */,
 			);
-			path = "Transactions Scene";
+			path = Transactions;
 			sourceTree = "<group>";
 		};
 		EDC842BB278245B700BA291C /* View */ = {
@@ -447,6 +520,7 @@
 				EDC842D72782A74B00BA291C /* Assets.xcassets in Resources */,
 				EDC8425C2780A20C00BA291C /* LaunchScreen.storyboard in Resources */,
 				ED8986E12782E96900CC21BF /* Transactions.json in Resources */,
+				8B11AD4A27E4E6E800BE3A12 /* Budget.json in Resources */,
 				ED8986D82782E52B00CC21BF /* Home.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,8 +547,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDC842AA27820C9400BA291C /* String+CurrencyFormat.swift in Sources */,
+				8B11AD1B27E4D32D00BE3A12 /* BudgetViewController.swift in Sources */,
 				EDC842B72782442300BA291C /* NavigationTabItem.swift in Sources */,
 				EDC842A6278204BB00BA291C /* NetworkErrors.swift in Sources */,
+				8B11AD1827E4D32D00BE3A12 /* BudgetFactory.swift in Sources */,
 				EDC842C9278269C400BA291C /* TransactionsModels.swift in Sources */,
 				ED8986DC2782E7BE00CC21BF /* String+json.swift in Sources */,
 				EDC842AE2782261D00BA291C /* UIStackView+RemoveSubviews.swift in Sources */,
@@ -488,24 +564,30 @@
 				EDC842882780A69C00BA291C /* HomeModels.swift in Sources */,
 				EDC842CD27826DF800BA291C /* TransactionsFactory.swift in Sources */,
 				EDC842AC2782142B00BA291C /* UIView+loading.swift in Sources */,
+				8B11AD1D27E4D32D00BE3A12 /* BudgetService.swift in Sources */,
 				EDC842C5278257EB00BA291C /* UIView+Rotate.swift in Sources */,
 				EDC842502780A20900BA291C /* AppDelegate.swift in Sources */,
+				8B11AD1C27E4D32D00BE3A12 /* BudgetView.swift in Sources */,
 				EDC842B52782395300BA291C /* TabBarTapGesture.swift in Sources */,
 				EDC8428A2780AA9F00BA291C /* HomeView.swift in Sources */,
 				EDC842BA2782457C00BA291C /* TransactionsViewController.swift in Sources */,
+				8B11AD6527E63AA700BE3A12 /* BudgetCell.swift in Sources */,
 				EDC842A42782019300BA291C /* HomeService.swift in Sources */,
 				EDC842812780A46200BA291C /* NetworkRequests.swift in Sources */,
 				EDC842C7278269BA00BA291C /* TransactionsService.swift in Sources */,
+				8B11AD6727E63B3600BE3A12 /* ThermometerView.swift in Sources */,
 				EDC842B12782284D00BA291C /* VerticalTabBarController.swift in Sources */,
 				EDC842CF2782810A00BA291C /* SystemIcons.swift in Sources */,
 				ED8986DF2782E91300CC21BF /* Bundle.swift in Sources */,
 				EDC842BD278245C600BA291C /* TransactionCell.swift in Sources */,
+				8B11AD1A27E4D32D00BE3A12 /* BudgetModels.swift in Sources */,
 				EDC842992780C8C500BA291C /* UIColor+Hex.swift in Sources */,
 				EDC842972780C7A900BA291C /* ColorTheme.swift in Sources */,
 				EDC842522780A20900BA291C /* SceneDelegate.swift in Sources */,
 				EDC842B327822A1D00BA291C /* VerticalTabBarView.swift in Sources */,
 				EDC842C1278249D600BA291C /* TransactionsView.swift in Sources */,
 				EDC842BF2782471D00BA291C /* TransactionCellViewModel.swift in Sources */,
+				8B11AD1927E4D32D00BE3A12 /* BudgetPresenter.swift in Sources */,
 				EDE60800278CACC8005A997D /* VerticalTabBarButtonsFactory.swift in Sources */,
 				EDC842A82782078300BA291C /* HomeFactory.swift in Sources */,
 				EDC8429B2780CB4D00BA291C /* ViewCode.swift in Sources */,
@@ -520,7 +602,9 @@
 				EDC842D52782923C00BA291C /* TransactionsPresenterTests.swift in Sources */,
 				EDC842672780A20D00BA291C /* HomePresenterTests.swift in Sources */,
 				ED8986E32782EC8B00CC21BF /* TransactionServiceTests.swift in Sources */,
+				8B11AD4627E4E63700BE3A12 /* BudgetWorkerTests.swift in Sources */,
 				ED8986D52782E48F00CC21BF /* HomeServiceTest.swift in Sources */,
+				8B11AD4727E4E63700BE3A12 /* BudgetPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
