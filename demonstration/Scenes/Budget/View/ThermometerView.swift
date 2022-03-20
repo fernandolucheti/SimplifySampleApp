@@ -20,7 +20,7 @@ final class ThermometerView: UIView {
         let view = UIView()
         view.backgroundColor = ColorTheme.secondaryColor.color
         view.clipsToBounds = true
-        view.layer.cornerRadius = 3
+        view.layer.cornerRadius = 2
         return view
     }()
     
@@ -80,7 +80,7 @@ extension ThermometerView: ViewCode {
             verticalBarBackground.centerXAnchor.constraint(equalTo: centerXAnchor),
             verticalBarBackground.topAnchor.constraint(equalTo: topAnchor),
             verticalBarBackground.bottomAnchor.constraint(equalTo: bottomAnchor),
-            verticalBarBackground.widthAnchor.constraint(equalToConstant: 6),
+            verticalBarBackground.widthAnchor.constraint(equalToConstant: 4),
             
             verticalBar.leadingAnchor.constraint(equalTo: verticalBarBackground.leadingAnchor),
             verticalBar.trailingAnchor.constraint(equalTo: verticalBarBackground.trailingAnchor),
