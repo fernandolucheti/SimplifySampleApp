@@ -18,7 +18,12 @@ class BudgetPresenterTests: XCTestCase {
     func testFetch() throws {
         sut.setDelegate(presenterSpy)
         sut.fetch()
-        //test: fetch data
+        
+        XCTAssertTrue(presenterSpy.viewModel?.categories.first?.categoryName == "Restaurants")
+        XCTAssertTrue(presenterSpy.viewModel?.categories.first?.color == UIColor(hex: "#A00014"))
+        XCTAssertTrue(presenterSpy.viewModel?.categories.first?.categoryBudget == 500.0.currencyString())
+        XCTAssertTrue(presenterSpy.viewModel?.categories.first?.totalSpent == 541.5.currencyString())
+        XCTAssertTrue(presenterSpy.viewModel?.categories.first?.categoryBudgetRemaining == (-41.5).currencyString())
     }
     
     func testError() {
@@ -30,9 +35,13 @@ class BudgetPresenterTests: XCTestCase {
 }
 
 final class BudgetServiceMock: BudgetServiceLogic {
+    
+    let mock = BudgetModels.Response(categories: [
+        BudgetModels.Category(name: "Restaurants", color: "#A00014", budget: 500.0, totalSpent: 541.5, budgetRemaining: -41.5)
+    ])
+    
     func fetch(completion: @escaping (Result<BudgetModels.Response, NetworkErrors>) -> Void) {
-        let response = BudgetModels.Response()
-        completion(.success(response))
+        completion(.success(mock))
     }
 }
 

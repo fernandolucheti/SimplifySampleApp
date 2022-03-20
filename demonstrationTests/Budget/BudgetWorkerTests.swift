@@ -20,7 +20,11 @@ class BudgetServiceTests: XCTestCase {
         sut.fetch { result in
             switch result {
             case .success(let response):
-                print(response)
+                XCTAssertTrue(response.categories.first?.name == "Restaurants")
+                XCTAssertTrue(response.categories.first?.color == "#A00014")
+                XCTAssertTrue(response.categories.first?.budget == 500.0)
+                XCTAssertTrue(response.categories.first?.totalSpent == 541.5)
+                XCTAssertTrue(response.categories.first?.budgetRemaining == -41.5)
             case .failure:
                 XCTFail()
             }
