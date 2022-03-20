@@ -12,7 +12,7 @@ import Charts
 class PieChartViewController: UIViewController {
     
     private var viewModel: PieChartModels.ViewModel?
-    private lazy var contentView = ChartView()
+    private var contentView = ChartView()
     private var presenter: PieChartPresenter
     private let cellIdentifier = "PieChartCell"
     
