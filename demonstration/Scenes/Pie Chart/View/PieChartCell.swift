@@ -10,17 +10,6 @@ import Charts
 
 final class PieChartCell: UITableViewCell {
     
-    var data: PieChartData? {
-        didSet {
-            pieChart.data = data
-            let percentFormatter = NumberFormatter()
-            percentFormatter.numberStyle = .percent
-            percentFormatter.maximumFractionDigits = 1
-            percentFormatter.multiplier = 1
-            pieChart.data?.setValueFormatter(DefaultValueFormatter(formatter: percentFormatter))
-        }
-    }
-    
     private lazy var pieChart: PieChartView = {
         let pieChart = PieChartView()
         pieChart.usePercentValuesEnabled = true
@@ -37,6 +26,15 @@ final class PieChartCell: UITableViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func set(data: PieChartData) {
+        pieChart.data = data
+        let percentFormatter = NumberFormatter()
+        percentFormatter.numberStyle = .percent
+        percentFormatter.maximumFractionDigits = 1
+        percentFormatter.multiplier = 1
+        pieChart.data?.setValueFormatter(DefaultValueFormatter(formatter: percentFormatter))
     }
 }
 

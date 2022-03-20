@@ -59,7 +59,7 @@ extension PieChartViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0, let viewModel = viewModel {
             let cell = PieChartCell(style: .default, reuseIdentifier: cellIdentifier)
-            cell.data = PieChartDataApapter.convertData(viewModel)
+            cell.set(data: PieChartDataApapter.convertData(viewModel))
             return cell
         }
         let cell = CategoryCell()
