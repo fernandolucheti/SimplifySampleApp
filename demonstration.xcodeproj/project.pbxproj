@@ -30,6 +30,8 @@
 		8BA2C1B627E7D3B5008082D9 /* PieChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1B527E7D3B4008082D9 /* PieChartCell.swift */; };
 		8BA2C1B827E7DD9C008082D9 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1B727E7DD9C008082D9 /* CategoryCell.swift */; };
 		8BA2C1BA27E7E1FB008082D9 /* UIView+spacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1B927E7E1FB008082D9 /* UIView+spacer.swift */; };
+		8BA2C1BD27E7EB63008082D9 /* PieChartWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1BB27E7EB63008082D9 /* PieChartWorkerTests.swift */; };
+		8BA2C1BE27E7EB63008082D9 /* PieChartPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1BC27E7EB63008082D9 /* PieChartPresenterTests.swift */; };
 		ED8986D52782E48F00CC21BF /* HomeServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8986D42782E48F00CC21BF /* HomeServiceTest.swift */; };
 		ED8986D82782E52B00CC21BF /* Home.json in Resources */ = {isa = PBXBuildFile; fileRef = ED8986D72782E52B00CC21BF /* Home.json */; };
 		ED8986DC2782E7BE00CC21BF /* String+json.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8986DB2782E7BE00CC21BF /* String+json.swift */; };
@@ -121,6 +123,8 @@
 		8BA2C1B527E7D3B4008082D9 /* PieChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartCell.swift; sourceTree = "<group>"; };
 		8BA2C1B727E7DD9C008082D9 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		8BA2C1B927E7E1FB008082D9 /* UIView+spacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+spacer.swift"; sourceTree = "<group>"; };
+		8BA2C1BB27E7EB63008082D9 /* PieChartWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartWorkerTests.swift; sourceTree = "<group>"; };
+		8BA2C1BC27E7EB63008082D9 /* PieChartPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartPresenterTests.swift; sourceTree = "<group>"; };
 		ED8986D42782E48F00CC21BF /* HomeServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceTest.swift; sourceTree = "<group>"; };
 		ED8986D72782E52B00CC21BF /* Home.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Home.json; sourceTree = "<group>"; };
 		ED8986DB2782E7BE00CC21BF /* String+json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+json.swift"; sourceTree = "<group>"; };
@@ -276,6 +280,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		8BA2C1BF27E7EB6A008082D9 /* Pie Chart */ = {
+			isa = PBXGroup;
+			children = (
+				8BA2C1BB27E7EB63008082D9 /* PieChartWorkerTests.swift */,
+				8BA2C1BC27E7EB63008082D9 /* PieChartPresenterTests.swift */,
+			);
+			path = "Pie Chart";
+			sourceTree = "<group>";
+		};
 		ED8986D62782E4A900CC21BF /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -339,6 +352,7 @@
 			children = (
 				8B11AD4827E4E64F00BE3A12 /* Budget */,
 				8B11AD4227E4E5F800BE3A12 /* Home */,
+				8BA2C1BF27E7EB6A008082D9 /* Pie Chart */,
 				8B11AD4327E4E60800BE3A12 /* Transactions */,
 			);
 			path = demonstrationTests;
@@ -665,7 +679,9 @@
 			files = (
 				EDC842D52782923C00BA291C /* TransactionsPresenterTests.swift in Sources */,
 				EDC842672780A20D00BA291C /* HomePresenterTests.swift in Sources */,
+				8BA2C1BE27E7EB63008082D9 /* PieChartPresenterTests.swift in Sources */,
 				ED8986E32782EC8B00CC21BF /* TransactionServiceTests.swift in Sources */,
+				8BA2C1BD27E7EB63008082D9 /* PieChartWorkerTests.swift in Sources */,
 				8B11AD4627E4E63700BE3A12 /* BudgetWorkerTests.swift in Sources */,
 				ED8986D52782E48F00CC21BF /* HomeServiceTest.swift in Sources */,
 				8B11AD4727E4E63700BE3A12 /* BudgetPresenterTests.swift in Sources */,
