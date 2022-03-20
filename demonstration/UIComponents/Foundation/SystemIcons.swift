@@ -10,4 +10,5 @@ import Foundation
 enum SystemIcons: String {
     case list = "list.bullet.rectangle.portrait"
     case dollarSign = "dollarsign.circle"
+    case tag = "tag"
 }

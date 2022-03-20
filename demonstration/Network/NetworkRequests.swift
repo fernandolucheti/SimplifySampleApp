@@ -11,6 +11,7 @@ import Moya
 enum NetworkRequests {
     case home
     case transactions
+    case budget
 }
 
 extension NetworkRequests: TargetType {
@@ -24,6 +25,8 @@ extension NetworkRequests: TargetType {
             return "93fa1636-db03-43e2-8c56-9c0c212285f4"
         case .transactions:
             return "f162c8e2-4a72-44d0-897a-b4990bf7dd28"
+        case .budget:
+            return "212d9443-a053-4724-a5f5-ff9b80b02ad8"
         }
     }
     
@@ -45,6 +48,8 @@ extension NetworkRequests: TargetType {
             return "Home".json ?? Data()
         case .transactions:
             return "Transactions".json ?? Data()
+        case .budget:
+            return "Budget".json ?? Data()
         }
     }
 }

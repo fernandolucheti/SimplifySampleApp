@@ -7,7 +7,7 @@
 
 import Moya
 
-protocol TransactionsServiceLogic: AnyObject {
+protocol TransactionsServiceLogic {
     func fetch(completion: @escaping (Result<TransactionModels.Response, NetworkErrors>) -> Void)
 }
 
