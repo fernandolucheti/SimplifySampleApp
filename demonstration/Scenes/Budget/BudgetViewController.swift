@@ -10,7 +10,7 @@ import UIKit
 
 class BudgetViewController: UIViewController {
     
-    private lazy var contentView = BudgetView()
+    private var contentView = BudgetView()
     private var presenter: BudgetPresenter
     
     let cellIdentifier = "BudgetCell"
