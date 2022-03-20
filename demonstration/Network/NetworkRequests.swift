@@ -12,6 +12,7 @@ enum NetworkRequests {
     case home
     case transactions
     case budget
+    case pieChart
 }
 
 extension NetworkRequests: TargetType {
@@ -24,9 +25,11 @@ extension NetworkRequests: TargetType {
         case .home:
             return "93fa1636-db03-43e2-8c56-9c0c212285f4"
         case .transactions:
-            return "f162c8e2-4a72-44d0-897a-b4990bf7dd28"
+            return "6cd13d2c-8844-4358-a5d0-5aa523f724dd"
         case .budget:
-            return "212d9443-a053-4724-a5f5-ff9b80b02ad8"
+            return "28234f5c-4cd5-46ce-b6ba-cecb1e4f01d4"
+        case .pieChart:
+            return "f53db189-53e0-4d09-b804-98b25a59d29d"
         }
     }
     
@@ -50,6 +53,8 @@ extension NetworkRequests: TargetType {
             return "Transactions".json ?? Data()
         case .budget:
             return "Budget".json ?? Data()
+        case .pieChart:
+            return "PieChart".json ?? Data()
         }
     }
 }

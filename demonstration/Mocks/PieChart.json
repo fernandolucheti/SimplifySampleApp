@@ -3,30 +3,22 @@
         {
           "name": "Restaurants",
           "color_hex": "#A00014",
-          "budget": 500.0,
           "total_spent": 541.5,
-          "budget_remaining": -41.5,
         },
         {
           "name": "Leisure",
           "color_hex": "#DE0162",
-          "budget": 500.0,
           "total_spent": 238.5,
-          "budget_remaining": 261.5,
         },
         {
           "name": "Groceries",
           "color_hex": "#F94852",
-          "budget": 300.0,
           "total_spent": 159.7,
-          "budget_remaining": 140.3,
         },
         {
           "name": "Transport",
           "color_hex": "#A125C5",
-          "budget": 200.0,
           "total_spent": 159.7,
-          "budget_remaining": 40.3,
         }
     ]
 }

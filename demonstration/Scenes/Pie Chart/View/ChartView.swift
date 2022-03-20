@@ -1,14 +1,14 @@
 //
-//  BudgetView.swift
+//  ChartView.swift
 //  demonstration
 //
-//  Created by Fernando Lucheti on 18/03/22.
+//  Created by Fernando Lucheti on 20/03/22.
 //  Copyright (c) 2022 ___ORGANIZATIONNAME___. All rights reserved.
 //
 
 import UIKit
 
-final class BudgetView: UIView {
+class ChartView: UIView {
     
     weak var tableViewDataSource: UITableViewDataSource? {
         didSet {
@@ -18,7 +18,7 @@ final class BudgetView: UIView {
     
     private let headerView = HeaderView()
     
-    private let tableView: UITableView = {
+    private var tableView: UITableView = {
         let tableView = UITableView()
         tableView.separatorStyle = .none
         let offset: CGFloat = 50
@@ -32,6 +32,7 @@ final class BudgetView: UIView {
     init() {
         super.init(frame: .zero)
         setupView()
+        tableView.delegate = self
     }
     
     required init?(coder: NSCoder) {
@@ -43,30 +44,35 @@ final class BudgetView: UIView {
     }
 }
 
-extension BudgetView: ViewCode {
+extension ChartView: ViewCode {
     func setupHierarchy() {
         addSubview(tableView)
         addSubview(headerView)
     }
     
     func setupConstraints() {
-        headerView.translatesAutoresizingMaskIntoConstraints = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        headerView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             headerView.topAnchor.constraint(equalTo: topAnchor),
             headerView.leadingAnchor.constraint(equalTo: leadingAnchor),
             headerView.trailingAnchor.constraint(equalTo: trailingAnchor),
             
-            tableView.topAnchor.constraint(equalTo: topAnchor),
-            tableView.bottomAnchor.constraint(equalTo: bottomAnchor),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: trailingAnchor)
+            tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            tableView.topAnchor.constraint(equalTo: topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
     
     func configureView() {
-        backgroundColor = ColorTheme.primaryColor.color
-        headerView.title = "Categories"
+        headerView.title = "Expense Graph"
+    }
+}
+
+extension ChartView: UITableViewDelegate {
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        indexPath.row == 0 ? 350 : 80
     }
 }

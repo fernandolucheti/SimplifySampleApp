@@ -18,6 +18,20 @@
 		8B11AD4A27E4E6E800BE3A12 /* Budget.json in Resources */ = {isa = PBXBuildFile; fileRef = 8B11AD4927E4E6E800BE3A12 /* Budget.json */; };
 		8B11AD6527E63AA700BE3A12 /* BudgetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B11AD6427E63AA700BE3A12 /* BudgetCell.swift */; };
 		8B11AD6727E63B3600BE3A12 /* ThermometerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B11AD6627E63B3600BE3A12 /* ThermometerView.swift */; };
+		8BA2C1A727E7B47F008082D9 /* PieChartFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1A127E7B47F008082D9 /* PieChartFactory.swift */; };
+		8BA2C1A827E7B47F008082D9 /* PieChartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1A227E7B47F008082D9 /* PieChartPresenter.swift */; };
+		8BA2C1A927E7B47F008082D9 /* PieChartModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1A327E7B47F008082D9 /* PieChartModels.swift */; };
+		8BA2C1AA27E7B47F008082D9 /* PieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1A427E7B47F008082D9 /* PieChartViewController.swift */; };
+		8BA2C1AB27E7B47F008082D9 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1A527E7B47F008082D9 /* ChartView.swift */; };
+		8BA2C1AC27E7B47F008082D9 /* PieChartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1A627E7B47F008082D9 /* PieChartService.swift */; };
+		8BA2C1AE27E7B4F5008082D9 /* PieChart.json in Resources */ = {isa = PBXBuildFile; fileRef = 8BA2C1AD27E7B4F5008082D9 /* PieChart.json */; };
+		8BA2C1B127E7B92B008082D9 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 8BA2C1B027E7B92B008082D9 /* Charts */; };
+		8BA2C1B327E7C76B008082D9 /* PieChartDataApapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1B227E7C76B008082D9 /* PieChartDataApapter.swift */; };
+		8BA2C1B627E7D3B5008082D9 /* PieChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1B527E7D3B4008082D9 /* PieChartCell.swift */; };
+		8BA2C1B827E7DD9C008082D9 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1B727E7DD9C008082D9 /* CategoryCell.swift */; };
+		8BA2C1BA27E7E1FB008082D9 /* UIView+spacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1B927E7E1FB008082D9 /* UIView+spacer.swift */; };
+		8BA2C1BD27E7EB63008082D9 /* PieChartWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1BB27E7EB63008082D9 /* PieChartWorkerTests.swift */; };
+		8BA2C1BE27E7EB63008082D9 /* PieChartPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1BC27E7EB63008082D9 /* PieChartPresenterTests.swift */; };
 		ED8986D52782E48F00CC21BF /* HomeServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8986D42782E48F00CC21BF /* HomeServiceTest.swift */; };
 		ED8986D82782E52B00CC21BF /* Home.json in Resources */ = {isa = PBXBuildFile; fileRef = ED8986D72782E52B00CC21BF /* Home.json */; };
 		ED8986DC2782E7BE00CC21BF /* String+json.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8986DB2782E7BE00CC21BF /* String+json.swift */; };
@@ -98,6 +112,19 @@
 		8B11AD4927E4E6E800BE3A12 /* Budget.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Budget.json; sourceTree = "<group>"; };
 		8B11AD6427E63AA700BE3A12 /* BudgetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetCell.swift; sourceTree = "<group>"; };
 		8B11AD6627E63B3600BE3A12 /* ThermometerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThermometerView.swift; sourceTree = "<group>"; };
+		8BA2C1A127E7B47F008082D9 /* PieChartFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartFactory.swift; sourceTree = "<group>"; };
+		8BA2C1A227E7B47F008082D9 /* PieChartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartPresenter.swift; sourceTree = "<group>"; };
+		8BA2C1A327E7B47F008082D9 /* PieChartModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartModels.swift; sourceTree = "<group>"; };
+		8BA2C1A427E7B47F008082D9 /* PieChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartViewController.swift; sourceTree = "<group>"; };
+		8BA2C1A527E7B47F008082D9 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		8BA2C1A627E7B47F008082D9 /* PieChartService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartService.swift; sourceTree = "<group>"; };
+		8BA2C1AD27E7B4F5008082D9 /* PieChart.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PieChart.json; sourceTree = "<group>"; };
+		8BA2C1B227E7C76B008082D9 /* PieChartDataApapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartDataApapter.swift; sourceTree = "<group>"; };
+		8BA2C1B527E7D3B4008082D9 /* PieChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartCell.swift; sourceTree = "<group>"; };
+		8BA2C1B727E7DD9C008082D9 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		8BA2C1B927E7E1FB008082D9 /* UIView+spacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+spacer.swift"; sourceTree = "<group>"; };
+		8BA2C1BB27E7EB63008082D9 /* PieChartWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartWorkerTests.swift; sourceTree = "<group>"; };
+		8BA2C1BC27E7EB63008082D9 /* PieChartPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartPresenterTests.swift; sourceTree = "<group>"; };
 		ED8986D42782E48F00CC21BF /* HomeServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceTest.swift; sourceTree = "<group>"; };
 		ED8986D72782E52B00CC21BF /* Home.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Home.json; sourceTree = "<group>"; };
 		ED8986DB2782E7BE00CC21BF /* String+json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+json.swift"; sourceTree = "<group>"; };
@@ -158,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDC842842780A48500BA291C /* Moya in Frameworks */,
+				8BA2C1B127E7B92B008082D9 /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,12 +256,46 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		8BA2C1A027E7B469008082D9 /* Pie Chart */ = {
+			isa = PBXGroup;
+			children = (
+				8BA2C1B427E7D3A2008082D9 /* View */,
+				8BA2C1A127E7B47F008082D9 /* PieChartFactory.swift */,
+				8BA2C1A227E7B47F008082D9 /* PieChartPresenter.swift */,
+				8BA2C1A327E7B47F008082D9 /* PieChartModels.swift */,
+				8BA2C1A427E7B47F008082D9 /* PieChartViewController.swift */,
+				8BA2C1A627E7B47F008082D9 /* PieChartService.swift */,
+				8BA2C1B227E7C76B008082D9 /* PieChartDataApapter.swift */,
+			);
+			path = "Pie Chart";
+			sourceTree = "<group>";
+		};
+		8BA2C1B427E7D3A2008082D9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8BA2C1A527E7B47F008082D9 /* ChartView.swift */,
+				8BA2C1B527E7D3B4008082D9 /* PieChartCell.swift */,
+				8BA2C1B727E7DD9C008082D9 /* CategoryCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8BA2C1BF27E7EB6A008082D9 /* Pie Chart */ = {
+			isa = PBXGroup;
+			children = (
+				8BA2C1BB27E7EB63008082D9 /* PieChartWorkerTests.swift */,
+				8BA2C1BC27E7EB63008082D9 /* PieChartPresenterTests.swift */,
+			);
+			path = "Pie Chart";
+			sourceTree = "<group>";
+		};
 		ED8986D62782E4A900CC21BF /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
 				ED8986D72782E52B00CC21BF /* Home.json */,
 				ED8986E02782E96900CC21BF /* Transactions.json */,
 				8B11AD4927E4E6E800BE3A12 /* Budget.json */,
+				8BA2C1AD27E7B4F5008082D9 /* PieChart.json */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -290,6 +352,7 @@
 			children = (
 				8B11AD4827E4E64F00BE3A12 /* Budget */,
 				8B11AD4227E4E5F800BE3A12 /* Home */,
+				8BA2C1BF27E7EB6A008082D9 /* Pie Chart */,
 				8B11AD4327E4E60800BE3A12 /* Transactions */,
 			);
 			path = demonstrationTests;
@@ -316,6 +379,7 @@
 		EDC842852780A67E00BA291C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				8BA2C1A027E7B469008082D9 /* Pie Chart */,
 				8B11AD1127E4BB9500BE3A12 /* Budget */,
 				EDC842B82782455100BA291C /* Transactions */,
 				EDC842862780A68800BA291C /* Home */,
@@ -358,6 +422,7 @@
 				EDC842AD2782261D00BA291C /* UIStackView+RemoveSubviews.swift */,
 				EDC842C4278257EB00BA291C /* UIView+Rotate.swift */,
 				EDC842CE2782810A00BA291C /* SystemIcons.swift */,
+				8BA2C1B927E7E1FB008082D9 /* UIView+spacer.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -425,6 +490,7 @@
 			name = demonstration;
 			packageProductDependencies = (
 				EDC842832780A48500BA291C /* Moya */,
+				8BA2C1B027E7B92B008082D9 /* Charts */,
 			);
 			productName = demonstration;
 			productReference = EDC8424C2780A20900BA291C /* demonstration.app */;
@@ -500,6 +566,7 @@
 			mainGroup = EDC842432780A20900BA291C;
 			packageReferences = (
 				EDC842822780A48500BA291C /* XCRemoteSwiftPackageReference "Moya" */,
+				8BA2C1AF27E7B92B008082D9 /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = EDC8424D2780A20900BA291C /* Products */;
 			projectDirPath = "";
@@ -520,6 +587,7 @@
 				EDC842D72782A74B00BA291C /* Assets.xcassets in Resources */,
 				EDC8425C2780A20C00BA291C /* LaunchScreen.storyboard in Resources */,
 				ED8986E12782E96900CC21BF /* Transactions.json in Resources */,
+				8BA2C1AE27E7B4F5008082D9 /* PieChart.json in Resources */,
 				8B11AD4A27E4E6E800BE3A12 /* Budget.json in Resources */,
 				ED8986D82782E52B00CC21BF /* Home.json in Resources */,
 			);
@@ -551,6 +619,7 @@
 				EDC842B72782442300BA291C /* NavigationTabItem.swift in Sources */,
 				EDC842A6278204BB00BA291C /* NetworkErrors.swift in Sources */,
 				8B11AD1827E4D32D00BE3A12 /* BudgetFactory.swift in Sources */,
+				8BA2C1AC27E7B47F008082D9 /* PieChartService.swift in Sources */,
 				EDC842C9278269C400BA291C /* TransactionsModels.swift in Sources */,
 				ED8986DC2782E7BE00CC21BF /* String+json.swift in Sources */,
 				EDC842AE2782261D00BA291C /* UIStackView+RemoveSubviews.swift in Sources */,
@@ -568,21 +637,26 @@
 				EDC842C5278257EB00BA291C /* UIView+Rotate.swift in Sources */,
 				EDC842502780A20900BA291C /* AppDelegate.swift in Sources */,
 				8B11AD1C27E4D32D00BE3A12 /* BudgetView.swift in Sources */,
+				8BA2C1A927E7B47F008082D9 /* PieChartModels.swift in Sources */,
 				EDC842B52782395300BA291C /* TabBarTapGesture.swift in Sources */,
 				EDC8428A2780AA9F00BA291C /* HomeView.swift in Sources */,
 				EDC842BA2782457C00BA291C /* TransactionsViewController.swift in Sources */,
 				8B11AD6527E63AA700BE3A12 /* BudgetCell.swift in Sources */,
+				8BA2C1A827E7B47F008082D9 /* PieChartPresenter.swift in Sources */,
 				EDC842A42782019300BA291C /* HomeService.swift in Sources */,
 				EDC842812780A46200BA291C /* NetworkRequests.swift in Sources */,
+				8BA2C1AB27E7B47F008082D9 /* ChartView.swift in Sources */,
 				EDC842C7278269BA00BA291C /* TransactionsService.swift in Sources */,
 				8B11AD6727E63B3600BE3A12 /* ThermometerView.swift in Sources */,
 				EDC842B12782284D00BA291C /* VerticalTabBarController.swift in Sources */,
 				EDC842CF2782810A00BA291C /* SystemIcons.swift in Sources */,
 				ED8986DF2782E91300CC21BF /* Bundle.swift in Sources */,
 				EDC842BD278245C600BA291C /* TransactionCell.swift in Sources */,
+				8BA2C1AA27E7B47F008082D9 /* PieChartViewController.swift in Sources */,
 				8B11AD1A27E4D32D00BE3A12 /* BudgetModels.swift in Sources */,
 				EDC842992780C8C500BA291C /* UIColor+Hex.swift in Sources */,
 				EDC842972780C7A900BA291C /* ColorTheme.swift in Sources */,
+				8BA2C1A727E7B47F008082D9 /* PieChartFactory.swift in Sources */,
 				EDC842522780A20900BA291C /* SceneDelegate.swift in Sources */,
 				EDC842B327822A1D00BA291C /* VerticalTabBarView.swift in Sources */,
 				EDC842C1278249D600BA291C /* TransactionsView.swift in Sources */,
@@ -590,8 +664,12 @@
 				8B11AD1927E4D32D00BE3A12 /* BudgetPresenter.swift in Sources */,
 				EDE60800278CACC8005A997D /* VerticalTabBarButtonsFactory.swift in Sources */,
 				EDC842A82782078300BA291C /* HomeFactory.swift in Sources */,
+				8BA2C1BA27E7E1FB008082D9 /* UIView+spacer.swift in Sources */,
 				EDC8429B2780CB4D00BA291C /* ViewCode.swift in Sources */,
 				EDC842C3278255DE00BA291C /* HeaderView.swift in Sources */,
+				8BA2C1B327E7C76B008082D9 /* PieChartDataApapter.swift in Sources */,
+				8BA2C1B627E7D3B5008082D9 /* PieChartCell.swift in Sources */,
+				8BA2C1B827E7DD9C008082D9 /* CategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,7 +679,9 @@
 			files = (
 				EDC842D52782923C00BA291C /* TransactionsPresenterTests.swift in Sources */,
 				EDC842672780A20D00BA291C /* HomePresenterTests.swift in Sources */,
+				8BA2C1BE27E7EB63008082D9 /* PieChartPresenterTests.swift in Sources */,
 				ED8986E32782EC8B00CC21BF /* TransactionServiceTests.swift in Sources */,
+				8BA2C1BD27E7EB63008082D9 /* PieChartWorkerTests.swift in Sources */,
 				8B11AD4627E4E63700BE3A12 /* BudgetWorkerTests.swift in Sources */,
 				ED8986D52782E48F00CC21BF /* HomeServiceTest.swift in Sources */,
 				8B11AD4727E4E63700BE3A12 /* BudgetPresenterTests.swift in Sources */,
@@ -926,6 +1006,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8BA2C1AF27E7B92B008082D9 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		EDC842822780A48500BA291C /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya";
@@ -937,6 +1025,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8BA2C1B027E7B92B008082D9 /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BA2C1AF27E7B92B008082D9 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
+		};
 		EDC842832780A48500BA291C /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EDC842822780A48500BA291C /* XCRemoteSwiftPackageReference "Moya" */;

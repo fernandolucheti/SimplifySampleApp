@@ -19,10 +19,10 @@ class TransactionServiceTests: XCTestCase {
         sut.fetch { result in
             switch result {
             case .success(let response):
-                XCTAssertTrue(response.transactions.first?.value == 13.23)
+                XCTAssertTrue(response.transactions.first?.value == -13.23)
                 XCTAssertTrue(response.transactions.first?.name == "Restaurant")
                 XCTAssertTrue(response.transactions.first?.date == "01/01/2021")
-                XCTAssertTrue(response.transactions.first?.categoryColor == "#F96766")
+                XCTAssertTrue(response.transactions.first?.categoryColor == "#A00014")
             case .failure:
                 XCTFail()
             }
