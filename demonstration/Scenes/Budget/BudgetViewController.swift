@@ -13,23 +13,20 @@ class BudgetViewController: UIViewController {
     private lazy var contentView = BudgetView()
     private var presenter: BudgetPresenter
     
-    let tableView = UITableView()
     let cellIdentifier = "BudgetCell"
     
     let mockContent = [
-        BudgetCellViewModel(categoryName: "Restaurantes", totalSpent: "R$ 541,50", color: .brown, fillPercent: 120),
-        BudgetCellViewModel(categoryName: "Lazer", totalSpent: "R$ 140,30", color: .systemPink, fillPercent: 40),
-        BudgetCellViewModel(categoryName: "Mercado", totalSpent: "R$ 238,50", color: ColorTheme.secondaryAccent.color, fillPercent: 70)
+        BudgetCellViewModel(categoryName: "Restaurants", categoryBudget: "$ 500.00", categoryBudgetRemaining: "$ -41.50", totalSpent: "$ 541.50", color: .brown, fillPercent: 120),
+        BudgetCellViewModel(categoryName: "Groceries", categoryBudget: "$ 300.00", categoryBudgetRemaining: "$ 159.70", totalSpent: "$ 140.30", color: .systemPink, fillPercent: 40),
+        BudgetCellViewModel(categoryName: "Leisure", categoryBudget: "$ 500.00", categoryBudgetRemaining: "$ 261.50", totalSpent: "$ 238.50", color: ColorTheme.secondaryAccent.color, fillPercent: 70)
     ]
     
     init(presenter: BudgetPresenter) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
-        view = tableView
+        view = contentView
         view.backgroundColor = ColorTheme.primaryColor.color
-        tableView.register(BudgetCell.self, forCellReuseIdentifier: cellIdentifier)
-        tableView.dataSource = self
-        tableView.separatorStyle = .none
+        contentView.tableViewDataSource = self
     }
     
     required init?(coder aDecoder: NSCoder) {

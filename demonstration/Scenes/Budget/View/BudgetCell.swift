@@ -9,6 +9,8 @@ import UIKit
 
 struct BudgetCellViewModel {
     let categoryName: String
+    let categoryBudget: String
+    let categoryBudgetRemaining: String
     let totalSpent: String
     let color: UIColor
     let fillPercent: Int
@@ -20,6 +22,8 @@ final class BudgetCell: UITableViewCell {
         didSet {
             categoryNameLabel.text = viewModel?.categoryName
             categoryNameLabel.textColor = viewModel?.color
+            categoryBudgetLabel.text = "Budget: \(viewModel?.categoryBudget ?? String())"
+            categoryBudgetRemainingLabel.text = "Remaining: \(viewModel?.categoryBudgetRemaining ?? String())"
             totalSpentValueLabel.text = viewModel?.totalSpent
         }
     }
@@ -34,6 +38,7 @@ final class BudgetCell: UITableViewCell {
     private let budgetStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
+        stackView.spacing = 16
         return stackView
     }()
     
@@ -46,7 +51,23 @@ final class BudgetCell: UITableViewCell {
     
     private let categoryNameLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 20)
+        label.font = .systemFont(ofSize: 18)
+        label.setContentHuggingPriority(.required, for: .vertical)
+        return label
+    }()
+    
+    private let categoryBudgetLabel: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 14)
+        label.textColor = ColorTheme.secondaryColor.color
+        label.setContentHuggingPriority(.required, for: .vertical)
+        return label
+    }()
+    
+    private let categoryBudgetRemainingLabel: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 14)
+        label.textColor = ColorTheme.secondaryColor.color
         label.setContentHuggingPriority(.required, for: .vertical)
         return label
     }()
@@ -63,7 +84,7 @@ final class BudgetCell: UITableViewCell {
     
     private let totalSpentValueLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 14)
+        label.font = .systemFont(ofSize: 16)
         label.textColor = ColorTheme.secondaryAccent.color
         label.setContentHuggingPriority(.required, for: .vertical)
         label.textAlignment = .right
@@ -93,6 +114,8 @@ extension BudgetCell: ViewCode {
         horizontalStackView.addArrangedSubview(totalSpentStackView)
         
         budgetStackView.addArrangedSubview(categoryNameLabel)
+        budgetStackView.addArrangedSubview(categoryBudgetLabel)
+        budgetStackView.addArrangedSubview(categoryBudgetRemainingLabel)
         budgetStackView.addArrangedSubview(UIView.spacer)
         
         totalSpentStackView.addArrangedSubview(totalSpentTitleLabel)
@@ -107,7 +130,7 @@ extension BudgetCell: ViewCode {
         NSLayoutConstraint.activate([
             thermometerView.topAnchor.constraint(equalTo: topAnchor, constant: 16),
             thermometerView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16),
-            thermometerView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            thermometerView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
             thermometerView.heightAnchor.constraint(equalToConstant: 120),
             
             horizontalStackView.leadingAnchor.constraint(equalTo: thermometerView.trailingAnchor, constant: 16),
