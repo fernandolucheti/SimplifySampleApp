@@ -7,19 +7,12 @@
 //
 
 import UIKit
-import Charts
 
 class ChartView: UIView {
     
     weak var tableViewDataSource: UITableViewDataSource? {
         didSet {
             tableView.dataSource = tableViewDataSource
-        }
-    }
-    
-    var data: PieChartData? {
-        didSet {
-            tableView.reloadData()
         }
     }
     
@@ -44,6 +37,10 @@ class ChartView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func reloadData() {
+        tableView.reloadData()
     }
 }
 

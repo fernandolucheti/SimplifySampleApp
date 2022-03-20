@@ -40,7 +40,7 @@ class PieChartViewController: UIViewController {
 extension PieChartViewController: PieChartPresenterDelegate {
     func presentSuccess(viewModel: PieChartModels.ViewModel) {
         self.viewModel = viewModel
-        contentView.data = PieChartDataApapter.convertData(viewModel)
+        contentView.reloadData()
         view.setLoading(false)
     }
     
