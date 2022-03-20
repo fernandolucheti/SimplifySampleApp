@@ -15,17 +15,7 @@ final class PieChartDataApapter {
         let set = PieChartDataSet(entries: entries)
         set.sliceSpace = 2
         set.colors = viewModel.categories.compactMap { $0.color }
-        
-        let data = PieChartData(dataSet: set)
-
-        let percentFormatter = NumberFormatter()
-        percentFormatter.numberStyle = .percent
-        percentFormatter.maximumFractionDigits = 1
-        percentFormatter.multiplier = 1
-//        percentFormatter.percentSymbol = " %"
-        
-        data.setValueFormatter(DefaultValueFormatter(formatter: percentFormatter))
-        return data
+        return PieChartData(dataSet: set)
     }
 }
 
