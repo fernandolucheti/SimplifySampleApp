@@ -21,7 +21,7 @@ final class BudgetView: UIView {
     private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.separatorStyle = .none
-        let offset: CGFloat = 40
+        let offset: CGFloat = 50
         tableView.backgroundColor = .clear
         tableView.contentInset = UIEdgeInsets(top: offset, left: 0, bottom: 0, right: 0)
         tableView.contentOffset = CGPoint(x: 0, y: offset)
