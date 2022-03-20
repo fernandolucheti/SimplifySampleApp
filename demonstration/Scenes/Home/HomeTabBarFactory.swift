@@ -26,6 +26,10 @@ final class HomeTabBarFactory {
                               iconFilled: systemImage(SystemIcons.list.rawValue, filled: true),
                               viewController: TransactionsFactory.createViewController()),
             
+            NavigationTabItem(icon: systemImage(SystemIcons.pieChart.rawValue),
+                              iconFilled: systemImage(SystemIcons.pieChart.rawValue, filled: true),
+                              viewController: PieChartFactory.createViewController()),
+            
             NavigationTabItem(icon: systemImage(SystemIcons.tag.rawValue),
                               iconFilled: systemImage(SystemIcons.tag.rawValue, filled: true),
                               viewController: BudgetFactory.createViewController())

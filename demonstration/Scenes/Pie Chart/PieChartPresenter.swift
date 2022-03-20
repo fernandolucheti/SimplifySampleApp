@@ -6,7 +6,7 @@
 //  Copyright (c) 2022 ___ORGANIZATIONNAME___. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol PieChartPresenterDelegate : AnyObject {
     func presentSuccess(viewModel: PieChartModels.ViewModel)
@@ -38,6 +38,11 @@ final class PieChartPresenter {
     }
     
     private func createViewModel(_ response: PieChartModels.Response) -> PieChartModels.ViewModel {
-        PieChartModels.ViewModel()
+        PieChartModels.ViewModel(categories:
+                                    response.categories.compactMap { category in
+                                        PieChartModels.CategoryViewModel(name: category.name,
+                                                                         color: UIColor(hex: category.color),
+                                                                         totalSpent: category.totalSpent)
+                                    })
     }
 }

@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Charts
 
 class PieChartViewController: UIViewController {
     
-    private lazy var contentView = PieChartView()
+    private var viewModel: PieChartModels.ViewModel?
+    private lazy var contentView = ChartView()
     private var presenter: PieChartPresenter
-    
+    private let cellIdentifier = "PieChartCell"
     
     init(presenter: PieChartPresenter) {
         self.presenter = presenter
@@ -27,13 +29,41 @@ class PieChartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view = contentView
+        view.backgroundColor = ColorTheme.primaryColor.color
+        presenter.fetch()
+        view.setLoading(true)
+        contentView.tableViewDataSource = self
     }
 }
 
 extension PieChartViewController: PieChartPresenterDelegate {
     func presentSuccess(viewModel: PieChartModels.ViewModel) {
+        self.viewModel = viewModel
+        contentView.data = PieChartDataApapter.convertData(viewModel)
+        view.setLoading(false)
     }
     
     func presentError(_ error: NetworkErrors) {
+        view.setLoading(false)
+    }
+}
+
+extension PieChartViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let count = viewModel?.categories.count else { return 0 }
+        return count + 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row == 0, let viewModel = viewModel {
+            let cell = PieChartCell(style: .default, reuseIdentifier: cellIdentifier)
+            cell.data = PieChartDataApapter.convertData(viewModel)
+            return cell
+        }
+        let cell = CategoryCell()
+        cell.viewModel = viewModel?.categories[indexPath.row - 1]
+        return cell
     }
 }

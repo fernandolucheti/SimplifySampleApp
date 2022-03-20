@@ -1,19 +1,19 @@
 {
   "transactions": [
    {
-        "value": 13.23,
+        "value": -13.23,
         "name": "Restaurant",
         "date": "01/01/2021",
-        "category_color": "#F96766"
+        "category_color": "#A00014"
    },
    {
-        "value": 134.73,
+        "value": -134.73,
         "name": "Restaurant",
         "date": "01/01/2021",
-        "category_color": "#F96766"
+        "category_color": "#A00014"
    },
    {
-        "value": 540.0,
+        "value": -540.0,
         "name": "Gas",
         "date": "03/01/2021",
         "category_color": "#A125C5"
@@ -25,10 +25,16 @@
         "category_color": "#5698F8"
    },
    {
-        "value": 43.5,
+        "value": -43.5,
         "name": "Movie",
         "date": "07/01/2021",
         "category_color": "#DD0061"
+   },
+   {
+        "value": -453.7,
+        "name": "Groceries",
+        "date": "12/01/2021",
+        "category_color": "#F94852"
    }
 ]
 }

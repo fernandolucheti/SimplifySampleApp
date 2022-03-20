@@ -27,7 +27,7 @@ final class BudgetCell: UITableViewCell {
             totalSpentValueLabel.text = viewModel?.totalSpent
         }
     }
-    private lazy var thermometerView = ThermometerView(color: .blue, fillPercent: 0)
+    private lazy var thermometerView = ThermometerView(color: ColorTheme.secondaryColor.color, fillPercent: 0)
     
     private let horizontalStackView: UIStackView = {
         let stackView = UIStackView()
