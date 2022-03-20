@@ -73,7 +73,5 @@ extension CategoryCell: ViewCode {
     func configureView() {
         backgroundColor = .clear
         selectionStyle = .none
-        circleView.setContentHuggingPriority(.required, for: .vertical)
-        circleView.setContentHuggingPriority(.required, for: .horizontal)
     }
 }
