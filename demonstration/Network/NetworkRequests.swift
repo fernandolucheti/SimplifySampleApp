@@ -26,7 +26,7 @@ extension NetworkRequests: TargetType {
         case .transactions:
             return "f162c8e2-4a72-44d0-897a-b4990bf7dd28"
         case .budget:
-            return "todo"
+            return "212d9443-a053-4724-a5f5-ff9b80b02ad8"
         }
     }
     

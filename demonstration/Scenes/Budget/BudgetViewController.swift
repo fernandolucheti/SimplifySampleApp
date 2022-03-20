@@ -14,19 +14,15 @@ class BudgetViewController: UIViewController {
     private var presenter: BudgetPresenter
     
     let cellIdentifier = "BudgetCell"
-    
-    let mockContent = [
-        BudgetCellViewModel(categoryName: "Restaurants", categoryBudget: "$ 500.00", categoryBudgetRemaining: "$ -41.50", totalSpent: "$ 541.50", color: .brown, fillPercent: 120),
-        BudgetCellViewModel(categoryName: "Groceries", categoryBudget: "$ 300.00", categoryBudgetRemaining: "$ 159.70", totalSpent: "$ 140.30", color: .systemPink, fillPercent: 40),
-        BudgetCellViewModel(categoryName: "Leisure", categoryBudget: "$ 500.00", categoryBudgetRemaining: "$ 261.50", totalSpent: "$ 238.50", color: ColorTheme.secondaryAccent.color, fillPercent: 70)
-    ]
+    var categories = [BudgetCellViewModel]() {
+        didSet {
+            contentView.reloadData()
+        }
+    }
     
     init(presenter: BudgetPresenter) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
-        view = contentView
-        view.backgroundColor = ColorTheme.primaryColor.color
-        contentView.tableViewDataSource = self
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -37,25 +33,33 @@ class BudgetViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view = contentView
+        view.backgroundColor = ColorTheme.primaryColor.color
+        contentView.tableViewDataSource = self
+        presenter.fetch()
+        view.setLoading(true)
     }
 }
 
 extension BudgetViewController: BudgetPresenterDelegate {
     func presentSuccess(viewModel: BudgetModels.ViewModel) {
+        categories = viewModel.categories
+        view.setLoading(false)
     }
     
     func presentError(_ error: NetworkErrors) {
+        view.setLoading(false)
     }
 }
 
 extension BudgetViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        mockContent.count
+        categories.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = BudgetCell(style: .default, reuseIdentifier: cellIdentifier)
-        cell.setupCell(mockContent[indexPath.row])
+        cell.setupCell(categories[indexPath.row])
         return cell
     }
 }

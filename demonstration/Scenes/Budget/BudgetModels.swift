@@ -7,15 +7,24 @@
 //
 
 enum BudgetModels {
-    struct Request: Codable {
-    }
     
     struct Response: Decodable {
+        let categories: [Category]
     }
     
-    struct ErrorModel: Decodable, Error {
+    struct Category: Decodable {
+        let name: String
+        let color: String
+        let budget: Double
+        let totalSpent: Double
+        let budgetRemaining: Double
+        
+        private enum CodingKeys : String, CodingKey {
+            case name, color = "color_hex", budget, totalSpent = "total_spent", budgetRemaining = "budget_remaining"
+        }
     }
     
     struct ViewModel {
+        let categories: [BudgetCellViewModel]
     }
 }

@@ -16,9 +16,9 @@ final class BudgetView: UIView {
         }
     }
     
-    let headerView = HeaderView()
+    private let headerView = HeaderView()
     
-    let tableView: UITableView = {
+    private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.separatorStyle = .none
         let offset: CGFloat = 40
@@ -35,6 +35,10 @@ final class BudgetView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func reloadData() {
+        tableView.reloadData()
     }
 }
 

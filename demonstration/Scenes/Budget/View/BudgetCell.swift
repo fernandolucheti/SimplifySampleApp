@@ -142,5 +142,6 @@ extension BudgetCell: ViewCode {
     
     func configureView() {
         backgroundColor = .clear
+        selectionStyle = .none
     }
 }
