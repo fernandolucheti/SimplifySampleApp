@@ -68,5 +68,6 @@ extension BudgetView: ViewCode {
     func configureView() {
         backgroundColor = ColorTheme.primaryColor.color
         headerView.title = "Categories"
+        clipsToBounds = true
     }
 }

@@ -68,6 +68,7 @@ extension ChartView: ViewCode {
     
     func configureView() {
         headerView.title = "Expense Graph"
+        clipsToBounds = true
     }
 }
 

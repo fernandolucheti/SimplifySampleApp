@@ -90,5 +90,6 @@ extension HomeView: ViewCode {
     
     func configureView() {
         backgroundColor = ColorTheme.primaryColor.color
+        clipsToBounds = true
     }
 }
