@@ -71,7 +71,7 @@ extension TransactionsView: ViewCode {
             headerView.topAnchor.constraint(equalTo: topAnchor),
             headerView.trailingAnchor.constraint(equalTo: trailingAnchor),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             tableView.topAnchor.constraint(equalTo: topAnchor),
             tableView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])

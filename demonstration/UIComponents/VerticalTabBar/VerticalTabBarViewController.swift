@@ -1,30 +1,34 @@
 //
-//  VerticalTabBarController.swift
+//  VerticalTabBarViewController.swift
 //  demonstration
 //
-//  Created by Fernando on 02/01/22.
+//  Created by Fernando Lucheti on 20/03/22.
+//  Copyright (c) 2022 ___ORGANIZATIONNAME___. All rights reserved.
 //
 
 import UIKit
 
-final class VerticalTabBarController: UIViewController {
+class VerticalTabBarViewController: UIViewController {
     
     var contentViewController: UIViewController
     let navigationItens: [NavigationTabItem]
     let verticalTabBarView: VerticalTabBarView
+    let presenter: VerticalTabBarPresenter
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupView()
-    }
-    
-    init(navigationItens: [NavigationTabItem]) {
+    init(navigationItens: [NavigationTabItem], presenter: VerticalTabBarPresenter) {
         self.contentViewController = navigationItens.first?.viewController ?? UIViewController()
         self.navigationItens = navigationItens
+        self.presenter = presenter
         let viewItens = VerticalTabBarButtonsFactory.createButtonsFor(navigationItens)
         verticalTabBarView = VerticalTabBarView(buttons: viewItens)
         super.init(nibName: nil, bundle: nil)
         verticalTabBarView.setDelegate(self)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupView()
+        presenter.fetch()
     }
     
     required init?(coder: NSCoder) {
@@ -48,7 +52,13 @@ final class VerticalTabBarController: UIViewController {
     }
 }
 
-extension VerticalTabBarController: TabViewDelegate {
+extension VerticalTabBarViewController: VerticalTabBarPresenterDelegate {
+    func presentSuccess(viewModel: VerticalTabBarModels.ViewModel) {
+        verticalTabBarView.setupView(viewModel)
+    }
+}
+
+extension VerticalTabBarViewController: TabViewDelegate {
     
     func didSelectTabAtIndex(_ index: Int) {
         contentViewController = navigationItens[index].viewController
@@ -56,14 +66,13 @@ extension VerticalTabBarController: TabViewDelegate {
     }
 }
 
-extension VerticalTabBarController: ViewCode {
+extension VerticalTabBarViewController: ViewCode {
     func setupHierarchy() {
         view = verticalTabBarView
         setupContentView()
     }
     
     func setupConstraints() {
-        view.translatesAutoresizingMaskIntoConstraints = false
         contentViewController.view.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([

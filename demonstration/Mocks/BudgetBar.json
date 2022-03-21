@@ -1,0 +1,20 @@
+{
+    "categories": [
+        {
+          "color_hex": "#A00014",
+          "total_spent": 541.5,
+        },
+        {
+          "color_hex": "#DE0162",
+          "total_spent": 238.5,
+        },
+        {
+          "color_hex": "#F94852",
+          "total_spent": 159.7,
+        },
+        {
+          "color_hex": "#A125C5",
+          "total_spent": 159.7,
+        }
+    ]
+}

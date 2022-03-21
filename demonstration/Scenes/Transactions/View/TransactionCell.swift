@@ -33,7 +33,7 @@ final class TransactionCell: UITableViewCell {
     
     private lazy var transactionNameLabel: UILabel = {
         let label = UILabel()
-        label.font = .boldSystemFont(ofSize: 14)
+        label.font = .boldSystemFont(ofSize: 16)
         label.textColor = ColorTheme.secondaryColor.color
         label.text = viewModel.name
         return label
@@ -90,8 +90,8 @@ extension TransactionCell: ViewCode {
             categoryView.topAnchor.constraint(equalTo: topAnchor),
             categoryView.bottomAnchor.constraint(equalTo: bottomAnchor),
             contentStack.centerYAnchor.constraint(equalTo: centerYAnchor),
-            contentStack.leadingAnchor.constraint(equalTo: categoryView.trailingAnchor, constant: 10),
-            contentStack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
+            contentStack.leadingAnchor.constraint(equalTo: categoryView.trailingAnchor, constant: 16),
+            contentStack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16)
         ])
     }
     
