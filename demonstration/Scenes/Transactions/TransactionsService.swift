@@ -6,9 +6,10 @@
 //
 
 import Moya
+import Foundation
 
 protocol TransactionsServiceLogic {
-    func fetch(completion: @escaping (Result<TransactionModels.Response, NetworkErrors>) -> Void)
+    func fetch(monthYear: MonthYear, completion: @escaping (Result<TransactionModels.Response, NetworkErrors>) -> Void)
 }
 
 final class TransactionsService: TransactionsServiceLogic {
@@ -19,8 +20,9 @@ final class TransactionsService: TransactionsServiceLogic {
         self.provider = provider
     }
     
-    func fetch(completion: @escaping (Result<TransactionModels.Response, NetworkErrors>) -> Void) {
-        provider.request(.transactions) { result in
+    func fetch(monthYear: MonthYear, completion: @escaping (Result<TransactionModels.Response, NetworkErrors>) -> Void) {
+        
+        provider.request(.transactions(monthYear: monthYear)) { result in
             switch result {
             case.success(let response):
                 do {

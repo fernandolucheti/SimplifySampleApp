@@ -16,9 +16,9 @@ class ChartView: UIView {
         }
     }
     
-    private let headerView = HeaderView()
+    private var headerView: HeaderView
     
-    private var tableView: UITableView = {
+    var tableView: UITableView = {
         let tableView = UITableView()
         tableView.separatorStyle = .none
         let offset: CGFloat = 50
@@ -29,7 +29,10 @@ class ChartView: UIView {
         return tableView
     }()
     
-    init() {
+    init(didSelectMonthBlock: @escaping (MonthYear) -> Void) {
+        self.headerView = HeaderView(didSelectMonthBlock: { monthYear in
+            didSelectMonthBlock(monthYear)
+        })
         super.init(frame: .zero)
         setupView()
         tableView.delegate = self

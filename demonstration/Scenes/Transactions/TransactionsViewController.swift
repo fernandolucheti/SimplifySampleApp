@@ -10,7 +10,12 @@ import UIKit
 final class TransactionsViewController: UIViewController {
     
     let presenter: TransactionsPresenter
-    let transactionsView = TransactionsView()
+    
+    private lazy var transactionsView = TransactionsView(didSelectMonthBlock: { [weak self] monthYear in
+        self?.presenter.fetch(monthYear: monthYear)
+        self?.view.setLoading(true, alpha: 0.4)
+    })
+    
     var transactions: [TransactionCellViewModel] = [] {
         didSet {
             transactionsView.reloadData()
@@ -21,7 +26,7 @@ final class TransactionsViewController: UIViewController {
         super.viewDidLoad()
         transactionsView.tableViewDataSource = self
         view = transactionsView
-        presenter.fetch()
+        presenter.fetch(monthYear: Date.currentMonthYear)
         transactionsView.setLoading(true)
     }
     

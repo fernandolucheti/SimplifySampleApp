@@ -16,7 +16,7 @@ class TransactionsPresenterTests: XCTestCase {
     
     func testFetch() throws {
         sut.setDelegate(transactionsPresenterSpy)
-        sut.fetch()
+        sut.fetch(monthYear: MonthYear(month: 4, year: 2022))
         XCTAssertTrue(transactionsPresenterSpy.viewModel?.transactions.first?.value == 50.0)
         XCTAssertTrue(transactionsPresenterSpy.viewModel?.transactions.first?.name == "Restaurant")
         XCTAssertTrue(transactionsPresenterSpy.viewModel?.transactions.first?.date == "01/01/2022")
@@ -26,13 +26,13 @@ class TransactionsPresenterTests: XCTestCase {
     func testError() {
         sut = TransactionsPresenter(service: TransactionsServiceErrorMock())
         sut.setDelegate(transactionsPresenterSpy)
-        sut.fetch()
+        sut.fetch(monthYear: MonthYear(month: 4, year: 2022))
         XCTAssertTrue(transactionsPresenterSpy.error == NetworkErrors.generic)
     }
 }
 
 final class TransactionsServiceMock: TransactionsServiceLogic {
-    func fetch(completion: @escaping (Result<TransactionModels.Response, NetworkErrors>) -> Void) {
+    func fetch(monthYear: MonthYear, completion: @escaping (Result<TransactionModels.Response, NetworkErrors>) -> Void) {
         let response = TransactionModels.Response(transactions: [
             TransactionModels.Transaction(value: 50.0,
                                           name: "Restaurant",
@@ -50,7 +50,7 @@ final class TransactionsServiceMock: TransactionsServiceLogic {
 
 final class TransactionsServiceErrorMock: TransactionsServiceLogic {
     
-    func fetch(completion: @escaping (Result<TransactionModels.Response, NetworkErrors>) -> Void) {
+    func fetch(monthYear: MonthYear, completion: @escaping (Result<TransactionModels.Response, NetworkErrors>) -> Void) {
         completion(.failure(NetworkErrors.generic))
     }
 }

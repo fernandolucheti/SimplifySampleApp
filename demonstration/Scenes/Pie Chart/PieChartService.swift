@@ -9,7 +9,7 @@
 import Moya
 
 protocol PieChartServiceLogic {
-    func fetch(completion: @escaping (Result<PieChartModels.Response, NetworkErrors>) -> Void)
+    func fetch(monthYear: MonthYear, completion: @escaping (Result<PieChartModels.Response, NetworkErrors>) -> Void)
 }
 
 class PieChartService: PieChartServiceLogic {
@@ -20,8 +20,8 @@ class PieChartService: PieChartServiceLogic {
         self.provider = provider
     }
     
-    func fetch(completion: @escaping (Result<PieChartModels.Response, NetworkErrors>) -> Void) {
-        provider.request(.pieChart) { result in
+    func fetch(monthYear: MonthYear, completion: @escaping (Result<PieChartModels.Response, NetworkErrors>) -> Void) {
+        provider.request(.pieChart(monthYear: monthYear)) { result in
             switch result {
             case.success(let response):
                 do {

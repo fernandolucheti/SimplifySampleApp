@@ -10,7 +10,10 @@ import UIKit
 
 class BudgetViewController: UIViewController {
     
-    private var contentView = BudgetView()
+    private lazy var contentView = BudgetView(didSelectMonthBlock: { [weak self] monthYear in
+        self?.presenter.fetch(monthYear: monthYear)
+        self?.view.setLoading(true, alpha: 0.4)
+    })
     private var presenter: BudgetPresenter
     
     let cellIdentifier = "BudgetCell"
@@ -36,7 +39,7 @@ class BudgetViewController: UIViewController {
         view = contentView
         view.backgroundColor = ColorTheme.primaryColor.color
         contentView.tableViewDataSource = self
-        presenter.fetch()
+        presenter.fetch(monthYear: Date.currentMonthYear)
         view.setLoading(true)
     }
 }

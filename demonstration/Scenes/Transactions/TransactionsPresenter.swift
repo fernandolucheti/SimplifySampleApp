@@ -24,8 +24,8 @@ final class TransactionsPresenter {
         self.delegate = delegate
     }
     
-    func fetch() {
-        service.fetch { [weak self] result in
+    func fetch(monthYear: MonthYear) {
+        service.fetch(monthYear: monthYear) { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let response):

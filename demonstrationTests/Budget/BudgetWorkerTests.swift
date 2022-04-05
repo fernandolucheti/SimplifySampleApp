@@ -17,7 +17,7 @@ class BudgetServiceTests: XCTestCase {
     
     func testFetch() {
         
-        sut.fetch { result in
+        sut.fetch(monthYear: MonthYear(month: 4, year: 2022)) { result in
             switch result {
             case .success(let response):
                 XCTAssertTrue(response.categories.first?.name == "Restaurants")
