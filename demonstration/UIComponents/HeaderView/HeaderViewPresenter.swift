@@ -10,16 +10,16 @@ import Foundation
 final class HeaderViewPresenter {
     
     private weak var delegate: HeaderViewDelegate?
-    var didSelectMonth: (MonthYear) -> Void
+    private var didSelectMonth: (MonthYear) -> Void
     
     enum Operation { case next; case previous }
     
     private lazy var selectedMonth = Date.currentMonthYear
     var monthName: String {
-        months[selectedMonth.month-1]
+        monthNames[selectedMonth.month-1]
     }
     
-    private let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    private let monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
     
     init(didSelectMonthBlock: @escaping (MonthYear) -> Void) {
         self.didSelectMonth = didSelectMonthBlock
