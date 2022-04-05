@@ -16,9 +16,12 @@ final class BudgetView: UIView {
         }
     }
     
-    private let headerView = HeaderView()
+    var didSelectMonth: (MonthYear) -> Void
+    private lazy var headerView = HeaderView(didSelectMonthBlock: { month in
+        self.didSelectMonth(month)
+    })
     
-    private let tableView: UITableView = {
+    let tableView: UITableView = {
         let tableView = UITableView()
         tableView.separatorStyle = .none
         let offset: CGFloat = 50
@@ -29,7 +32,8 @@ final class BudgetView: UIView {
         return tableView
     }()
     
-    init() {
+    init(didSelectMonthBlock: @escaping (MonthYear) -> Void) {
+        self.didSelectMonth = didSelectMonthBlock
         super.init(frame: .zero)
         setupView()
     }

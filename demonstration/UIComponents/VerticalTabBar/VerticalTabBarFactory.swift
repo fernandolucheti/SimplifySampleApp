@@ -13,9 +13,8 @@ final class VerticalTabBarFactory {
     
     private static func systemImage(_ name: String, filled: Bool = false) -> UIImage {
         let name = filled ? "\(name).fill" : name
-        let image = UIImage(systemName: name,
-                           withConfiguration: UIImage.SymbolConfiguration(pointSize: 28)) ?? UIImage()
-        return image.withTintColor(ColorTheme.primaryAccent.color)
+        return UIImage(systemName: name,
+                       withConfiguration: UIImage.SymbolConfiguration(pointSize: 28)) ?? UIImage()
     }
     
     private static func createNavigationTabItens() -> [NavigationTabItem] {

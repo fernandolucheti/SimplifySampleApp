@@ -14,6 +14,7 @@ final class VerticalTabBarButtonsFactory {
             button.setImage(item.icon, for: .normal)
             button.setImage(item.iconFilled, for: .selected)
             button.isSelected = index == 0
+            button.imageView?.tintColor = ColorTheme.primaryAccent.color
             return button
         }
     }

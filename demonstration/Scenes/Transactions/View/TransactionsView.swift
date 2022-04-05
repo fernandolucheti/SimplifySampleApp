@@ -9,6 +9,8 @@ import UIKit
 
 final class TransactionsView: UIView {
     
+    var didSelectMonth: (MonthYear) -> Void
+    
     weak var tableViewDataSource: UITableViewDataSource? {
         didSet {
             tableView.dataSource = tableViewDataSource
@@ -21,9 +23,11 @@ final class TransactionsView: UIView {
         return view
     }()
     
-    let headerView = HeaderView()
+    private lazy var headerView = HeaderView(didSelectMonthBlock: { monthYear in
+        self.didSelectMonth(monthYear)
+    })
     
-    private lazy var tableView: UITableView = {
+    lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.rowHeight = 100
         tableView.backgroundColor = .clear
@@ -35,7 +39,8 @@ final class TransactionsView: UIView {
         return tableView
     }()
     
-    init() {
+    init(didSelectMonthBlock: @escaping (MonthYear) -> Void) {
+        self.didSelectMonth = didSelectMonthBlock
         super.init(frame: .zero)
         setupView()
         tableView.reloadData()
@@ -69,7 +74,7 @@ extension TransactionsView: ViewCode {
             lineView.bottomAnchor.constraint(equalTo: bottomAnchor),
             headerView.leadingAnchor.constraint(equalTo: leadingAnchor),
             headerView.topAnchor.constraint(equalTo: topAnchor),
-            headerView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            headerView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             tableView.topAnchor.constraint(equalTo: topAnchor),

@@ -17,7 +17,7 @@ class BudgetPresenterTests: XCTestCase {
     
     func testFetch() throws {
         sut.setDelegate(presenterSpy)
-        sut.fetch()
+        sut.fetch(monthYear: MonthYear(month: 4, year: 2022))
         
         XCTAssertTrue(presenterSpy.viewModel?.categories.first?.categoryName == "Restaurants")
         XCTAssertTrue(presenterSpy.viewModel?.categories.first?.color == UIColor(hex: "#A00014"))
@@ -29,7 +29,7 @@ class BudgetPresenterTests: XCTestCase {
     func testError() {
         sut = BudgetPresenter(service: BudgetServiceErrorMock())
         sut.setDelegate(presenterSpy)
-        sut.fetch()
+        sut.fetch(monthYear: MonthYear(month: 4, year: 2022))
         XCTAssertTrue(presenterSpy.error == NetworkErrors.generic)
     }
 }
@@ -40,14 +40,14 @@ final class BudgetServiceMock: BudgetServiceLogic {
         BudgetModels.Category(name: "Restaurants", color: "#A00014", budget: 500.0, totalSpent: 541.5, budgetRemaining: -41.5)
     ])
     
-    func fetch(completion: @escaping (Result<BudgetModels.Response, NetworkErrors>) -> Void) {
+    func fetch(monthYear: MonthYear, completion: @escaping (Result<BudgetModels.Response, NetworkErrors>) -> Void) {
         completion(.success(mock))
     }
 }
 
 final class BudgetServiceErrorMock: BudgetServiceLogic {
     
-    func fetch(completion: @escaping (Result<BudgetModels.Response, NetworkErrors>) -> Void) {
+    func fetch(monthYear: MonthYear, completion: @escaping (Result<BudgetModels.Response, NetworkErrors>) -> Void) {
         completion(.failure(NetworkErrors.generic))
     }
 }

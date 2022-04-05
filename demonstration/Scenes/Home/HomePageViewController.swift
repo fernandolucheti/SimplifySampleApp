@@ -19,7 +19,7 @@ final class HomePageViewController: UIPageViewController {
         dataSource = self
         setViewControllers([orderedViewControllers[1]],
                            direction: .forward,
-                           animated: true,
+                           animated: false,
                            completion: nil)
     }
 }

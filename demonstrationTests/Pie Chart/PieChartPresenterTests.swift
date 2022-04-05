@@ -18,7 +18,7 @@ class PieChartPresenterTests: XCTestCase {
     
     func testFetch() throws {
         sut.setDelegate(presenterSpy)
-        sut.fetch()
+        sut.fetch(monthYear: MonthYear(month: 4, year: 2022))
         
         XCTAssertTrue(presenterSpy.viewModel?.categories.first?.name == "Restaurants")
         XCTAssertTrue(presenterSpy.viewModel?.categories.first?.color == UIColor(hex: "#A00014"))
@@ -28,13 +28,13 @@ class PieChartPresenterTests: XCTestCase {
     func testError() {
         sut = PieChartPresenter(service: PieChartServiceErrorMock())
         sut.setDelegate(presenterSpy)
-        sut.fetch()
+        sut.fetch(monthYear: MonthYear(month: 4, year: 2022))
         XCTAssertTrue(presenterSpy.error == NetworkErrors.generic)
     }
 }
 
 final class PieChartServiceMock: PieChartServiceLogic {
-    func fetch(completion: @escaping (Result<PieChartModels.Response, NetworkErrors>) -> Void) {
+    func fetch(monthYear: MonthYear, completion: @escaping (Result<PieChartModels.Response, NetworkErrors>) -> Void) {
         let response = PieChartModels.Response(categories: [
             PieChartModels.Category(name: "Restaurants", color: "#A00014", totalSpent: 541.5)
         ])
@@ -44,7 +44,7 @@ final class PieChartServiceMock: PieChartServiceLogic {
 
 final class PieChartServiceErrorMock: PieChartServiceLogic {
     
-    func fetch(completion: @escaping (Result<PieChartModels.Response, NetworkErrors>) -> Void) {
+    func fetch(monthYear: MonthYear, completion: @escaping (Result<PieChartModels.Response, NetworkErrors>) -> Void) {
         completion(.failure(NetworkErrors.generic))
     }
 }

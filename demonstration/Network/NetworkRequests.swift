@@ -10,9 +10,9 @@ import Moya
 
 enum NetworkRequests {
     case home
-    case transactions
-    case budget
-    case pieChart
+    case transactions(monthYear: MonthYear)
+    case budget(monthYear: MonthYear)
+    case pieChart(monthYear: MonthYear)
     case budgetBar
 }
 
@@ -41,7 +41,12 @@ extension NetworkRequests: TargetType {
     }
     
     var task: Task {
-        .requestParameters(parameters: [:], encoding: URLEncoding.default)
+        switch self {
+        case .home, .budgetBar:
+            return .requestParameters(parameters: [:], encoding: URLEncoding.default)
+        case .transactions(let monthYear), .budget(let monthYear), .pieChart(let monthYear):
+            return .requestParameters(parameters: ["month": monthYear.month, "year": monthYear.year], encoding: URLEncoding.default)
+        }
     }
     
     var headers: [String : String]? {

@@ -12,7 +12,10 @@ import Charts
 class PieChartViewController: UIViewController {
     
     private var viewModel: PieChartModels.ViewModel?
-    private var contentView = ChartView()
+    private lazy var contentView = ChartView(didSelectMonthBlock: { [weak self] monthYear in
+        self?.presenter.fetch(monthYear: monthYear)
+        self?.view.setLoading(true, alpha: 0.4)
+    })
     private var presenter: PieChartPresenter
     private let cellIdentifier = "PieChartCell"
     
@@ -31,7 +34,7 @@ class PieChartViewController: UIViewController {
         super.viewDidLoad()
         self.view = contentView
         view.backgroundColor = ColorTheme.primaryColor.color
-        presenter.fetch()
+        presenter.fetch(monthYear: Date.currentMonthYear)
         view.setLoading(true)
         contentView.tableViewDataSource = self
     }

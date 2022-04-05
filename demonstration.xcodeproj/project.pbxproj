@@ -18,6 +18,8 @@
 		8B11AD4A27E4E6E800BE3A12 /* Budget.json in Resources */ = {isa = PBXBuildFile; fileRef = 8B11AD4927E4E6E800BE3A12 /* Budget.json */; };
 		8B11AD6527E63AA700BE3A12 /* BudgetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B11AD6427E63AA700BE3A12 /* BudgetCell.swift */; };
 		8B11AD6727E63B3600BE3A12 /* ThermometerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B11AD6627E63B3600BE3A12 /* ThermometerView.swift */; };
+		8B6454FF27FC788C00EF8AAB /* MonthYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6454FE27FC788C00EF8AAB /* MonthYear.swift */; };
+		8B64550227FC854500EF8AAB /* HeaderViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B64550127FC854500EF8AAB /* HeaderViewPresenter.swift */; };
 		8BA2C1A727E7B47F008082D9 /* PieChartFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1A127E7B47F008082D9 /* PieChartFactory.swift */; };
 		8BA2C1A827E7B47F008082D9 /* PieChartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1A227E7B47F008082D9 /* PieChartPresenter.swift */; };
 		8BA2C1A927E7B47F008082D9 /* PieChartModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1A327E7B47F008082D9 /* PieChartModels.swift */; };
@@ -42,6 +44,7 @@
 		8BA2C1CF27E81343008082D9 /* BudgetBar.json in Resources */ = {isa = PBXBuildFile; fileRef = 8BA2C1CE27E81343008082D9 /* BudgetBar.json */; };
 		8BA2C1D327E813D1008082D9 /* VerticalTabBarWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1D127E813D1008082D9 /* VerticalTabBarWorkerTests.swift */; };
 		8BA2C1D427E813D1008082D9 /* VerticalTabBarPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1D227E813D1008082D9 /* VerticalTabBarPresenterTests.swift */; };
+		8BA2C1D627E8FA19008082D9 /* Date+currentMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1D527E8FA19008082D9 /* Date+currentMonth.swift */; };
 		ED8986D52782E48F00CC21BF /* HomeServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8986D42782E48F00CC21BF /* HomeServiceTest.swift */; };
 		ED8986D82782E52B00CC21BF /* Home.json in Resources */ = {isa = PBXBuildFile; fileRef = ED8986D72782E52B00CC21BF /* Home.json */; };
 		ED8986DC2782E7BE00CC21BF /* String+json.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8986DB2782E7BE00CC21BF /* String+json.swift */; };
@@ -120,6 +123,8 @@
 		8B11AD4927E4E6E800BE3A12 /* Budget.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Budget.json; sourceTree = "<group>"; };
 		8B11AD6427E63AA700BE3A12 /* BudgetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetCell.swift; sourceTree = "<group>"; };
 		8B11AD6627E63B3600BE3A12 /* ThermometerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThermometerView.swift; sourceTree = "<group>"; };
+		8B6454FE27FC788C00EF8AAB /* MonthYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthYear.swift; sourceTree = "<group>"; };
+		8B64550127FC854500EF8AAB /* HeaderViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewPresenter.swift; sourceTree = "<group>"; };
 		8BA2C1A127E7B47F008082D9 /* PieChartFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartFactory.swift; sourceTree = "<group>"; };
 		8BA2C1A227E7B47F008082D9 /* PieChartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartPresenter.swift; sourceTree = "<group>"; };
 		8BA2C1A327E7B47F008082D9 /* PieChartModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartModels.swift; sourceTree = "<group>"; };
@@ -143,6 +148,7 @@
 		8BA2C1CE27E81343008082D9 /* BudgetBar.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BudgetBar.json; sourceTree = "<group>"; };
 		8BA2C1D127E813D1008082D9 /* VerticalTabBarWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalTabBarWorkerTests.swift; sourceTree = "<group>"; };
 		8BA2C1D227E813D1008082D9 /* VerticalTabBarPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalTabBarPresenterTests.swift; sourceTree = "<group>"; };
+		8BA2C1D527E8FA19008082D9 /* Date+currentMonth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+currentMonth.swift"; sourceTree = "<group>"; };
 		ED8986D42782E48F00CC21BF /* HomeServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceTest.swift; sourceTree = "<group>"; };
 		ED8986D72782E52B00CC21BF /* Home.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Home.json; sourceTree = "<group>"; };
 		ED8986DB2782E7BE00CC21BF /* String+json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+json.swift"; sourceTree = "<group>"; };
@@ -272,6 +278,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		8B6454FD27FC784A00EF8AAB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8B6454FE27FC788C00EF8AAB /* MonthYear.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8B64550027FC853200EF8AAB /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				EDC842C2278255DD00BA291C /* HeaderView.swift */,
+				8B64550127FC854500EF8AAB /* HeaderViewPresenter.swift */,
+			);
+			path = HeaderView;
+			sourceTree = "<group>";
+		};
 		8BA2C1A027E7B469008082D9 /* Pie Chart */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,6 +355,7 @@
 				ED8986DE2782E91300CC21BF /* Bundle.swift */,
 				ED8986DB2782E7BE00CC21BF /* String+json.swift */,
 				EDC842A927820C9400BA291C /* String+CurrencyFormat.swift */,
+				8BA2C1D527E8FA19008082D9 /* Date+currentMonth.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -359,12 +383,13 @@
 		EDC8424E2780A20900BA291C /* demonstration */ = {
 			isa = PBXGroup;
 			children = (
-				ED8986DD2782E90400CC21BF /* Utils */,
 				EDC842D62782A74B00BA291C /* Assets.xcassets */,
 				ED8986D62782E4A900CC21BF /* Mocks */,
-				EDC8428F2780C71800BA291C /* UIComponents */,
-				EDC842852780A67E00BA291C /* Scenes */,
+				8B6454FD27FC784A00EF8AAB /* Models */,
 				EDC8427F2780A45100BA291C /* Network */,
+				EDC842852780A67E00BA291C /* Scenes */,
+				ED8986DD2782E90400CC21BF /* Utils */,
+				EDC8428F2780C71800BA291C /* UIComponents */,
 				EDC8424F2780A20900BA291C /* AppDelegate.swift */,
 				EDC842512780A20900BA291C /* SceneDelegate.swift */,
 				EDC8425A2780A20C00BA291C /* LaunchScreen.storyboard */,
@@ -431,9 +456,9 @@
 		EDC8428F2780C71800BA291C /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				8B64550027FC853200EF8AAB /* HeaderView */,
 				EDC842952780C79800BA291C /* Foundation */,
 				EDC842A12780D99B00BA291C /* CircleView.swift */,
-				EDC842C2278255DD00BA291C /* HeaderView.swift */,
 				EDC842AF2782282A00BA291C /* VerticalTabBar */,
 			);
 			path = UIComponents;
@@ -657,11 +682,14 @@
 				ED8986DC2782E7BE00CC21BF /* String+json.swift in Sources */,
 				EDC842AE2782261D00BA291C /* UIStackView+RemoveSubviews.swift in Sources */,
 				EDC8429E2780CE7E00BA291C /* SummarySectionView.swift in Sources */,
+				8BA2C1D627E8FA19008082D9 /* Date+currentMonth.swift in Sources */,
 				EDC842A02780D05900BA291C /* SummarySectionViewModel.swift in Sources */,
 				EDC842CB27826A5600BA291C /* TransactionsPresenter.swift in Sources */,
 				EDC8428C2780AAAD00BA291C /* HomePresenter.swift in Sources */,
 				8BA2C1C827E804EB008082D9 /* VerticalTabBarPresenter.swift in Sources */,
 				EDC842542780A20900BA291C /* HomeViewController.swift in Sources */,
+				8B64550227FC854500EF8AAB /* HeaderViewPresenter.swift in Sources */,
+				8B6454FF27FC788C00EF8AAB /* MonthYear.swift in Sources */,
 				EDC842A22780D99B00BA291C /* CircleView.swift in Sources */,
 				EDC842882780A69C00BA291C /* HomeModels.swift in Sources */,
 				EDC842CD27826DF800BA291C /* TransactionsFactory.swift in Sources */,

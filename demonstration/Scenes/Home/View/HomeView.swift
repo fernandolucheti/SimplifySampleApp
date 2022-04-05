@@ -82,7 +82,7 @@ extension HomeView: ViewCode {
             headerStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
             headerStackView.heightAnchor.constraint(equalToConstant: 60),
             contentStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            contentStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            contentStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20),
             contentStackView.topAnchor.constraint(equalTo: headerStackView.bottomAnchor),
             contentStackView.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])

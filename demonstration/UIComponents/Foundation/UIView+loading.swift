@@ -13,14 +13,14 @@ enum ViewTags: Int {
 
 extension UIView {
     
-    func setLoading(_ isLoading: Bool) {
+    func setLoading(_ isLoading: Bool, alpha: CGFloat = 1) {
         
         removeLoading()
         if !isLoading { return }
         
         let background = UIView()
         background.tag = ViewTags.loading.rawValue
-        background.backgroundColor = ColorTheme.primaryColor.color
+        background.backgroundColor = ColorTheme.primaryColor.color.withAlphaComponent(alpha)
         let loading = UIActivityIndicatorView(style: .large)
         loading.color = ColorTheme.secondaryColor.color
         loading.tag = ViewTags.loading.rawValue

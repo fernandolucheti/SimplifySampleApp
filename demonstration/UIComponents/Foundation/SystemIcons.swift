@@ -12,4 +12,8 @@ enum SystemIcons: String {
     case dollarSign = "dollarsign.circle"
     case tag = "tag"
     case pieChart = "chart.pie"
+    case calendar = "calendar"
+    case calendarOvertime = "calendar.badge.clock"
+    case chevronLeft = "chevron.left"
+    case chevronRight = "chevron.right"
 }

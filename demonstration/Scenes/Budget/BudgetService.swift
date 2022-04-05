@@ -9,7 +9,7 @@
 import Moya
 
 protocol BudgetServiceLogic {
-    func fetch(completion: @escaping (Result<BudgetModels.Response, NetworkErrors>) -> Void)
+    func fetch(monthYear: MonthYear, completion: @escaping (Result<BudgetModels.Response, NetworkErrors>) -> Void)
 }
 
 class BudgetService: BudgetServiceLogic {
@@ -20,8 +20,8 @@ class BudgetService: BudgetServiceLogic {
         self.provider = provider
     }
     
-    func fetch(completion: @escaping (Result<BudgetModels.Response, NetworkErrors>) -> Void) {
-        provider.request(.budget) { result in
+    func fetch(monthYear: MonthYear, completion: @escaping (Result<BudgetModels.Response, NetworkErrors>) -> Void) {
+        provider.request(.budget(monthYear: monthYear)) { result in
             switch result {
             case.success(let response):
                 do {
