@@ -13,9 +13,9 @@ final class CategoryCell: UITableViewCell {
         didSet {
             guard let viewModel = viewModel else { return }
             titleLabel.text = viewModel.name
-            titleLabel.textColor = viewModel.color
+            titleLabel.textColor = UIColor(hex: viewModel.color)
             totalLabel.text = viewModel.totalSpent.currencyString()
-            circleView.set(color: viewModel.color)
+            circleView.set(color: UIColor(hex: viewModel.color))
         }
     }
     

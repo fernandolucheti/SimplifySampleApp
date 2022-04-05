@@ -20,7 +20,7 @@ class BudgetPresenterTests: XCTestCase {
         sut.fetch(monthYear: MonthYear(month: 4, year: 2022))
         
         XCTAssertTrue(presenterSpy.viewModel?.categories.first?.categoryName == "Restaurants")
-        XCTAssertTrue(presenterSpy.viewModel?.categories.first?.color == UIColor(hex: "#A00014"))
+        XCTAssertTrue(presenterSpy.viewModel?.categories.first?.color == "#A00014")
         XCTAssertTrue(presenterSpy.viewModel?.categories.first?.categoryBudget == 500.0.currencyString())
         XCTAssertTrue(presenterSpy.viewModel?.categories.first?.totalSpent == 541.5.currencyString())
         XCTAssertTrue(presenterSpy.viewModel?.categories.first?.categoryBudgetRemaining == (-41.5).currencyString())

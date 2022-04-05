@@ -6,7 +6,6 @@
 //  Copyright (c) 2022 ___ORGANIZATIONNAME___. All rights reserved.
 //
 
-import UIKit
 
 protocol VerticalTabBarPresenterDelegate : AnyObject {
     func presentSuccess(viewModel: VerticalTabBarModels.ViewModel)
@@ -34,7 +33,7 @@ final class VerticalTabBarPresenter {
     private func createViewModel(_ response: VerticalTabBarModels.Response) -> VerticalTabBarModels.ViewModel {
         VerticalTabBarModels.ViewModel(categories:
                                         response.categories.compactMap({ category in
-            VerticalTabBarModels.CategoryViewModel(color: UIColor(hex: category.color), totalSpent: category.totalSpent)
+            VerticalTabBarModels.CategoryViewModel(color: category.color, totalSpent: category.totalSpent)
         }))
     }
 }

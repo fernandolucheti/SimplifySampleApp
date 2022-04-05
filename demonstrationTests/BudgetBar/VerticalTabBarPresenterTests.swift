@@ -19,7 +19,7 @@ class VerticalTabBarPresenterTests: XCTestCase {
     func testFetch() throws {
         sut.setDelegate(presenterSpy)
         sut.fetch()
-        XCTAssertTrue(presenterSpy.viewModel?.categories.first?.color == UIColor(hex: "#A00014"))
+        XCTAssertTrue(presenterSpy.viewModel?.categories.first?.color == "#A00014")
         XCTAssertTrue(presenterSpy.viewModel?.categories.first?.totalSpent == 541.5)
     }
 }

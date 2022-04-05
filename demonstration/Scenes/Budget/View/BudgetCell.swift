@@ -7,21 +7,14 @@
 
 import UIKit
 
-struct BudgetCellViewModel {
-    let categoryName: String
-    let categoryBudget: String
-    let categoryBudgetRemaining: String
-    let totalSpent: String
-    let color: UIColor
-    let fillPercent: Int
-}
-
 final class BudgetCell: UITableViewCell {
     
-    private var viewModel: BudgetCellViewModel? {
+    private var viewModel: BudgetModels.BudgetCellViewModel? {
         didSet {
             categoryNameLabel.text = viewModel?.categoryName
-            categoryNameLabel.textColor = viewModel?.color
+            if let colorHex = viewModel?.color {
+                categoryNameLabel.textColor = UIColor(hex: colorHex)
+            }
             categoryBudgetLabel.text = "Budget: \(viewModel?.categoryBudget ?? String())"
             categoryBudgetRemainingLabel.text = "Remaining: \(viewModel?.categoryBudgetRemaining ?? String())"
             totalSpentValueLabel.text = viewModel?.totalSpent
@@ -96,9 +89,9 @@ final class BudgetCell: UITableViewCell {
         setupView()
     }
     
-    public func setupCell(_ viewModel: BudgetCellViewModel) {
+    public func setupCell(_ viewModel: BudgetModels.BudgetCellViewModel) {
         self.viewModel = viewModel
-        thermometerView.setup(color: viewModel.color, fillPercent: viewModel.fillPercent)
+        thermometerView.setup(color: UIColor(hex: viewModel.color), fillPercent: viewModel.fillPercent)
     }
     
     required init?(coder: NSCoder) {
