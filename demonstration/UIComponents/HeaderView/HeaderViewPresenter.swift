@@ -14,15 +14,17 @@ final class HeaderViewPresenter {
     
     enum Operation { case next; case previous }
     
-    private lazy var selectedMonth = Date.currentMonthYear
+    private var selectedMonth: MonthYear
+    
     var monthName: String {
         monthNames[selectedMonth.month-1]
     }
     
     private let monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
     
-    init(didSelectMonthBlock: @escaping (MonthYear) -> Void) {
+    init(selectedMonth: MonthYear = Date.currentMonthYear, didSelectMonthBlock: @escaping (MonthYear) -> Void) {
         self.didSelectMonth = didSelectMonthBlock
+        self.selectedMonth = selectedMonth
     }
     
     func setDelegate(_ delegate: HeaderViewDelegate) {

@@ -21,6 +21,7 @@
 		8B6454FF27FC788C00EF8AAB /* MonthYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6454FE27FC788C00EF8AAB /* MonthYear.swift */; };
 		8B64550227FC854500EF8AAB /* HeaderViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B64550127FC854500EF8AAB /* HeaderViewPresenter.swift */; };
 		8B64550427FC9B2F00EF8AAB /* MonthYearTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B64550327FC9B2F00EF8AAB /* MonthYearTests.swift */; };
+		8B64550627FC9F9400EF8AAB /* HeaderViewPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B64550527FC9F9400EF8AAB /* HeaderViewPresenterTests.swift */; };
 		8BA2C1A727E7B47F008082D9 /* PieChartFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1A127E7B47F008082D9 /* PieChartFactory.swift */; };
 		8BA2C1A827E7B47F008082D9 /* PieChartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1A227E7B47F008082D9 /* PieChartPresenter.swift */; };
 		8BA2C1A927E7B47F008082D9 /* PieChartModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1A327E7B47F008082D9 /* PieChartModels.swift */; };
@@ -127,6 +128,7 @@
 		8B6454FE27FC788C00EF8AAB /* MonthYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthYear.swift; sourceTree = "<group>"; };
 		8B64550127FC854500EF8AAB /* HeaderViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewPresenter.swift; sourceTree = "<group>"; };
 		8B64550327FC9B2F00EF8AAB /* MonthYearTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthYearTests.swift; sourceTree = "<group>"; };
+		8B64550527FC9F9400EF8AAB /* HeaderViewPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewPresenterTests.swift; sourceTree = "<group>"; };
 		8BA2C1A127E7B47F008082D9 /* PieChartFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartFactory.swift; sourceTree = "<group>"; };
 		8BA2C1A227E7B47F008082D9 /* PieChartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartPresenter.swift; sourceTree = "<group>"; };
 		8BA2C1A327E7B47F008082D9 /* PieChartModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartModels.swift; sourceTree = "<group>"; };
@@ -409,6 +411,7 @@
 				8BA2C1BF27E7EB6A008082D9 /* Pie Chart */,
 				8B11AD4327E4E60800BE3A12 /* Transactions */,
 				8B64550327FC9B2F00EF8AAB /* MonthYearTests.swift */,
+				8B64550527FC9F9400EF8AAB /* HeaderViewPresenterTests.swift */,
 			);
 			path = demonstrationTests;
 			sourceTree = "<group>";
@@ -754,6 +757,7 @@
 				8BA2C1BE27E7EB63008082D9 /* PieChartPresenterTests.swift in Sources */,
 				ED8986E32782EC8B00CC21BF /* TransactionServiceTests.swift in Sources */,
 				8BA2C1BD27E7EB63008082D9 /* PieChartWorkerTests.swift in Sources */,
+				8B64550627FC9F9400EF8AAB /* HeaderViewPresenterTests.swift in Sources */,
 				8B11AD4627E4E63700BE3A12 /* BudgetWorkerTests.swift in Sources */,
 				ED8986D52782E48F00CC21BF /* HomeServiceTest.swift in Sources */,
 				8B11AD4727E4E63700BE3A12 /* BudgetPresenterTests.swift in Sources */,
