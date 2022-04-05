@@ -6,8 +6,6 @@
 //  Copyright (c) 2022 ___ORGANIZATIONNAME___. All rights reserved.
 //
 
-import UIKit
-
 enum VerticalTabBarModels {
     
     struct Response: Decodable {
@@ -28,7 +26,7 @@ enum VerticalTabBarModels {
     }
     
     struct CategoryViewModel {
-        let color: UIColor
+        let color: String
         let totalSpent: Double
     }
 }

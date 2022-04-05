@@ -6,8 +6,6 @@
 //  Copyright (c) 2022 ___ORGANIZATIONNAME___. All rights reserved.
 //
 
-import UIKit
-
 protocol PieChartPresenterDelegate : AnyObject {
     func presentSuccess(viewModel: PieChartModels.ViewModel)
     func presentError(_ error: NetworkErrors)
@@ -41,7 +39,7 @@ final class PieChartPresenter {
         PieChartModels.ViewModel(categories:
                                     response.categories.compactMap { category in
                                         PieChartModels.CategoryViewModel(name: category.name,
-                                                                         color: UIColor(hex: category.color),
+                                                                         color: category.color,
                                                                          totalSpent: category.totalSpent)
                                     })
     }

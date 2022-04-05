@@ -6,8 +6,6 @@
 //  Copyright (c) 2022 ___ORGANIZATIONNAME___. All rights reserved.
 //
 
-import UIKit
-
 protocol BudgetPresenterDelegate: AnyObject {
     func presentSuccess(viewModel: BudgetModels.ViewModel)
     func presentError(_ error: NetworkErrors)
@@ -39,11 +37,11 @@ final class BudgetPresenter {
     
     private func createViewModel(_ response: BudgetModels.Response) -> BudgetModels.ViewModel {
         BudgetModels.ViewModel(categories: response.categories.compactMap { category in
-            BudgetCellViewModel(categoryName: category.name,
+            BudgetModels.BudgetCellViewModel(categoryName: category.name,
                                 categoryBudget: category.budget.currencyString(),
                                 categoryBudgetRemaining: category.budgetRemaining.currencyString(),
                                 totalSpent: category.totalSpent.currencyString(),
-                                color: UIColor(hex: category.color),
+                                color: category.color,
                                 fillPercent: category.budget == 0 ? 100 : Int((category.totalSpent/category.budget)*100))
         })
     }

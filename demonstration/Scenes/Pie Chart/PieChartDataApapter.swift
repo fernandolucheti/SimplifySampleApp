@@ -14,7 +14,7 @@ final class PieChartDataApapter {
         let entries = viewModel.categories.compactMap { PieChartDataEntry(value: ($0.totalSpent)) }
         let set = PieChartDataSet(entries: entries)
         set.sliceSpace = 2
-        set.colors = viewModel.categories.compactMap { $0.color }
+        set.colors = viewModel.categories.compactMap { UIColor(hex: $0.color) }
         return PieChartData(dataSet: set)
     }
 }

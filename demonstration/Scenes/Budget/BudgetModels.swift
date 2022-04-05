@@ -27,4 +27,13 @@ enum BudgetModels {
     struct ViewModel {
         let categories: [BudgetCellViewModel]
     }
+    
+    struct BudgetCellViewModel {
+        let categoryName: String
+        let categoryBudget: String
+        let categoryBudgetRemaining: String
+        let totalSpent: String
+        let color: String
+        let fillPercent: Int
+    }
 }

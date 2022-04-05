@@ -22,7 +22,7 @@ final class BudgetBarView: UIView {
                     view.trailingAnchor.constraint(equalTo: trailingAnchor),
                     view.heightAnchor.constraint(equalToConstant: (category.totalSpent/totalSpentSum)*screenHeight)
                 ])
-                view.backgroundColor = category.color
+                view.backgroundColor = UIColor(hex: category.color)
             })
         }
     }

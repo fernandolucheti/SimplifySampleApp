@@ -6,8 +6,6 @@
 //  Copyright (c) 2022 ___ORGANIZATIONNAME___. All rights reserved.
 //
 
-import UIKit
-
 enum PieChartModels {
     
     struct Response: Decodable {
@@ -30,7 +28,7 @@ enum PieChartModels {
     
     struct CategoryViewModel {
         let name: String
-        let color: UIColor
+        let color: String
         let totalSpent: Double
     }
 }

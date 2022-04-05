@@ -17,7 +17,7 @@ class BudgetViewController: UIViewController {
     private var presenter: BudgetPresenter
     
     let cellIdentifier = "BudgetCell"
-    var categories = [BudgetCellViewModel]() {
+    var categories = [BudgetModels.BudgetCellViewModel]() {
         didSet {
             contentView.reloadData()
         }
