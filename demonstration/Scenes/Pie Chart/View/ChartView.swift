@@ -17,8 +17,8 @@ class ChartView: UIView {
     }
     
     var didSelectMonth: (MonthYear) -> Void
-    private lazy var headerView = HeaderView(didSelectMonthBlock: { monthYear in
-        self.didSelectMonth(monthYear)
+    private lazy var headerView = HeaderView(didSelectMonthBlock: { [weak self] monthYear in
+        self?.didSelectMonth(monthYear)
     })
     
     var tableView: UITableView = {

@@ -23,8 +23,8 @@ final class TransactionsView: UIView {
         return view
     }()
     
-    private lazy var headerView = HeaderView(didSelectMonthBlock: { monthYear in
-        self.didSelectMonth(monthYear)
+    private lazy var headerView = HeaderView(didSelectMonthBlock: { [weak self] monthYear in
+        self?.didSelectMonth(monthYear)
     })
     
     lazy var tableView: UITableView = {

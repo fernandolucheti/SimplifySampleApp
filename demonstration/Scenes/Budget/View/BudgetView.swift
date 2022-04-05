@@ -17,8 +17,8 @@ final class BudgetView: UIView {
     }
     
     var didSelectMonth: (MonthYear) -> Void
-    private lazy var headerView = HeaderView(didSelectMonthBlock: { month in
-        self.didSelectMonth(month)
+    private lazy var headerView = HeaderView(didSelectMonthBlock: { [weak self] month in
+        self?.didSelectMonth(month)
     })
     
     let tableView: UITableView = {
