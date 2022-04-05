@@ -16,10 +16,7 @@ final class BudgetView: UIView {
         }
     }
     
-    var didSelectMonth: (MonthYear) -> Void
-    private lazy var headerView = HeaderView(didSelectMonthBlock: { [weak self] month in
-        self?.didSelectMonth(month)
-    })
+    private var headerView: HeaderView
     
     let tableView: UITableView = {
         let tableView = UITableView()
@@ -33,7 +30,9 @@ final class BudgetView: UIView {
     }()
     
     init(didSelectMonthBlock: @escaping (MonthYear) -> Void) {
-        self.didSelectMonth = didSelectMonthBlock
+        self.headerView = HeaderView(didSelectMonthBlock: { monthYear in
+            didSelectMonthBlock(monthYear)
+        })
         super.init(frame: .zero)
         setupView()
     }

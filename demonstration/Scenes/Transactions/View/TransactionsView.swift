@@ -9,8 +9,6 @@ import UIKit
 
 final class TransactionsView: UIView {
     
-    var didSelectMonth: (MonthYear) -> Void
-    
     weak var tableViewDataSource: UITableViewDataSource? {
         didSet {
             tableView.dataSource = tableViewDataSource
@@ -23,9 +21,7 @@ final class TransactionsView: UIView {
         return view
     }()
     
-    private lazy var headerView = HeaderView(didSelectMonthBlock: { [weak self] monthYear in
-        self?.didSelectMonth(monthYear)
-    })
+    private var headerView: HeaderView
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -40,7 +36,9 @@ final class TransactionsView: UIView {
     }()
     
     init(didSelectMonthBlock: @escaping (MonthYear) -> Void) {
-        self.didSelectMonth = didSelectMonthBlock
+        self.headerView = HeaderView(didSelectMonthBlock: { monthYear in
+            didSelectMonthBlock(monthYear)
+        })
         super.init(frame: .zero)
         setupView()
         tableView.reloadData()
