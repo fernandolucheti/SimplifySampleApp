@@ -27,7 +27,7 @@ final class TransactionsView: UIView {
         self?.didSelectMonth(monthYear)
     })
     
-    lazy var tableView: UITableView = {
+    private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.rowHeight = 100
         tableView.backgroundColor = .clear
