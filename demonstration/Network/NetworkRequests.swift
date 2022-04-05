@@ -37,7 +37,12 @@ extension NetworkRequests: TargetType {
     }
     
     var method: Moya.Method {
-        .get
+        switch self {
+        case .home, .budgetBar:
+            return .get
+        case .transactions, .budget, .pieChart:
+            return .post
+        }
     }
     
     var task: Task {
@@ -45,7 +50,7 @@ extension NetworkRequests: TargetType {
         case .home, .budgetBar:
             return .requestParameters(parameters: [:], encoding: URLEncoding.default)
         case .transactions(let monthYear), .budget(let monthYear), .pieChart(let monthYear):
-            return .requestParameters(parameters: ["month": monthYear.month, "year": monthYear.year], encoding: URLEncoding.default)
+            return .requestParameters(parameters: ["month": monthYear.month, "year": monthYear.year], encoding: URLEncoding.httpBody)
         }
     }
     
