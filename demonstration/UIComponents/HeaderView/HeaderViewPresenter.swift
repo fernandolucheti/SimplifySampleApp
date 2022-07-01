@@ -22,8 +22,8 @@ final class HeaderViewPresenter {
     
     private let monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
     
-    init(selectedMonth: MonthYear = Date.currentMonthYear, didSelectMonthBlock: @escaping (MonthYear) -> Void) {
-        self.didSelectMonth = didSelectMonthBlock
+    init(selectedMonth: MonthYear = Date.currentMonthYear, didSelectMonth: @escaping (MonthYear) -> Void) {
+        self.didSelectMonth = didSelectMonth
         self.selectedMonth = selectedMonth
     }
     

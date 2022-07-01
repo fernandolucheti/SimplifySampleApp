@@ -12,7 +12,7 @@ import Charts
 class PieChartViewController: UIViewController {
     
     private var viewModel: PieChartModels.ViewModel?
-    private lazy var contentView = ChartView(didSelectMonthBlock: { [weak self] monthYear in
+    private lazy var contentView = ChartView(didSelectMonth: { [weak self] monthYear in
         self?.presenter.fetch(monthYear: monthYear)
         self?.view.setLoading(true, alpha: 0.4)
     })

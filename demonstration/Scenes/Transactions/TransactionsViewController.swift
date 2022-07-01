@@ -11,16 +11,10 @@ final class TransactionsViewController: UIViewController {
     
     let presenter: TransactionsPresenter
     
-    private lazy var transactionsView = TransactionsView(didSelectMonthBlock: { [weak self] monthYear in
+    private lazy var transactionsView = TransactionsView(didSelectMonth: { [weak self] monthYear in
         self?.presenter.fetch(monthYear: monthYear)
         self?.view.setLoading(true, alpha: 0.4)
     })
-    
-    var transactions: [TransactionCellViewModel] = [] {
-        didSet {
-            transactionsView.reloadData()
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,11 +36,11 @@ final class TransactionsViewController: UIViewController {
 
 extension TransactionsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        transactions.count
+        presenter.transactions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let viewModel = transactions[indexPath.row]
+        let viewModel = presenter.transactions[indexPath.row]
         let cell = TransactionCell(style: .default, reuseIdentifier: "transactionCell", viewModel: viewModel)
         cell.viewModel = viewModel
         return cell
@@ -55,7 +49,7 @@ extension TransactionsViewController: UITableViewDataSource {
 
 extension TransactionsViewController: TransactionsPresenterDelegate {
     func presentSuccess(viewModel: TransactionModels.ViewModel) {
-        transactions = viewModel.transactions
+        transactionsView.reloadData()
         transactionsView.setLoading(false)
     }
     

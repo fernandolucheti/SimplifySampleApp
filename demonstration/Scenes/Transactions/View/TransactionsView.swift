@@ -35,10 +35,8 @@ final class TransactionsView: UIView {
         return tableView
     }()
     
-    init(didSelectMonthBlock: @escaping (MonthYear) -> Void) {
-        self.headerView = HeaderView(didSelectMonthBlock: { monthYear in
-            didSelectMonthBlock(monthYear)
-        })
+    init(didSelectMonth: @escaping (MonthYear) -> Void) {
+        self.headerView = HeaderView(didSelectMonth: didSelectMonth)
         super.init(frame: .zero)
         setupView()
         tableView.reloadData()

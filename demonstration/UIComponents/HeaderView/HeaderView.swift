@@ -105,8 +105,8 @@ final class HeaderView: UIView {
         toggleMonthView.layer.borderWidth = 2
     }
     
-    init(didSelectMonthBlock: @escaping (MonthYear) -> Void) {
-        self.presenter = HeaderViewPresenter(didSelectMonthBlock: didSelectMonthBlock)
+    init(didSelectMonth: @escaping (MonthYear) -> Void) {
+        self.presenter = HeaderViewPresenter(didSelectMonth: didSelectMonth)
         super.init(frame: .zero)
         presenter.setDelegate(self)
         setupView()

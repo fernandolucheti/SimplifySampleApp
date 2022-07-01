@@ -10,7 +10,7 @@ import UIKit
 
 class BudgetViewController: UIViewController {
     
-    private lazy var contentView = BudgetView(didSelectMonthBlock: { [weak self] monthYear in
+    private lazy var contentView = BudgetView(didSelectMonth: { [weak self] monthYear in
         self?.presenter.fetch(monthYear: monthYear)
         self?.view.setLoading(true, alpha: 0.4)
     })
