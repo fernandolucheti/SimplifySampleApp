@@ -16,6 +16,12 @@ final class TransactionsViewController: UIViewController {
         self?.view.setLoading(true, alpha: 0.4)
     })
     
+    var transactions: [TransactionCellViewModel] = [] {
+        didSet {
+            transactionsView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         transactionsView.tableViewDataSource = self
@@ -36,11 +42,11 @@ final class TransactionsViewController: UIViewController {
 
 extension TransactionsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        presenter.transactions.count
+        transactions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let viewModel = presenter.transactions[indexPath.row]
+        let viewModel = transactions[indexPath.row]
         let cell = TransactionCell(style: .default, reuseIdentifier: "transactionCell", viewModel: viewModel)
         cell.viewModel = viewModel
         return cell
@@ -49,7 +55,7 @@ extension TransactionsViewController: UITableViewDataSource {
 
 extension TransactionsViewController: TransactionsPresenterDelegate {
     func presentSuccess(viewModel: TransactionModels.ViewModel) {
-        transactionsView.reloadData()
+        transactions = viewModel.transactions
         transactionsView.setLoading(false)
     }
     

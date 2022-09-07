@@ -16,8 +16,6 @@ final class TransactionsPresenter {
     private weak var delegate: TransactionsPresenterDelegate?
     private var service: TransactionsServiceLogic
     
-    var transactions: [TransactionCellViewModel] = []
-    
     init(service: TransactionsServiceLogic) {
         self.service = service
     }
@@ -39,7 +37,7 @@ final class TransactionsPresenter {
     }
     
     private func createViewModel(_ response: TransactionModels.Response) -> TransactionModels.ViewModel {
-        transactions = response.transactions.compactMap { transaction in
+        let transactions = response.transactions.compactMap { transaction in
             TransactionCellViewModel(value: transaction.value,
                                      name: transaction.name,
                                      date: transaction.date,
@@ -48,3 +46,4 @@ final class TransactionsPresenter {
         return TransactionModels.ViewModel(transactions: transactions)
     }
 }
+
