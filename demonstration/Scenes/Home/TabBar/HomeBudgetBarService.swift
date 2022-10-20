@@ -1,5 +1,5 @@
 //
-//  VerticalTabBarService.swift
+//  HomeBudgetBarService.swift
 //  demonstration
 //
 //  Created by Fernando Lucheti on 20/03/22.
@@ -10,7 +10,7 @@ protocol VerticalTabBarServiceLogic {
     func fetch(completion: @escaping (VerticalTabBarModels.Response) -> Void)
 }
 
-class VerticalTabBarService: VerticalTabBarServiceLogic {
+class HomeBudgetBarService: VerticalTabBarServiceLogic {
     
     var provider: NetworkProvider<NetworkRequests>
     

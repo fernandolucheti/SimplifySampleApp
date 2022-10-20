@@ -1,5 +1,5 @@
 //
-//  VerticalTabBarPresenter.swift
+//  HomeBudgetBarPresenter.swift
 //  demonstration
 //
 //  Created by Fernando Lucheti on 20/03/22.
@@ -11,7 +11,8 @@ protocol VerticalTabBarPresenterDelegate : AnyObject {
     func presentSuccess(viewModel: VerticalTabBarModels.ViewModel)
 }
 
-final class VerticalTabBarPresenter {
+final class HomeBudgetBarPresenter {
+    private typealias Models = VerticalTabBarModels
     private weak var delegate: VerticalTabBarPresenterDelegate?
     private var service: VerticalTabBarServiceLogic
     
@@ -30,10 +31,9 @@ final class VerticalTabBarPresenter {
         }
     }
     
-    private func createViewModel(_ response: VerticalTabBarModels.Response) -> VerticalTabBarModels.ViewModel {
-        VerticalTabBarModels.ViewModel(categories:
-                                        response.categories.compactMap({ category in
-            VerticalTabBarModels.CategoryViewModel(color: category.color, totalSpent: category.totalSpent)
+    private func createViewModel(_ response: Models.Response) -> Models.ViewModel {
+        Models.ViewModel(categories: response.categories.compactMap({ category in
+            Models.CategoryViewModel(color: category.color, totalSpent: category.totalSpent)
         }))
     }
 }

@@ -19,6 +19,7 @@
 		8B11AD6527E63AA700BE3A12 /* BudgetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B11AD6427E63AA700BE3A12 /* BudgetCell.swift */; };
 		8B11AD6727E63B3600BE3A12 /* ThermometerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B11AD6627E63B3600BE3A12 /* ThermometerView.swift */; };
 		8B1BC3F82900D47F0012D218 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1BC3F72900D47F0012D218 /* NetworkProvider.swift */; };
+		8B1BC3FA2900EEC90012D218 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1BC3F92900EEC90012D218 /* HomeTabBarViewController.swift */; };
 		8B6454FF27FC788C00EF8AAB /* MonthYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6454FE27FC788C00EF8AAB /* MonthYear.swift */; };
 		8B64550227FC854500EF8AAB /* HeaderViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B64550127FC854500EF8AAB /* HeaderViewPresenter.swift */; };
 		8B64550427FC9B2F00EF8AAB /* MonthYearTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B64550327FC9B2F00EF8AAB /* MonthYearTests.swift */; };
@@ -38,11 +39,11 @@
 		8BA2C1BD27E7EB63008082D9 /* PieChartWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1BB27E7EB63008082D9 /* PieChartWorkerTests.swift */; };
 		8BA2C1BE27E7EB63008082D9 /* PieChartPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1BC27E7EB63008082D9 /* PieChartPresenterTests.swift */; };
 		8BA2C1C127E7FAB6008082D9 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1C027E7FAB6008082D9 /* HomePageViewController.swift */; };
-		8BA2C1C727E804EB008082D9 /* VerticalTabBarFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1C227E804EB008082D9 /* VerticalTabBarFactory.swift */; };
-		8BA2C1C827E804EB008082D9 /* VerticalTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1C327E804EB008082D9 /* VerticalTabBarPresenter.swift */; };
+		8BA2C1C727E804EB008082D9 /* HomeTabBarFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1C227E804EB008082D9 /* HomeTabBarFactory.swift */; };
+		8BA2C1C827E804EB008082D9 /* HomeBudgetBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1C327E804EB008082D9 /* HomeBudgetBarPresenter.swift */; };
 		8BA2C1C927E804EB008082D9 /* VerticalTabBarModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1C427E804EB008082D9 /* VerticalTabBarModels.swift */; };
 		8BA2C1CA27E804EB008082D9 /* VerticalTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1C527E804EB008082D9 /* VerticalTabBarViewController.swift */; };
-		8BA2C1CB27E804EB008082D9 /* VerticalTabBarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1C627E804EB008082D9 /* VerticalTabBarService.swift */; };
+		8BA2C1CB27E804EB008082D9 /* HomeBudgetBarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1C627E804EB008082D9 /* HomeBudgetBarService.swift */; };
 		8BA2C1CD27E809C2008082D9 /* BudgetBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1CC27E809C2008082D9 /* BudgetBarView.swift */; };
 		8BA2C1CF27E81343008082D9 /* BudgetBar.json in Resources */ = {isa = PBXBuildFile; fileRef = 8BA2C1CE27E81343008082D9 /* BudgetBar.json */; };
 		8BA2C1D327E813D1008082D9 /* VerticalTabBarWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1D127E813D1008082D9 /* VerticalTabBarWorkerTests.swift */; };
@@ -127,6 +128,7 @@
 		8B11AD6427E63AA700BE3A12 /* BudgetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetCell.swift; sourceTree = "<group>"; };
 		8B11AD6627E63B3600BE3A12 /* ThermometerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThermometerView.swift; sourceTree = "<group>"; };
 		8B1BC3F72900D47F0012D218 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		8B1BC3F92900EEC90012D218 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
 		8B6454FE27FC788C00EF8AAB /* MonthYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthYear.swift; sourceTree = "<group>"; };
 		8B64550127FC854500EF8AAB /* HeaderViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewPresenter.swift; sourceTree = "<group>"; };
 		8B64550327FC9B2F00EF8AAB /* MonthYearTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthYearTests.swift; sourceTree = "<group>"; };
@@ -145,11 +147,11 @@
 		8BA2C1BB27E7EB63008082D9 /* PieChartWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartWorkerTests.swift; sourceTree = "<group>"; };
 		8BA2C1BC27E7EB63008082D9 /* PieChartPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartPresenterTests.swift; sourceTree = "<group>"; };
 		8BA2C1C027E7FAB6008082D9 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
-		8BA2C1C227E804EB008082D9 /* VerticalTabBarFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalTabBarFactory.swift; sourceTree = "<group>"; };
-		8BA2C1C327E804EB008082D9 /* VerticalTabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalTabBarPresenter.swift; sourceTree = "<group>"; };
+		8BA2C1C227E804EB008082D9 /* HomeTabBarFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarFactory.swift; sourceTree = "<group>"; };
+		8BA2C1C327E804EB008082D9 /* HomeBudgetBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBudgetBarPresenter.swift; sourceTree = "<group>"; };
 		8BA2C1C427E804EB008082D9 /* VerticalTabBarModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalTabBarModels.swift; sourceTree = "<group>"; };
 		8BA2C1C527E804EB008082D9 /* VerticalTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalTabBarViewController.swift; sourceTree = "<group>"; };
-		8BA2C1C627E804EB008082D9 /* VerticalTabBarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalTabBarService.swift; sourceTree = "<group>"; };
+		8BA2C1C627E804EB008082D9 /* HomeBudgetBarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBudgetBarService.swift; sourceTree = "<group>"; };
 		8BA2C1CC27E809C2008082D9 /* BudgetBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetBarView.swift; sourceTree = "<group>"; };
 		8BA2C1CE27E81343008082D9 /* BudgetBar.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BudgetBar.json; sourceTree = "<group>"; };
 		8BA2C1D127E813D1008082D9 /* VerticalTabBarWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalTabBarWorkerTests.swift; sourceTree = "<group>"; };
@@ -282,6 +284,18 @@
 				8B11AD6627E63B3600BE3A12 /* ThermometerView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		8B1BC3FD2900F6F90012D218 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				8BA2C1C227E804EB008082D9 /* HomeTabBarFactory.swift */,
+				8BA2C1C327E804EB008082D9 /* HomeBudgetBarPresenter.swift */,
+				8BA2C1C627E804EB008082D9 /* HomeBudgetBarService.swift */,
+				8B1BC3F92900EEC90012D218 /* HomeTabBarViewController.swift */,
+				8BA2C1C027E7FAB6008082D9 /* HomePageViewController.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		8B6454FD27FC784A00EF8AAB /* Models */ = {
@@ -451,13 +465,13 @@
 		EDC842862780A68800BA291C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				8B1BC3FD2900F6F90012D218 /* TabBar */,
 				EDC8429C2780CE6800BA291C /* View */,
 				EDC842872780A69C00BA291C /* HomeModels.swift */,
 				EDC842532780A20900BA291C /* HomeViewController.swift */,
 				EDC8428B2780AAAD00BA291C /* HomePresenter.swift */,
 				EDC842A32782019200BA291C /* HomeService.swift */,
 				EDC842A72782078300BA291C /* HomeFactory.swift */,
-				8BA2C1C027E7FAB6008082D9 /* HomePageViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -491,6 +505,7 @@
 		EDC8429C2780CE6800BA291C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8BA2C1CC27E809C2008082D9 /* BudgetBarView.swift */,
 				EDC842892780AA9F00BA291C /* HomeView.swift */,
 				EDC8429D2780CE7E00BA291C /* SummarySectionView.swift */,
 				EDC8429F2780D05900BA291C /* SummarySectionViewModel.swift */,
@@ -501,16 +516,12 @@
 		EDC842AF2782282A00BA291C /* VerticalTabBar */ = {
 			isa = PBXGroup;
 			children = (
-				8BA2C1CC27E809C2008082D9 /* BudgetBarView.swift */,
 				EDC842B227822A1D00BA291C /* VerticalTabBarView.swift */,
 				EDC842B62782442300BA291C /* NavigationTabItem.swift */,
 				EDC842B42782395300BA291C /* TabBarTapGesture.swift */,
 				EDE607FF278CACC8005A997D /* VerticalTabBarButtonsFactory.swift */,
-				8BA2C1C227E804EB008082D9 /* VerticalTabBarFactory.swift */,
-				8BA2C1C327E804EB008082D9 /* VerticalTabBarPresenter.swift */,
 				8BA2C1C427E804EB008082D9 /* VerticalTabBarModels.swift */,
 				8BA2C1C527E804EB008082D9 /* VerticalTabBarViewController.swift */,
-				8BA2C1C627E804EB008082D9 /* VerticalTabBarService.swift */,
 			);
 			path = VerticalTabBar;
 			sourceTree = "<group>";
@@ -696,7 +707,7 @@
 				EDC842CB27826A5600BA291C /* TransactionsPresenter.swift in Sources */,
 				EDC8428C2780AAAD00BA291C /* HomePresenter.swift in Sources */,
 				8B1BC3F82900D47F0012D218 /* NetworkProvider.swift in Sources */,
-				8BA2C1C827E804EB008082D9 /* VerticalTabBarPresenter.swift in Sources */,
+				8BA2C1C827E804EB008082D9 /* HomeBudgetBarPresenter.swift in Sources */,
 				EDC842542780A20900BA291C /* HomeViewController.swift in Sources */,
 				8B64550227FC854500EF8AAB /* HeaderViewPresenter.swift in Sources */,
 				8B6454FF27FC788C00EF8AAB /* MonthYear.swift in Sources */,
@@ -714,11 +725,12 @@
 				EDC842BA2782457C00BA291C /* TransactionsViewController.swift in Sources */,
 				8B11AD6527E63AA700BE3A12 /* BudgetCell.swift in Sources */,
 				8BA2C1A827E7B47F008082D9 /* PieChartPresenter.swift in Sources */,
+				8B1BC3FA2900EEC90012D218 /* HomeTabBarViewController.swift in Sources */,
 				EDC842A42782019300BA291C /* HomeService.swift in Sources */,
 				EDC842812780A46200BA291C /* NetworkRequests.swift in Sources */,
 				8BA2C1CD27E809C2008082D9 /* BudgetBarView.swift in Sources */,
 				8BA2C1AB27E7B47F008082D9 /* ChartView.swift in Sources */,
-				8BA2C1CB27E804EB008082D9 /* VerticalTabBarService.swift in Sources */,
+				8BA2C1CB27E804EB008082D9 /* HomeBudgetBarService.swift in Sources */,
 				EDC842C7278269BA00BA291C /* TransactionsService.swift in Sources */,
 				8B11AD6727E63B3600BE3A12 /* ThermometerView.swift in Sources */,
 				EDC842CF2782810A00BA291C /* SystemIcons.swift in Sources */,
@@ -729,7 +741,7 @@
 				8B11AD1A27E4D32D00BE3A12 /* BudgetModels.swift in Sources */,
 				EDC842992780C8C500BA291C /* UIColor+Hex.swift in Sources */,
 				EDC842972780C7A900BA291C /* ColorTheme.swift in Sources */,
-				8BA2C1C727E804EB008082D9 /* VerticalTabBarFactory.swift in Sources */,
+				8BA2C1C727E804EB008082D9 /* HomeTabBarFactory.swift in Sources */,
 				8BA2C1A727E7B47F008082D9 /* PieChartFactory.swift in Sources */,
 				EDC842522780A20900BA291C /* SceneDelegate.swift in Sources */,
 				EDC842B327822A1D00BA291C /* VerticalTabBarView.swift in Sources */,

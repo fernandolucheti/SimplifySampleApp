@@ -1,5 +1,5 @@
 //
-//  VerticalTabBarFactory.swift
+//  HomeTabBarFactory.swift
 //  demonstration
 //
 //  Created by Fernando Lucheti on 20/03/22.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class VerticalTabBarFactory {
+final class HomeTabBarFactory {
     
     private static func systemImage(_ name: String, filled: Bool = false) -> UIImage {
         let name = filled ? "\(name).fill" : name
@@ -34,9 +34,9 @@ final class VerticalTabBarFactory {
     
     static func createViewController() -> UIViewController {
         let provider = NetworkProvider<NetworkRequests>()
-        let service = VerticalTabBarService(provider: provider)
-        let presenter = VerticalTabBarPresenter(service: service)
-        let viewController = VerticalTabBarViewController(navigationItens: createNavigationTabItens(), presenter: presenter)
+        let service = HomeBudgetBarService(provider: provider)
+        let presenter = HomeBudgetBarPresenter(service: service)
+        let viewController = HomeTabBarController(navigationItens: createNavigationTabItens(), presenter: presenter)
         presenter.setDelegate(viewController)
         return viewController
     }

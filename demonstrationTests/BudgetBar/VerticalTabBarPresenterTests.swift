@@ -13,7 +13,7 @@ import Moya
 class VerticalTabBarPresenterTests: XCTestCase {
     
     lazy var service = VerticalTabBarServiceMock()
-    lazy var sut = VerticalTabBarPresenter(service: service)
+    lazy var sut = HomeBudgetBarPresenter(service: service)
     lazy var presenterSpy = VerticalTabBarPresenterSpy()
     
     func testFetch() throws {

@@ -13,7 +13,7 @@ import Moya
 class VerticalTabBarServiceTests: XCTestCase {
     
     lazy var provider = NetworkProvider<NetworkRequests>(stubClosure: MoyaProvider.immediatelyStub)
-    lazy var sut = VerticalTabBarService(provider: provider)
+    lazy var sut = HomeBudgetBarService(provider: provider)
     
     func testFetch() {
         

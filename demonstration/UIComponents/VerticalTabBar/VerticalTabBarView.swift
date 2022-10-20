@@ -13,21 +13,17 @@ protocol TabViewDelegate: AnyObject {
 
 final class VerticalTabBarView: UIView {
     
-    let budgetBar: BudgetBarView = {
-        let view = BudgetBarView()
-        view.backgroundColor = ColorTheme.secondaryColor.color
-        return view
-    }()
-    
-    let backgroundView: UIView = {
-        let view = UIView()
-        view.backgroundColor = ColorTheme.tertiaryColor.color
-        return view
-    }()
+    let backgroundView = UIView()
     
     override var backgroundColor: UIColor? {
         didSet {
             tabBarView.backgroundColor = backgroundColor
+        }
+    }
+    
+    var contentBackGroundColor: UIColor? {
+        didSet {
+            backgroundView.backgroundColor = contentBackGroundColor
         }
     }
     
@@ -59,10 +55,6 @@ final class VerticalTabBarView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupView(_ viewModel: VerticalTabBarModels.ViewModel) {
-        budgetBar.viewModel = viewModel
-    }
-    
     @objc func didTapButtonAt(sender: TabBarTapGesture) {
         delegate?.didSelectTabAtIndex(sender.index)
         for item in buttons {
@@ -92,12 +84,10 @@ extension VerticalTabBarView: ViewCode {
         addSubview(backgroundView)
         addSubview(contentView)
         addSubview(tabBarView)
-        addSubview(budgetBar)
     }
     
     func setupConstraints() {
         backgroundView.translatesAutoresizingMaskIntoConstraints = false
-        budgetBar.translatesAutoresizingMaskIntoConstraints = false
         contentView.translatesAutoresizingMaskIntoConstraints = false
         tabBarView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -107,12 +97,7 @@ extension VerticalTabBarView: ViewCode {
             backgroundView.leadingAnchor.constraint(equalTo: trailingAnchor),
             backgroundView.widthAnchor.constraint(equalToConstant: 1000),
             
-            budgetBar.leadingAnchor.constraint(equalTo: leadingAnchor, constant: -10),
-            budgetBar.topAnchor.constraint(equalTo: topAnchor),
-            budgetBar.bottomAnchor.constraint(equalTo: bottomAnchor),
-            budgetBar.widthAnchor.constraint(equalToConstant: 20),
-            
-            contentView.leadingAnchor.constraint(equalTo: budgetBar.trailingAnchor),
+            contentView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             contentView.topAnchor.constraint(equalTo: topAnchor),
             contentView.bottomAnchor.constraint(equalTo: bottomAnchor),
             tabBarView.leadingAnchor.constraint(equalTo: contentView.trailingAnchor),
@@ -121,9 +106,5 @@ extension VerticalTabBarView: ViewCode {
             tabBarView.bottomAnchor.constraint(equalTo: bottomAnchor),
             tabBarView.widthAnchor.constraint(equalToConstant: 50)
         ])
-    }
-    
-    func configureView() {
-        clipsToBounds = false
     }
 }

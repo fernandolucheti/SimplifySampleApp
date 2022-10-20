@@ -11,7 +11,7 @@ final class HomePageViewController: UIPageViewController {
     
     private var orderedViewControllers = [
         TransactionsFactory.createViewController(),
-        VerticalTabBarFactory.createViewController()
+        HomeTabBarFactory.createViewController()
     ]
     
     override func viewDidLoad() {
@@ -45,7 +45,5 @@ extension HomePageViewController: UIPageViewControllerDataSource {
         guard orderedViewControllersCount > nextIndex else { return nil }
         return orderedViewControllers[nextIndex]
     }
-    
-    
 }
 
