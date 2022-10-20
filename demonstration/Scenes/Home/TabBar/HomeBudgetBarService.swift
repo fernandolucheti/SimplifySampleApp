@@ -1,16 +1,16 @@
 //
-//  VerticalTabBarService.swift
+//  HomeBudgetBarService.swift
 //  demonstration
 //
 //  Created by Fernando Lucheti on 20/03/22.
 //  Copyright (c) 2022 ___ORGANIZATIONNAME___. All rights reserved.
 //
 
-protocol VerticalTabBarServiceLogic {
-    func fetch(completion: @escaping (VerticalTabBarModels.Response) -> Void)
+protocol HomeBudgetBarServiceLogic {
+    func fetch(completion: @escaping (HomeBudgetBarModels.Response) -> Void)
 }
 
-class VerticalTabBarService: VerticalTabBarServiceLogic {
+class HomeBudgetBarService: HomeBudgetBarServiceLogic {
     
     var provider: NetworkProvider<NetworkRequests>
     
@@ -18,8 +18,8 @@ class VerticalTabBarService: VerticalTabBarServiceLogic {
         self.provider = provider
     }
     
-    func fetch(completion: @escaping (VerticalTabBarModels.Response) -> Void) {
-        provider.request(.budgetBar) { (result: Result<VerticalTabBarModels.Response, NetworkErrors>) in
+    func fetch(completion: @escaping (HomeBudgetBarModels.Response) -> Void) {
+        provider.request(.budgetBar) { (result: Result<HomeBudgetBarModels.Response, NetworkErrors>) in
             if case .success(let response) = result {
                 completion(response)
             }

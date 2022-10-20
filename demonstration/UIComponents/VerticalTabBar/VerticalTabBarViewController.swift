@@ -13,12 +13,22 @@ class VerticalTabBarViewController: UIViewController {
     var contentViewController: UIViewController
     let navigationItens: [NavigationTabItem]
     let verticalTabBarView: VerticalTabBarView
-    let presenter: VerticalTabBarPresenter
     
-    init(navigationItens: [NavigationTabItem], presenter: VerticalTabBarPresenter) {
+    var tabBarBackgroundColor: UIColor? {
+        didSet {
+            verticalTabBarView.backgroundColor = tabBarBackgroundColor
+        }
+    }
+    
+    var contentBackGroundColor: UIColor? {
+        didSet {
+            verticalTabBarView.contentBackGroundColor = contentBackGroundColor
+        }
+    }
+    
+    init(navigationItens: [NavigationTabItem]) {
         self.contentViewController = navigationItens.first?.viewController ?? UIViewController()
         self.navigationItens = navigationItens
-        self.presenter = presenter
         let viewItens = VerticalTabBarButtonsFactory.createButtonsFor(navigationItens)
         verticalTabBarView = VerticalTabBarView(buttons: viewItens)
         super.init(nibName: nil, bundle: nil)
@@ -28,7 +38,6 @@ class VerticalTabBarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        presenter.fetch()
     }
     
     required init?(coder: NSCoder) {
@@ -52,12 +61,6 @@ class VerticalTabBarViewController: UIViewController {
     }
 }
 
-extension VerticalTabBarViewController: VerticalTabBarPresenterDelegate {
-    func presentSuccess(viewModel: VerticalTabBarModels.ViewModel) {
-        verticalTabBarView.setupView(viewModel)
-    }
-}
-
 extension VerticalTabBarViewController: TabViewDelegate {
     
     func didSelectTabAtIndex(_ index: Int) {
@@ -67,12 +70,12 @@ extension VerticalTabBarViewController: TabViewDelegate {
 }
 
 extension VerticalTabBarViewController: ViewCode {
-    func setupHierarchy() {
+    @objc func setupHierarchy() {
         view = verticalTabBarView
         setupContentView()
     }
     
-    func setupConstraints() {
+    @objc func setupConstraints() {
         contentViewController.view.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
@@ -83,7 +86,5 @@ extension VerticalTabBarViewController: ViewCode {
         ])
     }
     
-    func configureView() {
-        verticalTabBarView.backgroundColor = ColorTheme.tertiaryColor.color
-    }
+    @objc func configureView() { }
 }

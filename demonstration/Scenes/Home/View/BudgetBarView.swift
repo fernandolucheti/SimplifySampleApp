@@ -9,7 +9,7 @@ import UIKit
 
 final class BudgetBarView: UIView {
     
-    var viewModel: VerticalTabBarModels.ViewModel? {
+    var viewModel: HomeBudgetBarModels.ViewModel? {
         didSet {
             guard let totalSpentSum = viewModel?.categories.compactMap({ $0.totalSpent }).reduce(0, +) else { return }
             let screenHeight = UIScreen.main.bounds.height
