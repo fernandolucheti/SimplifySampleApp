@@ -6,11 +6,11 @@
 //  Copyright (c) 2022 ___ORGANIZATIONNAME___. All rights reserved.
 //
 
-protocol VerticalTabBarServiceLogic {
+protocol HomeBudgetBarServiceLogic {
     func fetch(completion: @escaping (VerticalTabBarModels.Response) -> Void)
 }
 
-class HomeBudgetBarService: VerticalTabBarServiceLogic {
+class HomeBudgetBarService: HomeBudgetBarServiceLogic {
     
     var provider: NetworkProvider<NetworkRequests>
     

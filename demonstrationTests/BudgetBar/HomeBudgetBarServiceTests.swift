@@ -1,5 +1,5 @@
 //
-//  VerticalTabBarWorkerTests.swift
+//  HomeBudgetBarServiceTests.swift
 //  demonstration
 //
 //  Created by Fernando Lucheti on 20/03/22.
@@ -10,7 +10,7 @@
 import XCTest
 import Moya
 
-class VerticalTabBarServiceTests: XCTestCase {
+class HomeBudgetBarServiceTests: XCTestCase {
     
     lazy var provider = NetworkProvider<NetworkRequests>(stubClosure: MoyaProvider.immediatelyStub)
     lazy var sut = HomeBudgetBarService(provider: provider)

@@ -7,20 +7,20 @@
 //
 
 
-protocol VerticalTabBarPresenterDelegate : AnyObject {
+protocol HomeBudgetBarPresenterDelegate : AnyObject {
     func presentSuccess(viewModel: VerticalTabBarModels.ViewModel)
 }
 
 final class HomeBudgetBarPresenter {
     private typealias Models = VerticalTabBarModels
-    private weak var delegate: VerticalTabBarPresenterDelegate?
-    private var service: VerticalTabBarServiceLogic
+    private weak var delegate: HomeBudgetBarPresenterDelegate?
+    private var service: HomeBudgetBarServiceLogic
     
-    init(service: VerticalTabBarServiceLogic) {
+    init(service: HomeBudgetBarServiceLogic) {
         self.service = service
     }
     
-    func setDelegate(_ delegate: VerticalTabBarPresenterDelegate) {
+    func setDelegate(_ delegate: HomeBudgetBarPresenterDelegate) {
         self.delegate = delegate
     }
     

@@ -1,5 +1,5 @@
 //
-//  VerticalTabBarPresenterTests.swift
+//  HomeBudgetBarPresenterTests.swift
 //  demonstration
 //
 //  Created by Fernando Lucheti on 20/03/22.
@@ -10,11 +10,11 @@
 import XCTest
 import Moya
 
-class VerticalTabBarPresenterTests: XCTestCase {
+class HomeBudgetBarPresenterTests: XCTestCase {
     
-    lazy var service = VerticalTabBarServiceMock()
+    lazy var service = HomeBudgetBarServiceMock()
     lazy var sut = HomeBudgetBarPresenter(service: service)
-    lazy var presenterSpy = VerticalTabBarPresenterSpy()
+    lazy var presenterSpy = HomeBudgetBarPresenterSpy()
     
     func testFetch() throws {
         sut.setDelegate(presenterSpy)
@@ -24,7 +24,7 @@ class VerticalTabBarPresenterTests: XCTestCase {
     }
 }
 
-final class VerticalTabBarServiceMock: VerticalTabBarServiceLogic {
+final class HomeBudgetBarServiceMock: HomeBudgetBarServiceLogic {
     func fetch(completion: @escaping (VerticalTabBarModels.Response) -> Void) {
         let response = VerticalTabBarModels.Response(categories: [
             VerticalTabBarModels.Category(color: "#A00014", totalSpent: 541.5)
@@ -33,7 +33,7 @@ final class VerticalTabBarServiceMock: VerticalTabBarServiceLogic {
     }
 }
 
-final class VerticalTabBarPresenterSpy: VerticalTabBarPresenterDelegate {
+final class HomeBudgetBarPresenterSpy: HomeBudgetBarPresenterDelegate {
     
     var presentSuccessCalled = false
     var presentErrorCalled = false
