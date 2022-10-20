@@ -11,7 +11,7 @@ import Moya
 
 class TransactionServiceTests: XCTestCase {
     
-    lazy var provider = MoyaProvider<NetworkRequests>(stubClosure: MoyaProvider.immediatelyStub)
+    lazy var provider = NetworkProvider<NetworkRequests>(stubClosure: MoyaProvider.immediatelyStub)
     lazy var sut = TransactionsService(provider: provider)
     
     func testFetch() {

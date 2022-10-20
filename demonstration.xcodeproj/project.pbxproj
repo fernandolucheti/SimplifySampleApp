@@ -18,6 +18,7 @@
 		8B11AD4A27E4E6E800BE3A12 /* Budget.json in Resources */ = {isa = PBXBuildFile; fileRef = 8B11AD4927E4E6E800BE3A12 /* Budget.json */; };
 		8B11AD6527E63AA700BE3A12 /* BudgetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B11AD6427E63AA700BE3A12 /* BudgetCell.swift */; };
 		8B11AD6727E63B3600BE3A12 /* ThermometerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B11AD6627E63B3600BE3A12 /* ThermometerView.swift */; };
+		8B1BC3F82900D47F0012D218 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1BC3F72900D47F0012D218 /* NetworkProvider.swift */; };
 		8B6454FF27FC788C00EF8AAB /* MonthYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6454FE27FC788C00EF8AAB /* MonthYear.swift */; };
 		8B64550227FC854500EF8AAB /* HeaderViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B64550127FC854500EF8AAB /* HeaderViewPresenter.swift */; };
 		8B64550427FC9B2F00EF8AAB /* MonthYearTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B64550327FC9B2F00EF8AAB /* MonthYearTests.swift */; };
@@ -125,6 +126,7 @@
 		8B11AD4927E4E6E800BE3A12 /* Budget.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Budget.json; sourceTree = "<group>"; };
 		8B11AD6427E63AA700BE3A12 /* BudgetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetCell.swift; sourceTree = "<group>"; };
 		8B11AD6627E63B3600BE3A12 /* ThermometerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThermometerView.swift; sourceTree = "<group>"; };
+		8B1BC3F72900D47F0012D218 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		8B6454FE27FC788C00EF8AAB /* MonthYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthYear.swift; sourceTree = "<group>"; };
 		8B64550127FC854500EF8AAB /* HeaderViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewPresenter.swift; sourceTree = "<group>"; };
 		8B64550327FC9B2F00EF8AAB /* MonthYearTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthYearTests.swift; sourceTree = "<group>"; };
@@ -430,6 +432,7 @@
 			children = (
 				EDC842802780A46200BA291C /* NetworkRequests.swift */,
 				EDC842A5278204BB00BA291C /* NetworkErrors.swift */,
+				8B1BC3F72900D47F0012D218 /* NetworkProvider.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -692,6 +695,7 @@
 				EDC842A02780D05900BA291C /* SummarySectionViewModel.swift in Sources */,
 				EDC842CB27826A5600BA291C /* TransactionsPresenter.swift in Sources */,
 				EDC8428C2780AAAD00BA291C /* HomePresenter.swift in Sources */,
+				8B1BC3F82900D47F0012D218 /* NetworkProvider.swift in Sources */,
 				8BA2C1C827E804EB008082D9 /* VerticalTabBarPresenter.swift in Sources */,
 				EDC842542780A20900BA291C /* HomeViewController.swift in Sources */,
 				8B64550227FC854500EF8AAB /* HeaderViewPresenter.swift in Sources */,
@@ -1094,8 +1098,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

@@ -6,11 +6,10 @@
 //
 
 import UIKit
-import Moya
 
 final class TransactionsFactory {
     static func createViewController() -> UIViewController {
-        let provider = MoyaProvider<NetworkRequests>()
+        let provider = NetworkProvider<NetworkRequests>()
         let service = TransactionsService(provider: provider)
         let presenter = TransactionsPresenter(service: service)
         let viewController = TransactionsViewController(presenter: presenter)

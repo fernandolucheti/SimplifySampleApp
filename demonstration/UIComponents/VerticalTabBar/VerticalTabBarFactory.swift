@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Moya
 
 final class VerticalTabBarFactory {
     
@@ -34,7 +33,7 @@ final class VerticalTabBarFactory {
     }
     
     static func createViewController() -> UIViewController {
-        let provider = MoyaProvider<NetworkRequests>()
+        let provider = NetworkProvider<NetworkRequests>()
         let service = VerticalTabBarService(provider: provider)
         let presenter = VerticalTabBarPresenter(service: service)
         let viewController = VerticalTabBarViewController(navigationItens: createNavigationTabItens(), presenter: presenter)

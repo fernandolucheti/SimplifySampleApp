@@ -11,7 +11,7 @@ import Moya
 
 class HomeServiceTests: XCTestCase {
     
-    lazy var provider = MoyaProvider<NetworkRequests>(stubClosure: MoyaProvider.immediatelyStub)
+    lazy var provider = NetworkProvider<NetworkRequests>(stubClosure: MoyaProvider.immediatelyStub)
     lazy var sut = HomeService(provider: provider)
     
     func testFetch() {
