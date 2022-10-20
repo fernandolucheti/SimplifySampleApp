@@ -6,25 +6,22 @@
 //  Copyright (c) 2022 ___ORGANIZATIONNAME___. All rights reserved.
 //
 
-import Moya
-
 protocol VerticalTabBarServiceLogic {
     func fetch(completion: @escaping (VerticalTabBarModels.Response) -> Void)
 }
 
 class VerticalTabBarService: VerticalTabBarServiceLogic {
     
-    var provider: MoyaProvider<NetworkRequests>
+    var provider: NetworkProvider<NetworkRequests>
     
-    init(provider: MoyaProvider<NetworkRequests>) {
+    init(provider: NetworkProvider<NetworkRequests>) {
         self.provider = provider
     }
     
     func fetch(completion: @escaping (VerticalTabBarModels.Response) -> Void) {
-        provider.request(.budgetBar) { result in
+        provider.request(.budgetBar) { (result: Result<VerticalTabBarModels.Response, NetworkErrors>) in
             if case .success(let response) = result {
-                guard let responseModel = try? response.map(VerticalTabBarModels.Response.self) else { return }
-                completion(responseModel)
+                completion(response)
             }
         }
     }

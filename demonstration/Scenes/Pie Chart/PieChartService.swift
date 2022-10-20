@@ -6,33 +6,19 @@
 //  Copyright (c) 2022 ___ORGANIZATIONNAME___. All rights reserved.
 //
 
-import Moya
-
 protocol PieChartServiceLogic {
     func fetch(monthYear: MonthYear, completion: @escaping (Result<PieChartModels.Response, NetworkErrors>) -> Void)
 }
 
 class PieChartService: PieChartServiceLogic {
     
-    var provider: MoyaProvider<NetworkRequests>
+    var provider: NetworkProvider<NetworkRequests>
     
-    init(provider: MoyaProvider<NetworkRequests>) {
+    init(provider: NetworkProvider<NetworkRequests>) {
         self.provider = provider
     }
     
     func fetch(monthYear: MonthYear, completion: @escaping (Result<PieChartModels.Response, NetworkErrors>) -> Void) {
-        provider.request(.pieChart(monthYear: monthYear)) { result in
-            switch result {
-            case.success(let response):
-                do {
-                    let responseModel = try response.map(PieChartModels.Response.self)
-                    completion(.success(responseModel))
-                } catch {
-                    completion(.failure(NetworkErrors.decoding))
-                }
-            case .failure:
-                completion(.failure(NetworkErrors.generic))
-            }
-        }
+        provider.request(.pieChart(monthYear: monthYear), completion: completion)
     }
 }

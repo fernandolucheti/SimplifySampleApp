@@ -7,11 +7,10 @@
 //
 
 import UIKit
-import Moya
 
 final class PieChartFactory {
     static func createViewController() -> UIViewController {
-        let provider = MoyaProvider<NetworkRequests>()
+        let provider = NetworkProvider<NetworkRequests>()
         let service = PieChartService(provider: provider)
         let presenter = PieChartPresenter(service: service)
         let viewController = PieChartViewController(presenter: presenter)

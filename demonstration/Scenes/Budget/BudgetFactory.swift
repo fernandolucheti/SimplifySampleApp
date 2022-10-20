@@ -7,11 +7,10 @@
 //
 
 import UIKit
-import Moya
 
 final class BudgetFactory {
     static func createViewController() -> UIViewController {
-        let provider = MoyaProvider<NetworkRequests>()
+        let provider = NetworkProvider<NetworkRequests>()
         let service = BudgetService(provider: provider)
         let presenter = BudgetPresenter(service: service)
         let viewController = BudgetViewController(presenter: presenter)
