@@ -8,11 +8,11 @@
 
 
 protocol HomeBudgetBarPresenterDelegate : AnyObject {
-    func presentSuccess(viewModel: VerticalTabBarModels.ViewModel)
+    func presentSuccess(viewModel: HomeBudgetBarModels.ViewModel)
 }
 
 final class HomeBudgetBarPresenter {
-    private typealias Models = VerticalTabBarModels
+    private typealias Models = HomeBudgetBarModels
     private weak var delegate: HomeBudgetBarPresenterDelegate?
     private var service: HomeBudgetBarServiceLogic
     

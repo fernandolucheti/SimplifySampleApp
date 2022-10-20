@@ -35,7 +35,7 @@ final class HomeTabBarController: VerticalTabBarViewController {
 }
 
 extension HomeTabBarController: HomeBudgetBarPresenterDelegate {
-    func presentSuccess(viewModel: VerticalTabBarModels.ViewModel) {
+    func presentSuccess(viewModel: HomeBudgetBarModels.ViewModel) {
         budgetBar.viewModel = viewModel
     }
 }

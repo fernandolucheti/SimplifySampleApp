@@ -7,7 +7,7 @@
 //
 
 protocol HomeBudgetBarServiceLogic {
-    func fetch(completion: @escaping (VerticalTabBarModels.Response) -> Void)
+    func fetch(completion: @escaping (HomeBudgetBarModels.Response) -> Void)
 }
 
 class HomeBudgetBarService: HomeBudgetBarServiceLogic {
@@ -18,8 +18,8 @@ class HomeBudgetBarService: HomeBudgetBarServiceLogic {
         self.provider = provider
     }
     
-    func fetch(completion: @escaping (VerticalTabBarModels.Response) -> Void) {
-        provider.request(.budgetBar) { (result: Result<VerticalTabBarModels.Response, NetworkErrors>) in
+    func fetch(completion: @escaping (HomeBudgetBarModels.Response) -> Void) {
+        provider.request(.budgetBar) { (result: Result<HomeBudgetBarModels.Response, NetworkErrors>) in
             if case .success(let response) = result {
                 completion(response)
             }
