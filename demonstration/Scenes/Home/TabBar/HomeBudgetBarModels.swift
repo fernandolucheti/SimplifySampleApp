@@ -23,6 +23,9 @@ enum HomeBudgetBarModels {
     
     struct ViewModel {
         let categories: [CategoryViewModel]
+        var totalSpentSum: Double {
+            categories.compactMap({ $0.totalSpent }).reduce(0, +)
+        }
     }
     
     struct CategoryViewModel {

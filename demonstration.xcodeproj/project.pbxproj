@@ -289,6 +289,7 @@
 		8B1BC3FD2900F6F90012D218 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				8BA2C1CC27E809C2008082D9 /* BudgetBarView.swift */,
 				8BA2C1C227E804EB008082D9 /* HomeTabBarFactory.swift */,
 				8BA2C1C327E804EB008082D9 /* HomeBudgetBarPresenter.swift */,
 				8BA2C1C627E804EB008082D9 /* HomeBudgetBarService.swift */,
@@ -506,7 +507,6 @@
 		EDC8429C2780CE6800BA291C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8BA2C1CC27E809C2008082D9 /* BudgetBarView.swift */,
 				EDC842892780AA9F00BA291C /* HomeView.swift */,
 				EDC8429D2780CE7E00BA291C /* SummarySectionView.swift */,
 				EDC8429F2780D05900BA291C /* SummarySectionViewModel.swift */,
