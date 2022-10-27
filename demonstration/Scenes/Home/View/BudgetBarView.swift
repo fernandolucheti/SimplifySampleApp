@@ -11,7 +11,7 @@ final class BudgetBarView: UIView {
     
     var viewModel: HomeBudgetBarModels.ViewModel? {
         didSet {
-            guard let totalSpentSum = viewModel?.categories.compactMap({ $0.totalSpent }).reduce(0, +) else { return }
+            guard let totalSpentSum = viewModel?.categories.compactMap({ $0.totalSpent }).reduce(0, +), totalSpentSum != 0 else { return }
             let screenHeight = UIScreen.main.bounds.height
             viewModel?.categories.forEach({ category in
                 let view = UIView()
