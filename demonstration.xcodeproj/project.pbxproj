@@ -25,6 +25,10 @@
 		8B64550227FC854500EF8AAB /* HeaderViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B64550127FC854500EF8AAB /* HeaderViewPresenter.swift */; };
 		8B64550427FC9B2F00EF8AAB /* MonthYearTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B64550327FC9B2F00EF8AAB /* MonthYearTests.swift */; };
 		8B64550627FC9F9400EF8AAB /* HeaderViewPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B64550527FC9F9400EF8AAB /* HeaderViewPresenterTests.swift */; };
+		8B8F692F2913095E0044E9FE /* AddTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8F692E2913095E0044E9FE /* AddTransactionView.swift */; };
+		8B8F6931291357AC0044E9FE /* MoreOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8F6930291357AC0044E9FE /* MoreOptionsView.swift */; };
+		8B8F6933291357CB0044E9FE /* NumericKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8F6932291357CB0044E9FE /* NumericKeyboardView.swift */; };
+		8B8F69352913657F0044E9FE /* AddTransactionModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8F69342913657F0044E9FE /* AddTransactionModels.swift */; };
 		8BA2C1A727E7B47F008082D9 /* PieChartFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1A127E7B47F008082D9 /* PieChartFactory.swift */; };
 		8BA2C1A827E7B47F008082D9 /* PieChartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1A227E7B47F008082D9 /* PieChartPresenter.swift */; };
 		8BA2C1A927E7B47F008082D9 /* PieChartModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1A327E7B47F008082D9 /* PieChartModels.swift */; };
@@ -135,6 +139,10 @@
 		8B64550127FC854500EF8AAB /* HeaderViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewPresenter.swift; sourceTree = "<group>"; };
 		8B64550327FC9B2F00EF8AAB /* MonthYearTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthYearTests.swift; sourceTree = "<group>"; };
 		8B64550527FC9F9400EF8AAB /* HeaderViewPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewPresenterTests.swift; sourceTree = "<group>"; };
+		8B8F692E2913095E0044E9FE /* AddTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionView.swift; sourceTree = "<group>"; };
+		8B8F6930291357AC0044E9FE /* MoreOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreOptionsView.swift; sourceTree = "<group>"; };
+		8B8F6932291357CB0044E9FE /* NumericKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericKeyboardView.swift; sourceTree = "<group>"; };
+		8B8F69342913657F0044E9FE /* AddTransactionModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionModels.swift; sourceTree = "<group>"; };
 		8BA2C1A127E7B47F008082D9 /* PieChartFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartFactory.swift; sourceTree = "<group>"; };
 		8BA2C1A227E7B47F008082D9 /* PieChartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartPresenter.swift; sourceTree = "<group>"; };
 		8BA2C1A327E7B47F008082D9 /* PieChartModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartModels.swift; sourceTree = "<group>"; };
@@ -320,6 +328,17 @@
 			path = HeaderView;
 			sourceTree = "<group>";
 		};
+		8B8F692D2913093C0044E9FE /* AddTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				8B8F692E2913095E0044E9FE /* AddTransactionView.swift */,
+				8B8F6930291357AC0044E9FE /* MoreOptionsView.swift */,
+				8B8F6932291357CB0044E9FE /* NumericKeyboardView.swift */,
+				8B8F69342913657F0044E9FE /* AddTransactionModels.swift */,
+			);
+			path = AddTransaction;
+			sourceTree = "<group>";
+		};
 		8BA2C1A027E7B469008082D9 /* Pie Chart */ = {
 			isa = PBXGroup;
 			children = (
@@ -459,6 +478,7 @@
 		EDC842852780A67E00BA291C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				8B8F692D2913093C0044E9FE /* AddTransaction */,
 				8BA2C1A027E7B469008082D9 /* Pie Chart */,
 				8B11AD1127E4BB9500BE3A12 /* Budget */,
 				EDC842B82782455100BA291C /* Transactions */,
@@ -705,6 +725,7 @@
 				ED8986DC2782E7BE00CC21BF /* String+json.swift in Sources */,
 				EDC842AE2782261D00BA291C /* UIStackView+RemoveSubviews.swift in Sources */,
 				EDC8429E2780CE7E00BA291C /* SummarySectionView.swift in Sources */,
+				8B8F6931291357AC0044E9FE /* MoreOptionsView.swift in Sources */,
 				8BA2C1D627E8FA19008082D9 /* Date+currentMonth.swift in Sources */,
 				EDC842A02780D05900BA291C /* SummarySectionViewModel.swift in Sources */,
 				EDC842CB27826A5600BA291C /* TransactionsPresenter.swift in Sources */,
@@ -734,8 +755,10 @@
 				8BA2C1CD27E809C2008082D9 /* BudgetBarView.swift in Sources */,
 				8BA2C1AB27E7B47F008082D9 /* ChartView.swift in Sources */,
 				8BA2C1CB27E804EB008082D9 /* HomeBudgetBarService.swift in Sources */,
+				8B8F69352913657F0044E9FE /* AddTransactionModels.swift in Sources */,
 				EDC842C7278269BA00BA291C /* TransactionsService.swift in Sources */,
 				8B11AD6727E63B3600BE3A12 /* ThermometerView.swift in Sources */,
+				8B8F6933291357CB0044E9FE /* NumericKeyboardView.swift in Sources */,
 				EDC842CF2782810A00BA291C /* SystemIcons.swift in Sources */,
 				ED8986DF2782E91300CC21BF /* Bundle.swift in Sources */,
 				EDC842BD278245C600BA291C /* TransactionCell.swift in Sources */,
@@ -752,6 +775,7 @@
 				EDC842BF2782471D00BA291C /* TransactionCellViewModel.swift in Sources */,
 				8B11AD1927E4D32D00BE3A12 /* BudgetPresenter.swift in Sources */,
 				EDE60800278CACC8005A997D /* VerticalTabBarButtonsFactory.swift in Sources */,
+				8B8F692F2913095E0044E9FE /* AddTransactionView.swift in Sources */,
 				8BA2C1CA27E804EB008082D9 /* VerticalTabBarViewController.swift in Sources */,
 				EDC842A82782078300BA291C /* HomeFactory.swift in Sources */,
 				8BA2C1BA27E7E1FB008082D9 /* UIView+spacer.swift in Sources */,

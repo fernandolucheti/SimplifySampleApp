@@ -16,4 +16,7 @@ enum SystemIcons: String {
     case calendarOvertime = "calendar.badge.clock"
     case chevronLeft = "chevron.left"
     case chevronRight = "chevron.right"
+    case close = "xmark"
+    case delete = "delete.left"
+    case checkmark = "checkmark"
 }
