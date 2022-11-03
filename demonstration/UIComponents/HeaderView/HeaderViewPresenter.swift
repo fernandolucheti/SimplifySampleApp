@@ -32,7 +32,7 @@ final class HeaderViewPresenter {
     }
     
     func updateMonth(_ operation: Operation) {
-        selectedMonth = operation == .next ? selectedMonth.nextMonth() : selectedMonth.previousMonth()
+        selectedMonth = operation == .next ? selectedMonth.nextMonth : selectedMonth.previousMonth
         delegate?.setIcon(selectedMonth.month == Date.currentMonth ? SystemIcons.calendar : SystemIcons.calendarOvertime)
         var monthName = monthName
         if Date.currentYear != selectedMonth.year {
