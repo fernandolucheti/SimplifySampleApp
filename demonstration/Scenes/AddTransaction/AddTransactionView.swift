@@ -7,10 +7,11 @@
 
 import SwiftUI
 
+fileprivate typealias ViewModel = AddTransactionViewModel
+
 struct AddTransactionView: View {
     
-    @State var value: String = ""
-    @State var toggleKeyboard = true
+    @StateObject private var viewModel = ViewModel(category: .init(name: "Restaurants", color: "#A00014"), account: .init(name: "Account", color: "#A00014"))
     
     init() {
         UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor : UIColor.gray], for: .selected)
@@ -19,35 +20,30 @@ struct AddTransactionView: View {
     
     var body: some View {
         VStack {
-            
             Navigation()
+            ValueAndOptionsHeader(viewModel: viewModel)
             
-            ValueAndOptionsHeader(value: $value,
-                                  toggleKeyboard: $toggleKeyboard)
-            
-            Spacer()
-            
-            if toggleKeyboard {
-                NumericKeyboardView(value: $value)
+            if viewModel.toggleKeyboard {
+                NumericKeyboardView(value: $viewModel.value, doneAction: save)
             } else {
                 MoreOptionsView()
             }
-            
-            Spacer()
         }
         .padding(24)
         .ignoresSafeArea()
     }
+    
+    func save() {
+        
+    }
 }
 
 fileprivate struct Navigation: View {
+    @Environment(\.dismiss) private var dismiss
     var body: some View {
         HStack {
             Spacer()
-            
-            Button {
-                
-            } label: {
+            Button(action: dismiss.callAsFunction) {
                 Image(systemName: SystemIcons.close.rawValue)
                     .resizable()
                     .foregroundColor(.gray)
@@ -61,68 +57,57 @@ fileprivate struct Navigation: View {
 
 fileprivate struct ValueAndOptionsHeader: View {
     
-    @Binding var value: String
-    @Binding var toggleKeyboard: Bool
-    @State var transactionType: AddTransactionModels.TransactionType = .expense
-    @State var category = AddTransactionModels.Category(name: "Restaurants", color: "#A00014")
+    @StateObject var viewModel: ViewModel
     
-    var displayText: Text {
-        switch transactionType {
-        case .income:
-            return Text("Income")
-                .foregroundColor(Color(uiColor: ColorTheme.primaryAccent.color))
-        case .expense:
-            return Text(category.name)
-                .foregroundColor(Color(uiColor: .init(hex: category.color)))
-        case .transfer:
-            return Text("Transfer")
-                .foregroundColor(.gray)
+    var transactionTypePicker: some View {
+        Picker("", selection: $viewModel.transactionType) {
+            ForEach(AddTransactionModels.TransactionType.allCases, id: \.self) { type in
+                Text("\(type.rawValue)")
+            }
+        }
+        .pickerStyle(.segmented)
+    }
+    
+    var moreOptionsButton: some View {
+        Button {
+            viewModel.toggleKeyboard.toggle()
+        } label: {
+            Text("\(viewModel.toggleKeyboard ? "+" : "-") options")
+                .primaryXL()
         }
     }
     
     var body: some View {
         HStack {
-            let doubleValue = (Double(value) ?? 0)/100
-            Text(doubleValue.currencyString())
-                .font(.system(size: 35))
-                .foregroundColor(.gray)
+            Text(viewModel.displayValue)
+                .primaryXXL()
                 .minimumScaleFactor(0.01)
                 .lineLimit(1)
             
             Spacer()
             
-            displayText
+            Text(viewModel.displayText)
+                .foregroundColor(viewModel.displayColor)
                 .font(.system(size: 30, weight: .medium))
                 .lineLimit(1)
                 .minimumScaleFactor(1)
         }
         
         HStack {
-            Button {
-                toggleKeyboard.toggle()
-            } label: {
-                Text("\(toggleKeyboard ? "+" : "-") options")
-                    .font(.system(size: 30))
-                    .foregroundColor(.gray)
-            }
+            moreOptionsButton
             
             Spacer()
             
-            Text("Account")
+            Text(viewModel.account.name)
+                .foregroundColor(viewModel.accountColor)
                 .font(.system(size: 30, weight: .medium))
-                .foregroundColor(.red)
                 .lineLimit(1)
             
-        }.padding([.top, .bottom], 4)
+        }.padding(.vertical, 4)
         
-        Picker("", selection: $transactionType) {
-            ForEach(AddTransactionModels.TransactionType.allCases, id: \.self) { type in
-                Text("\(type.rawValue)")
-            }
-        }
-        .pickerStyle(.segmented)
-        .padding(.top, 16)
-        .padding(.bottom, 24)
+        transactionTypePicker
+            .padding(.top, 16)
+            .padding(.bottom, 24)
     }
 }
 

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B0AA8F7291597DD00B9BAFD /* KeyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AA8F6291597DD00B9BAFD /* KeyViewModel.swift */; };
+		8B0AA8F92915A25C00B9BAFD /* AddTransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AA8F82915A25C00B9BAFD /* AddTransactionViewModel.swift */; };
+		8B0AA8FB2915AD5500B9BAFD /* Text+Syles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AA8FA2915AD5500B9BAFD /* Text+Syles.swift */; };
+		8B0AA8FF2915AEAA00B9BAFD /* TextField+Syles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AA8FE2915AEAA00B9BAFD /* TextField+Syles.swift */; };
 		8B11AD1827E4D32D00BE3A12 /* BudgetFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B11AD1227E4D32D00BE3A12 /* BudgetFactory.swift */; };
 		8B11AD1927E4D32D00BE3A12 /* BudgetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B11AD1327E4D32D00BE3A12 /* BudgetPresenter.swift */; };
 		8B11AD1A27E4D32D00BE3A12 /* BudgetModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B11AD1427E4D32D00BE3A12 /* BudgetModels.swift */; };
@@ -54,6 +58,7 @@
 		8BA2C1D327E813D1008082D9 /* HomeBudgetBarServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1D127E813D1008082D9 /* HomeBudgetBarServiceTests.swift */; };
 		8BA2C1D427E813D1008082D9 /* HomeBudgetBarPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1D227E813D1008082D9 /* HomeBudgetBarPresenterTests.swift */; };
 		8BA2C1D627E8FA19008082D9 /* Date+currentMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA2C1D527E8FA19008082D9 /* Date+currentMonth.swift */; };
+		8BD8AB8C2913F0C90065F3F4 /* AddTransactionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD8AB8B2913F0C90065F3F4 /* AddTransactionPresenter.swift */; };
 		ED8986D52782E48F00CC21BF /* HomeServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8986D42782E48F00CC21BF /* HomeServiceTest.swift */; };
 		ED8986D82782E52B00CC21BF /* Home.json in Resources */ = {isa = PBXBuildFile; fileRef = ED8986D72782E52B00CC21BF /* Home.json */; };
 		ED8986DC2782E7BE00CC21BF /* String+json.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8986DB2782E7BE00CC21BF /* String+json.swift */; };
@@ -121,6 +126,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B0AA8F6291597DD00B9BAFD /* KeyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyViewModel.swift; sourceTree = "<group>"; };
+		8B0AA8F82915A25C00B9BAFD /* AddTransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewModel.swift; sourceTree = "<group>"; };
+		8B0AA8FA2915AD5500B9BAFD /* Text+Syles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Syles.swift"; sourceTree = "<group>"; };
+		8B0AA8FE2915AEAA00B9BAFD /* TextField+Syles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Syles.swift"; sourceTree = "<group>"; };
 		8B11AD1227E4D32D00BE3A12 /* BudgetFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetFactory.swift; sourceTree = "<group>"; };
 		8B11AD1327E4D32D00BE3A12 /* BudgetPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetPresenter.swift; sourceTree = "<group>"; };
 		8B11AD1427E4D32D00BE3A12 /* BudgetModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetModels.swift; sourceTree = "<group>"; };
@@ -167,6 +176,7 @@
 		8BA2C1D127E813D1008082D9 /* HomeBudgetBarServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBudgetBarServiceTests.swift; sourceTree = "<group>"; };
 		8BA2C1D227E813D1008082D9 /* HomeBudgetBarPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBudgetBarPresenterTests.swift; sourceTree = "<group>"; };
 		8BA2C1D527E8FA19008082D9 /* Date+currentMonth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+currentMonth.swift"; sourceTree = "<group>"; };
+		8BD8AB8B2913F0C90065F3F4 /* AddTransactionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionPresenter.swift; sourceTree = "<group>"; };
 		ED8986D42782E48F00CC21BF /* HomeServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceTest.swift; sourceTree = "<group>"; };
 		ED8986D72782E52B00CC21BF /* Home.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Home.json; sourceTree = "<group>"; };
 		ED8986DB2782E7BE00CC21BF /* String+json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+json.swift"; sourceTree = "<group>"; };
@@ -246,6 +256,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B0AA8F5291597A900B9BAFD /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				8B8F6932291357CB0044E9FE /* NumericKeyboardView.swift */,
+				8B0AA8F6291597DD00B9BAFD /* KeyViewModel.swift */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
 		8B11AD1127E4BB9500BE3A12 /* Budget */ = {
 			isa = PBXGroup;
 			children = (
@@ -331,10 +350,12 @@
 		8B8F692D2913093C0044E9FE /* AddTransaction */ = {
 			isa = PBXGroup;
 			children = (
+				8B0AA8F5291597A900B9BAFD /* Keyboard */,
 				8B8F692E2913095E0044E9FE /* AddTransactionView.swift */,
+				8B0AA8F82915A25C00B9BAFD /* AddTransactionViewModel.swift */,
 				8B8F6930291357AC0044E9FE /* MoreOptionsView.swift */,
-				8B8F6932291357CB0044E9FE /* NumericKeyboardView.swift */,
 				8B8F69342913657F0044E9FE /* AddTransactionModels.swift */,
+				8BD8AB8B2913F0C90065F3F4 /* AddTransactionPresenter.swift */,
 			);
 			path = AddTransaction;
 			sourceTree = "<group>";
@@ -523,6 +544,8 @@
 				EDC842C4278257EB00BA291C /* UIView+Rotate.swift */,
 				EDC842CE2782810A00BA291C /* SystemIcons.swift */,
 				8BA2C1B927E7E1FB008082D9 /* UIView+spacer.swift */,
+				8B0AA8FA2915AD5500B9BAFD /* Text+Syles.swift */,
+				8B0AA8FE2915AEAA00B9BAFD /* TextField+Syles.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -725,6 +748,7 @@
 				ED8986DC2782E7BE00CC21BF /* String+json.swift in Sources */,
 				EDC842AE2782261D00BA291C /* UIStackView+RemoveSubviews.swift in Sources */,
 				EDC8429E2780CE7E00BA291C /* SummarySectionView.swift in Sources */,
+				8B0AA8F7291597DD00B9BAFD /* KeyViewModel.swift in Sources */,
 				8B8F6931291357AC0044E9FE /* MoreOptionsView.swift in Sources */,
 				8BA2C1D627E8FA19008082D9 /* Date+currentMonth.swift in Sources */,
 				EDC842A02780D05900BA291C /* SummarySectionViewModel.swift in Sources */,
@@ -758,12 +782,15 @@
 				8B8F69352913657F0044E9FE /* AddTransactionModels.swift in Sources */,
 				EDC842C7278269BA00BA291C /* TransactionsService.swift in Sources */,
 				8B11AD6727E63B3600BE3A12 /* ThermometerView.swift in Sources */,
+				8B0AA8F92915A25C00B9BAFD /* AddTransactionViewModel.swift in Sources */,
 				8B8F6933291357CB0044E9FE /* NumericKeyboardView.swift in Sources */,
 				EDC842CF2782810A00BA291C /* SystemIcons.swift in Sources */,
 				ED8986DF2782E91300CC21BF /* Bundle.swift in Sources */,
 				EDC842BD278245C600BA291C /* TransactionCell.swift in Sources */,
 				8BA2C1C927E804EB008082D9 /* HomeBudgetBarModels.swift in Sources */,
 				8BA2C1AA27E7B47F008082D9 /* PieChartViewController.swift in Sources */,
+				8B0AA8FB2915AD5500B9BAFD /* Text+Syles.swift in Sources */,
+				8B0AA8FF2915AEAA00B9BAFD /* TextField+Syles.swift in Sources */,
 				8B11AD1A27E4D32D00BE3A12 /* BudgetModels.swift in Sources */,
 				EDC842992780C8C500BA291C /* UIColor+Hex.swift in Sources */,
 				EDC842972780C7A900BA291C /* ColorTheme.swift in Sources */,
@@ -777,6 +804,7 @@
 				EDE60800278CACC8005A997D /* VerticalTabBarButtonsFactory.swift in Sources */,
 				8B8F692F2913095E0044E9FE /* AddTransactionView.swift in Sources */,
 				8BA2C1CA27E804EB008082D9 /* VerticalTabBarViewController.swift in Sources */,
+				8BD8AB8C2913F0C90065F3F4 /* AddTransactionPresenter.swift in Sources */,
 				EDC842A82782078300BA291C /* HomeFactory.swift in Sources */,
 				8BA2C1BA27E7E1FB008082D9 /* UIView+spacer.swift in Sources */,
 				EDC8429B2780CB4D00BA291C /* ViewCode.swift in Sources */,

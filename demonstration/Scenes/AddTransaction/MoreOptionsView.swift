@@ -16,22 +16,14 @@ struct MoreOptionsView: View {
     @State var monthly = false
     @State var installments = ""
     
-    private struct Line<Content: View>: View {
-        var content: () -> Content
-        
-        init(@ViewBuilder content: @escaping () -> Content) {
-            self.content = content
-        }
-        var body: some View {
-            VStack(spacing: 0) {
-                HStack {
-                    content()
-                }
-                Color.gray.frame(width: .infinity, height: 1)
-                    .padding(.bottom, 25)
-                    .padding(.top, 4)
-            }
-        }
+    private var datePicker: some View {
+        DatePicker("Day",
+                   selection: $date,
+                   displayedComponents: [.date])
+        .labelsHidden()
+        .id(calendarId)
+        .onChange(of: date)
+        { _ in calendarId = UUID() }
     }
     
     var body: some View {
@@ -39,62 +31,65 @@ struct MoreOptionsView: View {
             
             Line {
                 Text("name: ")
-                    .font(.system(size: 30))
-                    .foregroundColor(.gray)
+                    .primaryXL()
                     .disableAutocorrection(true)
                 TextField("name", text: $expenseName)
-                    .font(.system(size: 30))
-                    .foregroundColor(.gray)
+                    .primaryXL()
                     .multilineTextAlignment(.trailing)
             }.padding(.top, 24)
             
             Line {
                 Text("paid: ")
-                    .font(.system(size: 30))
-                    .foregroundColor(.gray)
+                    .primaryXL()
                 Toggle("", isOn: $paid)
             }
-            
             Line {
                 Text("date: ")
-                    .font(.system(size: 30))
-                    .foregroundColor(.gray)
+                    .primaryXL()
                 Spacer()
-                DatePicker("Day",
-                           selection: $date,
-                           displayedComponents: [.date])
-                .labelsHidden()
-                .id(calendarId)
-                .onChange(of: date)
-                { _ in calendarId = UUID() }
+                datePicker
             }
-            
             Line {
                 Text("monthly: ")
-                    .font(.system(size: 30))
-                    .foregroundColor(.gray)
+                    .primaryXL()
                 Toggle("", isOn: $monthly)
             }
             Line {
                 HStack {
                     Text("installments: ")
-                        .font(.system(size: 30))
-                        .foregroundColor(.gray)
+                        .primaryXL()
                         .lineLimit(1)
                     Spacer()
                     TextField("1", text: $installments)
-                        .font(.system(size: 30))
-                        .foregroundColor(.gray)
+                        .primaryXL()
                         .multilineTextAlignment(.trailing)
-                        .frame(width: 70, height: 40)
+                        .frame(width: 70)
                         .keyboardType(.numberPad)
                     Text("x")
-                        .font(.system(size: 30))
-                        .foregroundColor(.gray)
+                        .primaryXL()
                         .lineLimit(1)
                 }
             }
             Spacer()
+        }
+    }
+}
+
+fileprivate struct Line<Content: View>: View {
+    var content: () -> Content
+    
+    init(@ViewBuilder content: @escaping () -> Content) {
+        self.content = content
+    }
+    var body: some View {
+        VStack(spacing: 0) {
+            HStack {
+                content()
+            }
+            Color.gray
+                .frame(height: 1)
+                .padding(.top, 4)
+                .padding(.bottom, 25)
         }
     }
 }

@@ -8,7 +8,13 @@
 import Foundation
 
 struct AddTransactionModels {
+    
     struct Category {
+        var name: String
+        var color: String
+    }
+    
+    struct Account {
         var name: String
         var color: String
     }
