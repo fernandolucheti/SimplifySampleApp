@@ -11,26 +11,26 @@ import XCTest
 class HeaderViewPresenterTests: XCTestCase {
     
     func testNextMonth() {
-        var sut = HeaderViewPresenter(selectedMonth: MonthYear(month: 1, year: 2022)) { _ in }
+        var sut = HeaderViewPresenter(selectedMonth: MonthYear(month: 1, year: Date.currentYear)) { _ in }
         let delegateSpy = HeaderViewPresenterDelegateSpy()
         sut.setDelegate(delegateSpy)
         sut.updateMonth(.next)
         XCTAssertTrue(delegateSpy.monthName == "February")
 
-        sut = HeaderViewPresenter(selectedMonth: MonthYear(month: 12, year: 2022)) { _ in }
+        sut = HeaderViewPresenter(selectedMonth: MonthYear(month: 12, year: Date.currentYear)) { _ in }
         sut.setDelegate(delegateSpy)
         sut.updateMonth(.next)
-        XCTAssertTrue(delegateSpy.monthName == "January 23")
+        XCTAssertTrue(delegateSpy.monthName == "January \((Date.currentYear+1) % 100)")
     }
     
     func testPreviousMonth() {
-        var sut = HeaderViewPresenter(selectedMonth: MonthYear(month: 1, year: 2022)) { _ in }
+        var sut = HeaderViewPresenter(selectedMonth: MonthYear(month: 1, year: Date.currentYear)) { _ in }
         let delegateSpy = HeaderViewPresenterDelegateSpy()
         sut.setDelegate(delegateSpy)
         sut.updateMonth(.previous)
-        XCTAssertTrue(delegateSpy.monthName == "December 21")
+        XCTAssertTrue(delegateSpy.monthName == "December \((Date.currentYear-1) % 100)")
 
-        sut = HeaderViewPresenter(selectedMonth: MonthYear(month: 12, year: 2022)) { _ in }
+        sut = HeaderViewPresenter(selectedMonth: MonthYear(month: 12, year: Date.currentYear)) { _ in }
         sut.setDelegate(delegateSpy)
         sut.updateMonth(.previous)
         XCTAssertTrue(delegateSpy.monthName == "November")
